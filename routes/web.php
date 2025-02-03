@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::namespace('App\Http\Controllers\Admin')->group(function() {
+    Route::get('/',[DashboardController::class,'index']);
+
+
+    // menu pengaturan web
+    Route::get('artikel','WebController@artikel');
+    Route::get('form','WebController@form');
+    Route::get('kategori','WebController@kategori');
+    Route::get('menu','WebController@menu');
+    Route::get('subkategori','WebController@subkategori');
+    Route::get('widget','WebController@widget');
+
 });
+
+
+
+

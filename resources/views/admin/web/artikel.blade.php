@@ -139,7 +139,7 @@
                                 </div>
                                 <hr>
                                 <div class="row justify-content-between">
-                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="col-sm-12 col-md-3 col-lg-3">
                                         <div class="form-group">
                                             <select class="form-control form-control-sm">
                                                 <option>Pilih Status</option>
@@ -148,7 +148,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-9 col-lg-9">
+                                    <div class="col-sm-12 col-md-9 col-lg-9">
                                         <div id="example1_filter" class="dataTables_filter"><label>Cari:<input
                                                     type="search" class="form-control form-control-sm"
                                                     placeholder="Kata Kunci Pencarian" aria-controls="example1"></label>
