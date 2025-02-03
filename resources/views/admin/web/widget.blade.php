@@ -1,0 +1,223 @@
+@extends('admin.layout.layout')
+@section('content')
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h5 class="m-0" style="font-weight: 400;">Widget</h5>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
+                        <li class="breadcrumb-item active">Widget</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row" style="display: none;" id="tampilBerhasil">
+                <div id="toastsContainerTopRight" class="fixed">
+                    <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header"><strong class="mr-auto">
+                                Berhasil</strong> <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="toast-body">Berhasil Ubah Status Komentar</div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="card card-primary card-outline">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="dt-buttons btn-group flex-wrap">
+                                            <div class="margin">
+                                                <a href="#" data-dismiss="modal" id="btn-add"
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs" ><i
+                                                        class="fa fa-plus "></i> Tambah</a>
+                                                <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs" data-toggle="modal" data-target="#modal1" title="Hapus Data"><i class="fa fa-trash"></i>
+                                                    Hapus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-6">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row justify-content-between">
+                                    <div class="col-sm-3 col-md-2 col-lg-3">
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm">
+                                                <option>Semua</option>
+                                                <option>Aktif</option>
+                                                <option>Tidak Aktif</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-9 col-lg-9">
+                                        <div id="example1_filter" class="dataTables_filter"><label>Cari:<input
+                                                    type="search" class="form-control form-control-sm"
+                                                    placeholder="Kata Kunci Pencarian" aria-controls="example1"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-body table-responsive p-0 ">
+                                            <table class="table table-hover table-bordered text-nowrap ">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width:5%">
+                                                            <input type="checkbox" id="check-all" />
+                                                        </th>
+                                                        <th style="width:5%">No</th>
+                                                        <th style="width:5%">Aksi</th>
+                                                        <th>Judul</th>
+                                                        <th>Jenis Widget</th>
+                                                        <th>Isi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="check-item" />
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td class="aksi">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Nonaktifkan">
+                                                                <i class="fa fa-unlock"></i></a>
+                                                        </td>
+                                                        <td>Menu Kategori</td>
+                                                        <td>Sistem</td>
+                                                        <td>menu_kategori.blade.php</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="check-item" />
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td class="aksi">
+                                                            <a href="#" class="btn bg-info btn-sm" title="Form Admin">
+                                                                <i class="fa fa-sliders"></i></a>
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Nonaktifkan">
+                                                                <i class="fa fa-unlock"></i></a>
+                                                        </td>
+                                                        <td>Sinergi Program</td>
+                                                        <td>Sistem</td>
+                                                        <td>sinergi_program.blade.php</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="check-item" />
+                                                        </td>
+                                                        <td>3</td>
+                                                        <td class="aksi">
+                                                            <a href="#" class="btn bg-info btn-sm" title="Form Admin">
+                                                                <i class="fa fa-sliders"></i></a>
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Nonaktifkan">
+                                                                <i class="fa fa-unlock"></i></a>
+                                                        </td>
+                                                        <td>Aparatur Desa</td>
+                                                        <td>Sistem</td>
+                                                        <td>aparatur_desa.blade.php</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="dataTables_info" id="example1_info" role="status"
+                                            aria-live="polite">Menampilkan 1 sampai 10 dari 57 entri</div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button page-item previous disabled"
+                                                    id="example1_previous">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
+                                                        class="page-link">Sebelumnya</a>
+                                                </li>
+                                                <li class="paginate_button page-item active">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
+                                                        class="page-link">1</a>
+                                                </li>
+                                                <li class="paginate_button page-item next" id="example1_next">
+                                                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
+                                                        class="page-link">Selanjutnya</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+
+        <!-- first Modal -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="modal1Label"><i class="fas fa-exclamation-triangle text-red"></i>
+                            Konfirmasi
+                        </h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div style="background-color: #00c0ef;">
+                        <div class="card-header">
+                            <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
+                                data
+                                ini?</h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-end">
+                        <button type="button" class="btn btn-warning btn-sm text-white" data-dismiss="modal"><i
+                                class="fa fa-sign-out"></i> Tutup</button>
+                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</button>
+                    </div>
+                    </form>
+
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a href="#" class="btn btn-block btn-primary">Btn1</a>
+            <a href="#" class="btn btn-primary m-0 btn-block mx-4">Btn2</a>
+            <a href="#" class="btn btn-block m-0 btn-primary">Btn3</a>
+         </div>
+    </section>
+    <!-- /.content -->
+</div>
+
+
+@endsection
