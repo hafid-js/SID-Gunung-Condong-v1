@@ -8,12 +8,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h5 class="m-0" style="font-weight: 400;">Kategori</h5>
+                    <h5 class="m-0" style="font-weight: 400;">Sub Kategori</h5>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                        <li class="breadcrumb-item active">Kategori</li>
+                        <li class="breadcrumb-item active">Sub Kategori</li>
                     </ol>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                 <form action="#">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Nama Kategori</label>
+                                <label>Nama Sub Kategori</label>
                                 <input type="text" class="form-control form-control-sm" name="" id="">
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                 <form action="#">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Nama Kategori</label>
+                                <label>Nama Sub Kategori</label>
                                 <input type="text" value="Berita Lokal" class="form-control form-control-sm" name="" id="">
                             </div>
                         </div>

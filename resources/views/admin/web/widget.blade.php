@@ -46,7 +46,7 @@
                                     <div class="col-sm-12 col-md-12">
                                         <div class="dt-buttons btn-group flex-wrap">
                                             <div class="margin">
-                                                <a href="#" data-dismiss="modal" id="btn-add"
+                                                <a href="{{ url('form-widget') }}" data-dismiss="modal" id="btn-add"
                                                     class="btn btn-social mt-1 mb-1 btn-success btn-xs" ><i
                                                         class="fa fa-plus "></i> Tambah</a>
                                                 <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs" data-toggle="modal" data-target="#modal1" title="Hapus Data"><i class="fa fa-trash"></i>
@@ -210,11 +210,6 @@
                 <!-- /.modal-dialog -->
             </div>
         </div>
-        <div class="card-footer d-flex justify-content-between">
-            <a href="#" class="btn btn-block btn-primary">Btn1</a>
-            <a href="#" class="btn btn-primary m-0 btn-block mx-4">Btn2</a>
-            <a href="#" class="btn btn-block m-0 btn-primary">Btn3</a>
-         </div>
     </section>
     <!-- /.content -->
 </div>

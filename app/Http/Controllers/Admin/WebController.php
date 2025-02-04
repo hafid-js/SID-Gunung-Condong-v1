@@ -10,8 +10,8 @@ class WebController extends Controller
     public function artikel() {
         return view('admin.web.artikel');
     }
-    public function form() {
-        return view('admin.web.form');
+    public function formartikel() {
+        return view('admin.web.form_artikel');
     }
     public function kategori() {
         return view('admin.web.kategori');
@@ -21,6 +21,9 @@ class WebController extends Controller
     }
     public function widget() {
         return view('admin.web.widget');
+    }
+    public function formwidget() {
+        return view('admin.web.form_widget');
     }
     public function menu() {
         return view('admin.web.menu');

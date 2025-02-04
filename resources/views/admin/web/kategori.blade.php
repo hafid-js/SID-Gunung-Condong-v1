@@ -101,7 +101,7 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
-                                                            <a href="#" class="btn bg-orange btn-sm" title="Ubah">
+                                                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
                                                                 <i class="fa fa-unlock"></i></a>
@@ -118,7 +118,7 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
-                                                            <a href="#" class="btn bg-orange btn-sm" title="Ubah">
+                                                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
                                                                 <i class="fa fa-lock"></i></a>
@@ -137,7 +137,7 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
-                                                            <a href="#" class="btn bg-orange btn-sm" title="Ubah">
+                                                            <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
                                                                 <i class="fa fa-unlock"></i></a>

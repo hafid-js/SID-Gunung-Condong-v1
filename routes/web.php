@@ -23,11 +23,12 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
 
     // menu pengaturan web
     Route::get('artikel','WebController@artikel');
-    Route::get('form','WebController@form');
+    Route::get('form-artikel','WebController@formartikel');
     Route::get('kategori','WebController@kategori');
     Route::get('menu','WebController@menu');
     Route::get('subkategori','WebController@subkategori');
     Route::get('widget','WebController@widget');
+    Route::get('form-widget','WebController@formwidget');
 
 });
 
