@@ -8,13 +8,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Widget</h1>
+                    <h1>Komentar</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                        <li class="breadcrumb-item active">Widget</li>
-                        <li class="breadcrumb-item active">Tambah Data</li>
+                        <li class="breadcrumb-item active">Daftar Komentar</li>
+                        <li class="breadcrumb-item active">Ubah Komentar</li>
                     </ol>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                                     <a href="{{ url('artikel') }}" title="Unduh Data"
                                         class="btn btn-social btn-info btn-xs visible-xs-block"
                                         data-title="Unduh Data"><span class="btn-label"><i
-                                                class="fa fa-arrow-circle-left"></i></span> Kembali ke Widget</a>
+                                                class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar Komentar</a>
                                 </div>
                             </div>
                         </div>
@@ -42,16 +42,28 @@
                         <form class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="judulWidget" class="col-sm-2 col-form-label font-12">Judul
-                                        Widget</label>
-                                    <div class="col-sm-10 col-lg-6 col-md-6">
-                                        <input type="text" class="form-control form-control-sm font-12" id="judulWidget"
-                                            placeholder="Judul Widget">
+                                    <label for="pengirim" class="col-sm-2 col-form-label font-12">Pengirim</label>
+                                    <div class="col-sm-10 col-lg-9 col-md-9">
+                                        <input type="text" class="form-control form-control-sm font-12" id="pengirim"
+                                            value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="gambarWidget" class="col-sm-2 col-form-label font-12">Gambar
-                                        Widget</label>
+                                    <label for="noHP" class="col-sm-2 col-form-label font-12">No. HP</label>
+                                    <div class="col-sm-10 col-lg-9 col-md-9">
+                                        <input type="text" class="form-control form-control-sm font-12" id="noHP"
+                                            value="087322657433">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-2 col-form-label font-12">Email</label>
+                                    <div class="col-sm-10 col-lg-9 col-md-9">
+                                        <input type="email" class="form-control form-control-sm font-12" id="email"
+                                            value="fulanula@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="gambarWidget" class="col-sm-2 col-form-label font-12">Komentar</label>
                                     <div class="col-sm-6">
                                         <img class="img-responsive" src="{{ asset('admin/images/not-available.jpeg') }}"
                                             alt="">

@@ -28,4 +28,13 @@ class WebController extends Controller
     public function menu() {
         return view('admin.web.menu');
     }
+    public function submenu() {
+        return view('admin.web.sub_menu');
+    }
+    public function komentar() {
+        return view('admin.web.komentar');
+    }
+    public function ubahkomentar() {
+        return view('admin.web.ubah_komentar');
+    }
 }

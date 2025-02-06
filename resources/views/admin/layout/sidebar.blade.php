@@ -1,24 +1,4 @@
 
-<style>
- .info {
-    font-size: 12px;
-    color: #fff;
- }
- .sidebar .nav-item {
-    font-size: 0.8rem;  /* Larger font size for zoom effect */
-}
-
-.sidebar .nav-item {
-    font-size: 0.8rem;  /* Larger font size for zoom effect */
-}
-.sidebar .nav-icon {
-    transform: scale(0.7); /* 1.5 means 150% size */
-}
-
-.sidebar .nav-icon-beranda {
-    transform: scale(0.6); /* 1.5 means 150% size */
-}
-</style>
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary">
     <!-- Brand Logo -->
@@ -47,9 +27,9 @@
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control form-control-sm form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
-            <button class="btn btn-sidebar">
+            <button class="btn btn-sidebar btn-sm">
               <i class="fas fa-search fa-fw"></i>
             </button>
           </div>
@@ -886,7 +866,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ url('menu') }}" class="nav-link">
                         <i class="nav-icon fa fa-bars"></i>
                         <p>
                           Menu
@@ -896,7 +876,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ url('komentar') }}" class="nav-link">
                         <i class="nav-icon fa fa-comments"></i>
                         <p>
                           Komentar

@@ -2,6 +2,10 @@ $("#berhasil").click(function () {
     $("#tampilBerhasil").show();
 });
 
+$("#linkMenu").click(function () {
+    $("#tampilLinkMenu").show();
+});
+
 $(function () {
     bsCustomFileInput.init();
 });

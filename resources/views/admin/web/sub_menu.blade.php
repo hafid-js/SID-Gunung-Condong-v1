@@ -54,8 +54,11 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-sm-12 col-md-6">
+                                    </div>
+                                    <hr>
+                                    <div class="box-header with-border">
+                                        <strong><a href="https://demosid.opendesa.id/menu/index?parent=0">MENU UTAMA </a> / PROFIL DESA</strong>
                                     </div>
                                 </div>
                                 <hr>
@@ -98,7 +101,7 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('submenu') }}" class="btn bg-purple btn-sm" title="Rincian Sub Menu">
+                                                            <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
                                                             <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
@@ -107,7 +110,8 @@
                                                                 <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
-                                                        <td>Profil Desa</td>
+                                                        <td>Menu Kategori</td>
+                                                        <td>Sistem</td>
                                                         <td><a href="https://berputar.opendesa.id/artikel/kategori/berita-lokal" target="_blank">https://berputar.opendesa.id/artikel/kategori/berita-lokal</a></td>
                                                     </tr>
                                                 </tbody>
