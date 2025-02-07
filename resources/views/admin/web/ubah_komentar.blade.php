@@ -64,35 +64,27 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="gambarWidget" class="col-sm-2 col-form-label font-12">Komentar</label>
-                                    <div class="col-sm-6">
-                                        <img class="img-responsive" src="{{ asset('admin/images/not-available.jpeg') }}"
-                                            alt="">
-                                        <div class="input-group input-group-sm mt-2">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                <label class="custom-file-label font-12" for="exampleInputFile">Tidak
-                                                    ada gambar yang dipilih</label>
-                                            </div>
-                                            {{-- <div class="input-group-append">
-                                                <span class="input-group-text">Upload</span>
-                                            </div> --}}
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <input type="checkbox" title="Centang Untuk Hapus Gambar">
-                                                </span>
-                                            </div>
-                                        </div>
+                                    <div class="col-sm-10 col-md-9 col-lg-9">
+                                        <textarea class="form-control" rows="10" style="height:100%;"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="judulWidget" class="col-sm-2 col-form-label font-12">Jenis
                                         Widget</label>
-                                    <div class="col-sm-10 col-lg-6 col-md-6">
-                                        <select class="form-control form-control-sm select2" style="width: 100%;">
-                                          <option selected="selected">-- Pilih Jenis Widget --</option>
-                                          <option>Statis</option>
-                                          <option>Dinamis</option>
-                                        </select>
+                                    <div class="col-sm-10 col-lg-9 col-md-9">
+                                         <!-- Radio Buttons -->
+            <div class="card">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn bg-olive active">
+                      <input type="radio" name="aktif" id="option_b1" autocomplete="off" checked> Aktif
+                    </label>
+                    <label class="btn bg-olive">
+                      <input type="radio" name="tidak_aktif" id="option_b2" autocomplete="off"> Tidak Aktif
+                    </label>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
                                     </div>
                                 </div>
                             </div>

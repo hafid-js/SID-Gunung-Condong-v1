@@ -100,7 +100,7 @@
     <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
     <script>
         tinymce.init({
-            selector: 'textarea',
+            selector: 'textarea#myeditorinstance',
             plugins: [
                 // Core editing features
                 'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
