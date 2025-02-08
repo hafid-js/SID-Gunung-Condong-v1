@@ -32,6 +32,9 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('form-widget','WebController@formwidget');
     Route::get('komentar','WebController@komentar');
     Route::get('ubah-komentar','WebController@ubahkomentar');
+    Route::get('balas-komentar','WebController@balaskomentar');
+    Route::get('galeri','WebController@galeri');
+    Route::get('form-galeri','WebController@formgaleri');
 
 });
 

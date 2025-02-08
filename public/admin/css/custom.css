@@ -38,6 +38,11 @@
     border-radius: 3px;
 }
 
+.bg-gray {
+    color: #000;
+    background-color: #d2d6de !important;
+}
+
 
 .select2-container--default .select2-dropdown .select2-search__field, .select2-container--default .select2-search--inline .select2-search__field {
     border: 1px solid #ced4da;

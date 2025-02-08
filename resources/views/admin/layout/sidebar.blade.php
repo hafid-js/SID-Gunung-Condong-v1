@@ -896,7 +896,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="galeri" class="nav-link">
                         <i class="nav-icon fa fa-image"></i>
                         <p>
                          Galeri

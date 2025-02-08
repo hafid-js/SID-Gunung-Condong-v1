@@ -37,4 +37,13 @@ class WebController extends Controller
     public function ubahkomentar() {
         return view('admin.web.ubah_komentar');
     }
+    public function balaskomentar() {
+        return view('admin.web.balas_komentar');
+    }
+    public function galeri() {
+        return view('admin.web.galeri');
+    }
+    public function formgaleri() {
+        return view('admin.web.form_galeri');
+    }
 }
