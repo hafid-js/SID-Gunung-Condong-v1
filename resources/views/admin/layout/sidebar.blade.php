@@ -896,7 +896,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="galeri" class="nav-link">
+                    <a href="{{ url('galeri') }}" class="nav-link">
                         <i class="nav-icon fa fa-image"></i>
                         <p>
                          Galeri
@@ -906,7 +906,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ url('sosmed') }}" class="nav-link">
                         <i class="nav-icon fa fa-facebook"></i>
                         <p>
                           Media Sosial
@@ -916,7 +916,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ url('slider') }}" class="nav-link">
                         <i class="nav-icon fa fa-film"></i>
                         <p>
                           Slider

@@ -23,19 +23,22 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
 
     // menu pengaturan web
     Route::get('artikel','WebController@artikel');
-    Route::get('form-artikel','WebController@formartikel');
+    Route::get('artikel/form','WebController@formartikel');
     Route::get('kategori','WebController@kategori');
     Route::get('menu','WebController@menu');
-    Route::get('submenu','WebController@submenu');
-    Route::get('subkategori','WebController@subkategori');
+    Route::get('menu/sub','WebController@submenu');
+    Route::get('kategori/sub','WebController@subkategori');
     Route::get('widget','WebController@widget');
-    Route::get('form-widget','WebController@formwidget');
+    Route::get('widget/form','WebController@formwidget');
     Route::get('komentar','WebController@komentar');
-    Route::get('ubah-komentar','WebController@ubahkomentar');
-    Route::get('balas-komentar','WebController@balaskomentar');
+    Route::get('komentar/form','WebController@ubahkomentar');
+    Route::get('komentar/balas','WebController@balaskomentar');
     Route::get('galeri','WebController@galeri');
-    Route::get('form-galeri','WebController@formgaleri');
-
+    Route::get('galeri/form','WebController@formgaleri');
+    Route::get('galeri/sub','WebController@subgaleri');
+    Route::get('sosmed','WebController@sosmed');
+    Route::get('sosmed/form','WebController@formsosmed');
+    Route::get('slider','WebController@slider');
 });
 
 

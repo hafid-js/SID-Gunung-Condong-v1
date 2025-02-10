@@ -121,7 +121,7 @@
                                     <div class="col-sm-12 col-md-12">
                                         <div class="dt-buttons btn-group flex-wrap">
                                             <div class="margin">
-                                                <a href="{{ url('form-artikel') }}" id="btn-add"
+                                                <a href="{{ url('artikel/form') }}" id="btn-add"
                                                     class="btn btn-social mt-1 mb-1 btn-success btn-xs"><i
                                                         class="fa fa-plus "></i> Tambah Berita Desa</a>
                                                 <a href="#"
@@ -178,7 +178,7 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('form-artikel') }}" class="btn bg-orange btn-sm" title="Ubah Data">
+                                                            <a href="{{ url('artikel/form') }}" class="btn bg-orange btn-sm" title="Ubah Data">
                                                                 <i class="fa fa-edit text-white"></i>
                                                             </a>
                                                             <a href="#" data-dismiss="modal" class="btn bg-danger btn-sm" data-toggle="modal" data-target="#modal1" title="Hapus">

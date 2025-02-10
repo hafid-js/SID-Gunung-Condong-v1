@@ -43,6 +43,47 @@
     background-color: #d2d6de !important;
 }
 
+.btn-group-toggle .btn {
+    display: block;
+    width: 100%;
+  }
+
+.custom-file-label-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    box-shadow: none;
+}
+
+.custom-file-label-form::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: 2.25rem;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #fff;
+    content: "Browse";
+    background-color: #17a2b8;
+    border-left: inherit;
+    border-radius: 0 .25rem .25rem 0;
+}
+
 
 .select2-container--default .select2-dropdown .select2-search__field, .select2-container--default .select2-search--inline .select2-search__field {
     border: 1px solid #ced4da;

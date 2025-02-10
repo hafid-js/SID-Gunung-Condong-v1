@@ -16,7 +16,7 @@ class WebController extends Controller
     public function kategori() {
         return view('admin.web.kategori');
     }
-    public function subkategori() {
+    public function kategorisub() {
         return view('admin.web.sub_kategori');
     }
     public function widget() {
@@ -45,5 +45,17 @@ class WebController extends Controller
     }
     public function formgaleri() {
         return view('admin.web.form_galeri');
+    }
+    public function subgaleri() {
+        return view('admin.web.sub_galeri');
+    }
+    public function sosmed() {
+        return view('admin.web.media_sosial');
+    }
+    public function formsosmed() {
+        return view('admin.web.form_media_sosial');
+    }
+    public function slider() {
+        return view('admin.web.slider');
     }
 }

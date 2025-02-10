@@ -100,9 +100,9 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('ubah-komentar') }}" class="btn bg-orange btn-sm" title="Ubah">
+                                                            <a href="{{ url('komentar/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="{{ url('balas-komentar') }}" class="btn bg-info btn-sm" title="Rincian Sub Menu">
+                                                            <a href="{{ url('komentar/balas') }}" class="btn bg-info btn-sm" title="Rincian Sub Menu">
                                                                 <i class="fa fa-mail-forward"></i></a>
 
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">

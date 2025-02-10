@@ -98,7 +98,7 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('submenu') }}" class="btn bg-purple btn-sm" title="Rincian Sub Menu">
+                                                            <a href="{{ url('menu/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Menu">
                                                                 <i class="fa fa-list"></i></a>
                                                             <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>

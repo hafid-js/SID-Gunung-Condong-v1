@@ -99,7 +99,7 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
+                                                            <a href="{{ url('kategori/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
                                                             <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
@@ -116,7 +116,7 @@
                                                         </td>
                                                         <td>2</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
+                                                            <a href="{{ url('kategori/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
                                                             <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
@@ -135,7 +135,7 @@
                                                         </td>
                                                         <td>3</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('subkategori') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
+                                                            <a href="{{ url('kategori/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
                                                                 <i class="fa fa-list"></i></a>
                                                             <a href="#" data-toggle="modal" data-target="#modal1" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
@@ -188,35 +188,6 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
 
-        <!-- first Modal -->
-
-<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h6 class="modal-title" id="modal1Label">Ubah Kategori</h6>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="#">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nama Kategori</label>
-                                <input type="text" class="form-control form-control-sm" name="" id="">
-                            </div>
-                        </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-            <!-- /.modal -->
 
 
     </section>

@@ -51,11 +51,24 @@
                                                         class="fa fa-plus "></i> Tambah</a>
                                                 <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs"><i class="fa fa-trash"></i>
                                                     Hapus</a>
+                                                    <a href="{{ url('galeri') }}" title="Unduh Data"
+                                                    class="btn btn-social btn-info btn-xs visible-xs-block"
+                                                    data-title="Unduh Data"><span class="btn-label"><i
+                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
+                                                    Album</a>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-sm-12 col-md-6">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="box-header with-border">
+                                            <strong>Nama Album : KARNAVAL HARI KEMERDEKAAN</strong>
+                                        </div>
                                     </div>
                                 </div>
                                 <hr>
@@ -99,14 +112,10 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('galeri/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
-                                                                <i class="fa fa-list"></i></a>
                                                             <a href="{{ url('galeri/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Kunci" data-toggle="modal" data-target="#confirm-delete">
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" class="btn bg-gray btn-sm" title="Eject">
-                                                                    <i class="fa fa-eject" style="color: black;"></i></a>
                                                                 <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
@@ -120,14 +129,10 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('kategori/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
-                                                                <i class="fa fa-list"></i></a>
                                                             <a href="{{ url('galeri/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Kunci" data-toggle="modal" data-target="#confirm-delete">
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" class="btn bg-gray btn-sm" title="Eject">
-                                                                    <i class="fa fa-eject" style="color: black;"></i></a>
                                                                 <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>

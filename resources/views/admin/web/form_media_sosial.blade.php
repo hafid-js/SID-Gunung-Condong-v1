@@ -8,13 +8,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Pengaturan Album</h1>
+                    <h1>Media Sosial</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                        <li class="breadcrumb-item active">Daftar Album</li>
-                        <li class="breadcrumb-item active">Pengaturan Album</li>
+                        <li class="breadcrumb-item active">Media Sosial</li>
+                        <li class="breadcrumb-item active">Tambah Data</li>
                     </ol>
                 </div>
             </div>
@@ -30,11 +30,11 @@
                         <div class="card-header">
                             <div class="col-md-12">
                                 <div class="margin">
-                                    <a href="{{ url('galeri') }}" title="Unduh Data"
+                                    <a href="{{ url('sosmed') }}" title="Unduh Data"
                                         class="btn btn-social btn-info btn-xs visible-xs-block"
                                         data-title="Unduh Data"><span class="btn-label"><i
                                                 class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
-                                        Album</a>
+                                        Media Sosial</a>
                                 </div>
                             </div>
                         </div>
@@ -43,23 +43,21 @@
                         <form class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="pengirim" class="col-sm-2 col-form-label font-12">Pengirim</label>
+                                    <label for="nama" class="col-sm-2 col-form-label font-12">Nama</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                        <input type="text" class="form-control form-control-sm font-12" id="pengirim"
+                                        <input type="text" class="form-control form-control-sm font-12" id="nama"
                                             value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="jenis" class="col-sm-2 col-form-label font-12">Email</label>
+                                    <label for="link" class="col-sm-2 col-form-label font-12">Link</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                       <select name="" id="jenis" class="form-control form-control-sm">
-                                        <option value="">File</option>
-                                        <option value="">URL</option>
-                                       </select>
+                                        <input type="text" class="form-control form-control-sm font-12" id="link"
+                                            value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="exampleInputFile" class="col-sm-2 col-form-label font-12">Unggah Gambar</label>
+                                    <label for="exampleInputFile" class="col-sm-2 col-form-label font-12">Icon</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
                                     <div class="input-group">
                                         <div class="custom-file">
@@ -67,7 +65,15 @@
                                             <label class="custom-file-label-form" for="exampleInputFile"></label>
                                         </div>
                                     </div>
-                                    <strong>Batas maksimal pengunggahan berkas 2 MB.</strong>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="tampil" class="col-sm-2 col-form-label font-12">Tampil</label>
+                                    <div class="col-sm-10 col-lg-3 col-md-3">
+                                       <select name="" id="jenis" class="form-control form-control-sm">
+                                        <option value="">Tidak</option>
+                                        <option value="">Ya</option>
+                                       </select>
                                     </div>
                                 </div>
                             </div>
