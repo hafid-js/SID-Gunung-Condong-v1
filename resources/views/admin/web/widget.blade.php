@@ -86,7 +86,7 @@
                                                             <input type="checkbox" id="check-all" />
                                                         </th>
                                                         <th style="width:5%">No</th>
-                                                        <th style="width:5%">Aksi</th>
+                                                        <th style="width:5%" class="text-center">Aksi</th>
                                                         <th>Judul</th>
                                                         <th>Jenis Widget</th>
                                                         <th>Isi</th>

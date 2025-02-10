@@ -926,7 +926,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ url('teks-berjalan') }}" class="nav-link">
                         <i class="nav-icon fa fa-ellipsis-h"></i>
                         <p>
                           Teks Berjalan
@@ -946,7 +946,7 @@
                 </ul>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ url('setting-web') }}" class="nav-link">
                         <i class="nav-icon fa fa-gear"></i>
                         <p>
                           Pengaturan

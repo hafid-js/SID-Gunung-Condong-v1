@@ -83,7 +83,7 @@
                                                             <input type="checkbox" id="check-all" />
                                                         </th>
                                                         <th style="width:5%">No.</th>
-                                                        <th style="width:5%">Aksi</th>
+                                                        <th style="width:5%" class="text-center">Aksi</th>
                                                         <th>Pengirim</th>
                                                         <th>Isi Komentar</th>
                                                         <th>No. HP Pengirim</th>

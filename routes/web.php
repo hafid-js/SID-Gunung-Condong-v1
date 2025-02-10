@@ -39,6 +39,9 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('sosmed','WebController@sosmed');
     Route::get('sosmed/form','WebController@formsosmed');
     Route::get('slider','WebController@slider');
+    Route::get('teks-berjalan','WebController@teksberjalan');
+    Route::get('teks-berjalan/form','WebController@formteksberjalan');
+    Route::get('setting-web','WebController@settingweb');
 });
 
 

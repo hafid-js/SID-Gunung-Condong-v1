@@ -58,4 +58,13 @@ class WebController extends Controller
     public function slider() {
         return view('admin.web.slider');
     }
+    public function teksberjalan() {
+        return view('admin.web.teks_berjalan');
+    }
+    public function formteksberjalan() {
+        return view('admin.web.form_teks_berjalan');
+    }
+    public function settingweb() {
+        return view('admin.web.setting_web');
+    }
 }

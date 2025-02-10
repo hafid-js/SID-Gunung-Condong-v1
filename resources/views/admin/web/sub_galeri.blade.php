@@ -99,7 +99,7 @@
                                                             <input type="checkbox" id="check-all" />
                                                         </th>
                                                         <th style="width:5%">NO</th>
-                                                        <th style="width:5%">Aksi</th>
+                                                        <th style="width:5%" class="text-center">Aksi</th>
                                                         <th>Nama Album</th>
                                                         <th>Aktif</th>
                                                         <th>Dimuat Pada</th>

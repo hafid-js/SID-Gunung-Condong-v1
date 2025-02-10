@@ -89,7 +89,7 @@
                                                             <input type="checkbox" id="check-all" />
                                                         </th>
                                                         <th style="width:5%">NO</th>
-                                                        <th style="width:5%">AKSI</th>
+                                                        <th style="width:5%" class="text-center">Aksi</th>
                                                         <th>NAMA MENU</th>
                                                         <th>LINK</th>
                                                     </tr>
