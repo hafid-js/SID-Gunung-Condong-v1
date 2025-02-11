@@ -8,7 +8,7 @@
          <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h1>Teks Berjalan</h1>
+                    <h5 class="m-0" style="font-weight: 400;">Teks Berjalan</h5>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">
@@ -23,6 +23,7 @@
 
     <!-- Main content -->
     <section class="content">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
                 <div class="card-body p-0">
@@ -105,6 +106,7 @@
                 <!-- /.card -->
 
             </div>
+        </div>
         </div>
         <!-- /.col-->
 </div>

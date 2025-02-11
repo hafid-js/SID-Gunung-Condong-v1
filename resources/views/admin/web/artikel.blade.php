@@ -17,25 +17,22 @@
                     </ol>
                 </div>
             </div>
-            <div class="row" style="display: none;" id="tampilBerhasil">
-                <div id="toastsContainerTopRight" class="fixed">
-                    <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-header"><strong class="mr-auto">
-                                Berhasil</strong> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                        </div>
-                        <div class="toast-body">Berhasil Ubah Status Komentar</div>
-                    </div>
-                </div>
-            </div>
         </div><!-- /.container-fluid -->
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content rem85">
         <div class="container-fluid">
             <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                    <div style="display: none;" id="tampilBerhasil">
+                        <div class="alert alert-success alert-dismissible">
+                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                           <h5><i class="icon fas fa-check"></i> Alert!</h5>
+                           Success alert preview. This alert is dismissable.
+                         </div>
+                     </div>
+                </div>
                 <div class="col-md-3">
                         <a href="#" class="btn btn-lightblue btn-block mb-3 text-white">Semua Artikel Dinamis</a>
 
@@ -145,6 +142,7 @@
                                                 <option>Pilih Status</option>
                                                 <option>Aktif</option>
                                                 <option>Tidak Aktif</option>
+                                                <option>Belum Dibaca</option>
                                             </select>
                                         </div>
                                     </div>
@@ -158,7 +156,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="card-body table-responsive p-0 ">
-                                            <table class="table table-hover table-bordered text-nowrap ">
+                                            <table class="table table-hover table-bordered table-sm text-nowrap" >
                                                 <thead>
                                                     <tr>
                                                         <th style="width:5%">
@@ -291,7 +289,7 @@
 <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body">
+            <div>
                 <div class="modal-header">
                     <h6 class="modal-title" id="modal2Label">Ubah Kategori</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -299,7 +297,8 @@
                     </button>
                 </div>
                 <form action="#">
-                    <div class="card card-outline card-danger">
+                    <div class="modal-body">
+                        <div class="card card-outline card-danger">
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>Nama Kategori</label>
@@ -320,6 +319,7 @@
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                    </div>
                     </div>
                 </form>
             </div>

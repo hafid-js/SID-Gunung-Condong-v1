@@ -40,7 +40,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card card-primary card-outline">
                         <!-- /.card-header -->
-                        <div class="card-body">
+                        <div class="card-body rem85">
                             <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                                 <div class="row">
                                     <div class="box-header">

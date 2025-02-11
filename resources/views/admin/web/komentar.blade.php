@@ -40,7 +40,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card card-primary card-outline">
                         <!-- /.card-header -->
-                        <div class="card-body">
+                        <div class="card-body rem85">
                             <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
@@ -76,7 +76,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="card-body table-responsive p-0 ">
-                                            <table class="table table-hover table-bordered text-nowrap ">
+                                            <table class="table table-hover table-bordered table-sm text-nowrap ">
                                                 <thead>
                                                     <tr>
                                                         <th style="width:5%">

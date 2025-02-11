@@ -8,7 +8,7 @@
          <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h1>Form Artikel</h1>
+                    <h5 class="m-0" style="font-weight: 400;">Form Artikel</h5>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">
@@ -23,9 +23,11 @@
 
     <!-- Main content -->
     <section class="content">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
                 <div class="card card-outline card-info">
+                   <div class="form-group row">
                     <div class="card-header">
                         <div class="col-md-12">
                             <div class="margin">
@@ -35,7 +37,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
+                   </div>
+                  <div class="form-group row">
+                      <div class="card-body">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="judulArtikel">Judul Artikel</label>
@@ -50,6 +54,7 @@
                             </div>
                         </div>
                     </div>
+                  </div>
                 </div>
             </div>
             <!-- /.col-->
@@ -60,7 +65,7 @@
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                <i class="fas fa-minus"></i>
+                                <i class="fas fa-plus"></i>
                             </button>
                         </div>
                     </div>
@@ -117,8 +122,8 @@
                     </div>
                     <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                         <div class="form-group">
-                            <label style="font-size: 12px;" for="exampleInputFile">Posisi</label>
-                            <select class="form-control form-control-sm select2" style="width: 100%;">
+                            <label for="exampleInputFile">Posisi</label>
+                            <select class="form-control select2" style="width: 100%;">
                                 <option selected>Konten + Sidebar Kanan</option>
                                 <option>Konten + Sidebar Kiri</option>
                                 <option>Konten Lebar Penuh</option>
@@ -154,21 +159,19 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="namaDokumen">Nama Dokumen</label>
                             <input type="text" class="form-control form-control-sm" id="namaDokumen">
                         </div>
                         <div class="form-group">
-                            <label>Tanggal Posting</label>
-                            <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                <div class="input-group-append" data-target="#reservationdate"
-                                    data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            <label for="id_start_datetime">Tanggal Posting</label>
+                            <div class="input-group date" id="id_1">
+                                <input type="text" class="form-control" required/>
+                                <div class="input-group-addon input-group-append">
+                                    <div class="input-group-text">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
                                 </div>
-                                <input type="text" class="form-control datetimepicker-input"
-                                    data-target="#reservationdate" />
-
                             </div>
                         </div>
                     </div>
@@ -177,10 +180,10 @@
                 <!-- /.card -->
 
                 <div class="card card-outline card-info">
-                    <div class="card-body">
+                    <div class="card-body mb-min-20">
                         <div class="form-group">
                             <button type="button" class="btn btn-xs btn-danger">
-                                <span class="btn-label"><i class="fa fa-times"></i></span>Batal</button>
+                                <span class="btn-label"><i class="fa fa-times"></i></span> Batal</button>
                             <button type="submit" class="btn btn-xs btn-info float-right"><span class="btn-label"><i
                                         class="fa fa-check"></i></span> Simpan</button>
                         </div>
@@ -189,6 +192,7 @@
                 <!-- /.card-body -->
             </div>
         </div>
+    </div>
 </div>
 
 <!-- ./row -->

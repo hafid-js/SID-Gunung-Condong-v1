@@ -8,7 +8,7 @@
          <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h1>Pengaturan Album</h1>
+                    <h5 class="m-0" style="font-weight: 400;">Pengaturan Album</h5>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">
@@ -23,18 +23,21 @@
 
     <!-- Main content -->
     <section class="content">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
                 <div class="card-body p-0">
                     <div class="card card-outline card-info">
                         <div class="card-header">
-                            <div class="col-md-12">
-                                <div class="margin">
-                                    <a href="{{ url('galeri') }}" title="Unduh Data"
-                                        class="btn btn-social btn-info btn-xs visible-xs-block"
-                                        data-title="Unduh Data"><span class="btn-label"><i
-                                                class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
-                                        Album</a>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="margin">
+                                        <a href="{{ url('galeri') }}" title="Unduh Data"
+                                            class="btn btn-social btn-info btn-xs visible-xs-block"
+                                            data-title="Unduh Data"><span class="btn-label"><i
+                                                    class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
+                                            Album</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -43,14 +46,14 @@
                         <form class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="pengirim" class="col-sm-2 col-form-label font-12">Pengirim</label>
+                                    <label for="namaAlbum" class="col-sm-2 col-form-label font-12">Nama Album</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                        <input type="text" class="form-control form-control-sm font-12" id="pengirim"
+                                        <input type="text" class="form-control form-control-sm font-12" id="namaAlbum"
                                             value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="jenis" class="col-sm-2 col-form-label font-12">Email</label>
+                                    <label for="jenis" class="col-sm-2 col-form-label font-12">Jenis</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
                                        <select name="" id="jenis" class="form-control form-control-sm">
                                         <option value="">File</option>
@@ -67,7 +70,7 @@
                                             <label class="custom-file-label-form" for="exampleInputFile"></label>
                                         </div>
                                     </div>
-                                    <strong>Batas maksimal pengunggahan berkas 2 MB.</strong>
+                                    <code>Batas maksimal pengunggahan berkas 2 MB.</code>
                                     </div>
                                 </div>
                             </div>
@@ -85,6 +88,7 @@
 
             </div>
         </div>
+    </div>
         <!-- /.col-->
 </div>
 </div>
