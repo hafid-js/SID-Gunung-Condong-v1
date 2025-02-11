@@ -4,13 +4,13 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
+    <section class="content-header mt-min-20">
+         <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <h1>Widget</h1>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
                         <li class="breadcrumb-item active">Widget</li>
