@@ -47,7 +47,7 @@
                                         <div class="dt-buttons btn-group flex-wrap">
                                             <div class="margin">
                                                 <a href="#" data-dismiss="modal" id="btn-add"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs" data-toggle="modal" data-target="#modal2" title="Tambah Kategori"><i
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs" data-toggle="modal" data-target="#modal3" title="Tambah Kategori"><i
                                                         class="fa fa-plus "></i> Tambah</a>
                                                 <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs" data-toggle="modal" data-target="#modal1" title="Hapus Sub Kategori"><i class="fa fa-trash"></i>
                                                     Hapus</a>
@@ -108,7 +108,7 @@
                                                         </td>
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="#" class="btn bg-orange btn-sm" data-toggle="modal" data-target="#modal3" title="Ubah Sub Kategori">
+                                                            <a href="#" class="btn bg-orange btn-sm" data-toggle="modal" data-target="#modal2" title="Ubah Sub Kategori">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                                 <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Aktifkan" data-toggle="modal" data-target="#confirm-delete">
                                                                     <i class="fa fa-lock"></i></a>
@@ -125,7 +125,7 @@
                                                         </td>
                                                         <td>2</td>
                                                         <td class="aksi">
-                                                            <a href="#" class="btn bg-orange btn-sm" data-toggle="modal" data-target="#modal3" title="Ubah Sub Kategori">
+                                                            <a href="#" class="btn bg-orange btn-sm" data-toggle="modal" data-target="#modal2" title="Ubah Sub Kategori">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Aktifkan" data-toggle="modal" data-target="#confirm-delete">
                                                                 <i class="fa fa-lock"></i></a>
@@ -217,12 +217,12 @@
     <!-- /.content -->
 </div>
 
-<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="modal-header">
-                    <h6 class="modal-title" id="modal2Label">Tambah Sub Kategori</h6>
+                    <h6 class="modal-title" id="modal1Label">Tambah Sub Kategori</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -246,28 +246,51 @@
 
 <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <h6 class="modal-title" id="modal3Label">Ubah Sub Kategori</h6>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="#">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nama Sub Kategori</label>
-                                <input type="text" value="Berita Lokal" class="form-control form-control-sm" name="" id="">
-                            </div>
-                        </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                    </div>
-                </form>
+        <div class="modal-content rem85">
+            <div class="modal-header">
+                <h6 class="modal-title" id="modal3Label">Tambah Sub Kategori</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <form action="#">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nama">Nama Kategori</label>
+                        <input type="text" class="form-control form-control-sm" id="nama">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                </div>
         </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rem85">
+            <div class="modal-header">
+                <h6 class="modal-title" id="modal2Label">Ubah Sub Kategori</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="#">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nama">Nama Kategori</label>
+                        <input type="text" class="form-control form-control-sm" value="Berita Desa" id="nama">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                </div>
+        </div>
+        </form>
     </div>
 </div>
 

@@ -88,4 +88,12 @@ class WebController extends Controller
         Session::put('page','setting-web');
         return view('admin.web.setting_web');
     }
+    public function pembangunan() {
+        Session::put('page','pembangunan');
+        return view('admin.web.pembangunan');
+    }
+    public function formpembangunan() {
+        Session::put('page','form-pembangunan');
+        return view('admin.web.form_pembangunan');
+    }
 }

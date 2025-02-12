@@ -616,8 +616,22 @@
                         </li>
                     </ul>
                 </li>
+
+
+                    @if (
+                        Session::get('page') == 'pembangunan'
+                    )
+                                        @php
+                                            $active = "active";
+                                            $callout = "callout callout-icon-primary";
+                                         @endphp
+                    @else
+                                    @php $active = "";
+                                        $callout = "";
+                                      @endphp
+                    @endif
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ url('pembangunan') }}" class="nav-link {{ $active }} {{ $callout }}">
                         <i class="nav-icon fas fa-university"></i>
                         <p>
                             Pembangunan
@@ -818,29 +832,30 @@
                 </li>
 
                 @if (
-                        Session::get('page') == 'artikel' ||
-                        Session::get('page') == 'form-artikel' ||
-                        Session::get('page') == 'kategori' ||
-                        Session::get('page') == 'sub-kategori' ||
-                        Session::get('page') == 'widget' ||
-                        Session::get('page') == 'form-widget' ||
-                        Session::get('page') == 'sinergi-program' ||
-                        Session::get('page') == 'menu' ||
-                        Session::get('page') == 'sub-menu' ||
-                        Session::get('page') == 'komentar' ||
-                        Session::get('page') == 'ubah-komentar' ||
-                        Session::get('page') == 'balas-komentar' ||
-                        Session::get('page') == 'tema' ||
-                        Session::get('page') == 'galeri' ||
-                        Session::get('page') == 'form-galeri' ||
-                        Session::get('page') == 'sub-galeri' ||
-                        Session::get('page') == 'sosmed' ||
-                        Session::get('page') == 'form-sosmed' ||
-                        Session::get('page') == 'slider' ||
-                        Session::get('page') == 'teks-berjalan' ||
-                        Session::get('page') == 'form-teks-berjalan' ||
-                        Session::get('page') == 'pengunjung'
-                    )
+                    Session::get('page') == 'artikel' ||
+                    Session::get('page') == 'form-artikel' ||
+                    Session::get('page') == 'kategori' ||
+                    Session::get('page') == 'sub-kategori' ||
+                    Session::get('page') == 'widget' ||
+                    Session::get('page') == 'form-widget' ||
+                    Session::get('page') == 'sinergi-program' ||
+                    Session::get('page') == 'menu' ||
+                    Session::get('page') == 'sub-menu' ||
+                    Session::get('page') == 'komentar' ||
+                    Session::get('page') == 'ubah-komentar' ||
+                    Session::get('page') == 'balas-komentar' ||
+                    Session::get('page') == 'tema' ||
+                    Session::get('page') == 'galeri' ||
+                    Session::get('page') == 'form-galeri' ||
+                    Session::get('page') == 'sub-galeri' ||
+                    Session::get('page') == 'sosmed' ||
+                    Session::get('page') == 'form-sosmed' ||
+                    Session::get('page') == 'slider' ||
+                    Session::get('page') == 'teks-berjalan' ||
+                    Session::get('page') == 'form-teks-berjalan' ||
+                    Session::get('page') == 'pengunjung' ||
+                    Session::get('page') == 'setting-web'
+                )
                                     @php
                                         $open = "menu-is-opening menu-open"
                                        @endphp
@@ -858,9 +873,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'artikel' ||
-                                Session::get('page') == 'form-artikel'
-                            )
+                            Session::get('page') == 'artikel' ||
+                            Session::get('page') == 'form-artikel'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout-icon-primary";
@@ -882,9 +897,9 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'kategori' ||
-                                Session::get('page') == 'sub-kategori'
-                            )
+                            Session::get('page') == 'kategori' ||
+                            Session::get('page') == 'sub-kategori'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout callout-icon-primary";
@@ -906,9 +921,9 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'widget' ||
-                                Session::get('page') == 'form-widget'
-                            )
+                            Session::get('page') == 'widget' ||
+                            Session::get('page') == 'form-widget'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout callout-icon-primary";
@@ -940,9 +955,9 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'menu' ||
-                                Session::get('page') == 'sub-menu'
-                            )
+                            Session::get('page') == 'menu' ||
+                            Session::get('page') == 'sub-menu'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout callout-icon-primary";
@@ -964,10 +979,10 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'komentar' ||
-                                Session::get('page') == 'ubah-komentar' ||
-                                Session::get('page') == 'balas-komentar'
-                            )
+                            Session::get('page') == 'komentar' ||
+                            Session::get('page') == 'ubah-komentar' ||
+                            Session::get('page') == 'balas-komentar'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout callout-icon-primary";
@@ -1020,9 +1035,9 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'sosmed' ||
-                                Session::get('page') == 'form-sosmed'
-                            )
+                            Session::get('page') == 'sosmed' ||
+                            Session::get('page') == 'form-sosmed'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout callout-icon-primary";
@@ -1065,9 +1080,9 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         @if (
-                                Session::get('page') == 'teks-berjalan' ||
-                                Session::get('page') == 'form-teks-berjalan'
-                            )
+                            Session::get('page') == 'teks-berjalan' ||
+                            Session::get('page') == 'form-teks-berjalan'
+                        )
                                                     @php
                                                         $active = "active";
                                                         $callout = "callout callout-icon-primary";

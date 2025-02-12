@@ -21,7 +21,7 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('/',[DashboardController::class,'index']);
 
 
-    // menu pengaturan web
+    // menu admin web
     Route::get('artikel','WebController@artikel');
     Route::get('artikel/form','WebController@formartikel');
     Route::get('kategori','WebController@kategori');
@@ -42,6 +42,11 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('teks-berjalan','WebController@teksberjalan');
     Route::get('teks-berjalan/form','WebController@formteksberjalan');
     Route::get('setting-web','WebController@settingweb');
+
+
+    //menu pembangunan
+    Route::get('pembangunan','WebController@pembangunan');
+    Route::get('pembangunan/form','WebController@formpembangunan');
 });
 
 
