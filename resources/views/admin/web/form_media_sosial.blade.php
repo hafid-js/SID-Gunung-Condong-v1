@@ -8,7 +8,7 @@
          <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h5 class="m-0" style="font-weight: 400;">Media Sosial</h5>
+                    <h4 class="m-0" style="font-weight: 400;">Media Sosial</h4>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">
@@ -44,21 +44,21 @@
                         <form class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="nama" class="col-sm-2 col-form-label font-12">Nama</label>
+                                    <label for="nama" class="col-sm-2 col-form-label font-13">Nama</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                        <input type="text" class="form-control form-control-sm font-12" id="nama"
+                                        <input type="text" class="form-control form-control-sm font-13" id="nama"
                                             value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="link" class="col-sm-2 col-form-label font-12">Link</label>
+                                    <label for="link" class="col-sm-2 col-form-label font-13">Link</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                        <input type="text" class="form-control form-control-sm font-12" id="link"
+                                        <input type="text" class="form-control form-control-sm font-13" id="link"
                                             value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="exampleInputFile" class="col-sm-2 col-form-label font-12">Icon</label>
+                                    <label for="exampleInputFile" class="col-sm-2 col-form-label font-13">Icon</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
                                     <div class="input-group">
                                         <div class="custom-file">
@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="tampil" class="col-sm-2 col-form-label font-12">Tampil</label>
+                                    <label for="tampil" class="col-sm-2 col-form-label font-13">Tampil</label>
                                     <div class="col-sm-10 col-lg-3 col-md-3">
                                        <select name="" id="jenis" class="form-control form-control-sm">
                                         <option value="">Tidak</option>

@@ -8,7 +8,7 @@
          <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h5 class="m-0" style="font-weight: 400;">Sub Kategori</h5>
+                    <h4 class="m-0" style="font-weight: 400;">Sub Kategori</h4>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">

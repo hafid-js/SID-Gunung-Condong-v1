@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .btn-lightblue {
     background-color: #337ab7;
 }
@@ -20,7 +24,7 @@
 }
 
 .mb-min-20 {
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 .mt-20 {
@@ -199,8 +203,15 @@ select.form-control-sm~.select2-container--default {
     font-size: 12px;
 }
 
+
 td.aksi {
     width: 1%;
     white-space: nowrap;
     text-align: left;
+}
+
+/* radio button modif */
+#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
 }
