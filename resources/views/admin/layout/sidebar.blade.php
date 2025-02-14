@@ -71,7 +71,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
+                            <a href="{{ url('identitas-desa') }}" class="nav-link">
                                 <i class="nav-icon fa fa-id-card"></i>
                                 <p>
                                     Identitas Desa

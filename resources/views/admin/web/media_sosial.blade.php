@@ -50,7 +50,7 @@
                                                 <a href="{{ url('sosmed/form') }}"
                                                     class="btn btn-social mt-1 mb-1 btn-success btn-xs" title="Tambah Kategori"><i
                                                         class="fa fa-plus "></i> Tambah</a>
-                                                <a href="#"  data-href="#" data-target="#modal1" title="Hapus" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger mt-1 mb-1 btn-success btn-xs"><i class="fa fa-trash"></i>
+                                                <a href="#"  data-href="#" data-target="#modal1" title="Hapus" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger mt-1 mb-1 btn-xs"><i class="fa fa-trash"></i>
                                                     Hapus</a>
                                             </div>
                                         </div>

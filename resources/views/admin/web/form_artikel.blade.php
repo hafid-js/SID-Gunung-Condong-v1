@@ -154,7 +154,7 @@
                             <label for="exampleInputFile">Dokumen Lampiran</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="input-group input-group-sm" id="exampleInputFile">
+                                    <input type="file" class="input-group input-group" id="exampleInputFile">
                                     <label class="custom-file-label" for="exampleInputFile"></label>
                                 </div>
                             </div>

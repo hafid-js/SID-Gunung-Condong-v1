@@ -6,7 +6,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header mt-min-20">
             <div class="container-fluid">
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <h4 class="m-0" style="font-weight: 400;">Pembangunan</h4>
                     </div>
@@ -181,10 +181,10 @@
                                             <div class="col-sm-10 col-lg-10 col-md-10">
                                                 <div class="input-group input-group-sm">
                                                     <div id="radioBtn" class="btn-group">
-                                                        <a class="btn btn-info btn-sm active"
+                                                        <a class="btn btn-info btn-xs active"
                                                             data-toggle="lokasiPembangunan" data-title="Pilih Lokasi"
                                                             id="pilihLokasi">Pilih Lokasi</a>
-                                                        <a class="btn btn-info btn-sm notActive"
+                                                        <a class="btn btn-info btn-xs notActive"
                                                             data-toggle="lokasiPembangunan" data-title="Tulis Manual"
                                                             id="tulisManual">Tulis Manual</a>
                                                     </div>

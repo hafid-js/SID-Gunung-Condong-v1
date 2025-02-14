@@ -47,6 +47,14 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     //menu pembangunan
     Route::get('pembangunan','WebController@pembangunan');
     Route::get('pembangunan/form','WebController@formpembangunan');
+    Route::get('pembangunan/dokumentasi','WebController@dokumentasipembangunan');
+    Route::get('pembangunan/dokumentasi/form','WebController@formdokumentasipembangunan');
+
+    // maps
+    Route::get('maps','WebController@maps');
+
+    // info desa
+    Route::get('identitas-desa','InfoDesaController@identitasdesa');
 });
 
 

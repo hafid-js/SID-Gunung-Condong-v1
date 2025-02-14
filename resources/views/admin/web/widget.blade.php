@@ -60,7 +60,7 @@
                                 </div>
                                 <hr>
                                 <div class="row justify-content-between">
-                                    <div class="col-sm-3 col-md-2 col-lg-3">
+                                    <div class="col-sm-3 col-md-2 col-lg-1">
                                         <div class="form-group">
                                             <select class="form-control form-control-sm">
                                                 <option>Semua</option>
@@ -76,12 +76,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="card-body table-responsive p-0 ">
-                                            <table class="table table-hover table-bordered table-sm text-nowrap ">
-                                                <thead>
-                                                    <tr>
+                                <div class="card">
+                                    <div class="card-body table-responsive p-0">
+                                        <table class="table table-hover table-bordered text-nowrap">
+                                            <thead>
+                                                <tr>
                                                         <th style="width:5%">
                                                             <input type="checkbox" id="check-all" />
                                                         </th>
@@ -141,7 +140,6 @@
 
                                         </div>
                                     </div>
-                                </div>
                                 <div class="row mt-2">
                                     <div class="col-sm-12 col-md-5">
                                         <div class="dataTables_info" id="example1_info" role="status"
