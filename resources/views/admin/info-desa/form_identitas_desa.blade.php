@@ -13,7 +13,8 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item active">Identitas Desa</li>
+                            <li class="breadcrumb-item">Identitas Desa</li>
+                            <li class="breadcrumb-item active">Ubah Data</li>
                         </ol>
                     </div>
                 </div>
@@ -24,245 +25,245 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-lg-12">
+                    <div class="col-md-4 col-sm-12 col-lg-3">
                         <div class="card-body p-0">
                             <div class="card card-outline card-info">
-                                <div class="form-group">
-                                    <div class="card-header">
-                                        <div class="col-md-12">
+                                <div class="form-group mt-3">
+                                    <div class="text-center">
+                                        <img class="img-responsive img-circle profile-user-img"
+                                            src="https://berputar.opendesa.id/assets/files/logo/opensid_logo.png"
+                                            style="width: 120px;height:120px;" alt="Photo">
+                                    </div>
+                                </div>
+                                <label class="text-center">Lambang Desa</label>
+                                <code class="text-center">(Kosongkan, jika logo tidak berubah)</code>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="">Dimensi logo (persegi)</label>
+                                        <input type="text" class="form-control form-control-sm font-12"
+                                            placeholder="Kosongkan jika ingin dimensi bawaan">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="input-group" id="exampleInputFile">
+                                            <label class="custom-file-label " for="exampleInputFile"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="card card-outline card-info">
+                                <div class="form-group mt-3">
+                                    <div class="text-center p-3">
+                                        <img class="img-fluid pad"
+                                            src="https://www.purworejo24.com/wp-content/uploads/2022/07/kirab-budaya-merti-desa-di-Desa-Gunung-Condong-Kecamatan-Bruno-Senin-18-Juli-2022.jpg"
+                                            style="width: 600px;height: auto;" alt="Photo">
+                                    </div>
+                                </div>
+                                <label class="text-center">Lambang Desa</label>
+                                <code class="text-center">(Kosongkan, jika logo tidak berubah)</code>
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="input-group" id="exampleInputFile">
+                                            <label class="custom-file-label " for="exampleInputFile"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12 col-lg-9">
+                        <div class="card-body p-0">
+                            <div class="card card-outline card-info">
+                                <div class="card-header">
+                                    <div class="form-group row mb-0">
+                                        <div class="col-sm-12">
                                             <div class="margin">
-                                                <a href="{{ url('identitas-desa/form') }}" title="Ubah Data Desa"
-                                                    class="btn btn-warning btn-xs visible-xs-block"
-                                                    data-title="Ubah Data Desa"><span class="btn-label"><i
-                                                            class="fa fa-arrow-circle-left"></i></span> Ubah Data Desa</a>
-                                                <a href="{{ url('identitas-desa/lokasi') }}" title="Lokasi Kantor Desa"
-                                                    class="btn bg-purple btn-xs visible-xs-block"
-                                                    data-title="Lokasi Kantor Desa"><span class="btn-label"><i
-                                                            class="fa fa-map-marker"></i></span> Ubah Data Desa</a>
-                                                <a href="{{ url('identitas-desa/peta') }}" title="Peta Wilayah Desa"
-                                                    class="btn btn-info btn-xs visible-xs-block"
-                                                    data-title="Peta Wilayah Desa"><span class="btn-label"><i
-                                                            class="fa fa-arrow-circle-left"></i></span> Peta Wilayah
-                                                    Desa</a>
+                                                <a href="{{ url('identitas-desa') }}" title="Unduh Data"
+                                                    class="btn btn-social btn-info btn-xs visible-xs-block"><span
+                                                        class="btn-label"><i class="fa fa-arrow-circle-left"></i></span>
+                                                    Kembali
+                                                    ke Data Identitas Desa</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                    <img class="img-fluid pad" src="{{ url('admin/images/photo2.png') }}"
-                                        style="width: 600px;height: auto;" alt="Photo">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="namaDesa" class="font-12 col-sm-2">Nama Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-9">
+                                            <select name="" id="namaDesa" class="form-control form-control-sm select2"
+                                                style="width:100%;">
+                                                <option value="">Gunung Condong - Bruno - PURWOREJO - JAWA TENGAH</option>
+                                                <option value="">Kemranggen - Bruno - PURWOREJO - JAWA TENGAH</option>
+                                                <option value="">Karanggedang - Bruno - PURWOREJO - JAWA TENGAH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kodeDesa" class="col-sm-2 col-form-label font-12">Kode Desa</label>
+                                        <div class="col-sm-10 col-lg-2 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kodeDesa"
+                                                disabled value="11.01.01.2003" placeholder="Kode Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kodePosDesa" class="col-sm-2 col-form-label font-12">Kode Pos
+                                            Desa</label>
+                                        <div class="col-sm-10 col-lg-2 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kodePosDesa"
+                                                value="54261" placeholder="Kode Pos Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kepalaDesa" class="col-sm-2 col-form-label font-12">Kepala Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-9">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kepalaDesa"
+                                                value="Agus Sulistyo" disabled placeholder="Kepala Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="nipKades" class="col-sm-2 col-form-label font-12">NIP Kepala
+                                            Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="nipKades"
+                                                disabled placeholder="NIP Kepala Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="alamat" class="col-sm-2 col-form-label font-12">Alamat Kantor
+                                            Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <textarea class="form-control font-12" rows="3"
+                                                style="height:100%;">Jl.Kemranggen - Gn.Condong Km.8</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-sm-2 col-form-label font-12">E-Mail Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="email"
+                                                placeholder="Email Desa" value="pemdes@gunungcondong.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="telepon" class="col-sm-2 col-form-label font-12">Nomor Telepon
+                                            Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="telepon"
+                                                value="" placeholder="Nomor Telepon Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="ponsel" class="col-sm-2 col-form-label font-12">Nomor Ponsel
+                                            Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="ponsel"
+                                                value="082377463844" placeholder="Nomor Ponsel Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="website" class="col-sm-2 col-form-label font-12">Website Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="website"
+                                                value="www.gunungcondong.com" placeholder="Website Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kecamatan" class="col-sm-2 col-form-label font-12">Nama
+                                            Kecamatan</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kecamatan"
+                                                value="Bruno" disabled placeholder="Nama Kecamatan">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kode" class="col-sm-2 col-form-label font-12">Kode Kecamatan</label>
+                                        <div class="col-sm-10 col-lg-2 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kode"
+                                                value="54261" disabled placeholder="Kode Kecamatan">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="camat" class="col-sm-2 col-form-label font-12">Nama Camat</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="camat"
+                                                value="Agus Budianto.SH" placeholder="Nama Camat">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="nipCamat" class="col-sm-2 col-form-label font-12">NIP Camat</label>
+                                        <div class="col-sm-10 col-lg-4 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="nipCamat"
+                                                value="" placeholder="NIP Camat">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kab" class="col-sm-2 col-form-label font-12">Nama Kabupaten</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kab"
+                                                value="Purworejo" disabled placeholder="Nama Kabupaten">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kodeKab" class="col-sm-2 col-form-label font-12">Kode Kabupaten</label>
+                                        <div class="col-sm-10 col-lg-2 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kodeKab"
+                                                value="5319" disabled placeholder="Kode Kabupaten">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="prov" class="col-sm-2 col-form-label font-12">Nama Provinsi</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="prov"
+                                                value="Jawa Tengah" disabled placeholder="Nama Provinsi">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="kodeProv" class="col-sm-2 col-form-label font-12">Kode Provinsi</label>
+                                        <div class="col-sm-10 col-lg-2 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="kodeProv"
+                                                value="53" disabled placeholder="Kode Provinsi">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <h6><strong>Kontak Pemberitahuan</strong></h6>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="perDes" class="col-sm-2 col-form-label font-12">Nama Perangkat
+                                            Desa</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="perDes"
+                                                value="Hafid" placeholder="Nama Perangkat Desa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="noHp" class="col-sm-2 col-form-label font-12">No. HP/WA</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="noHp"
+                                                value="082377656433" placeholder="No. HP/WA">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="jabatan" class="col-sm-2 col-form-label font-12">Jabatan</label>
+                                        <div class="col-sm-10 col-lg-9 col-md-4">
+                                            <input type="text" class="form-control form-control-sm font-12" id="jabatan"
+                                                value="Sekretaris" placeholder="Jabatan">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body mt-3">
-                                    <table class="table table-sm table-striped table-bordered"
-                                        style="border: 0px  #f4f4f4;">
-                                        <thead>
-                                        </thead>
-                                        <tbody class="font-12">
-                                            <tr>
-                                                <th colspan="3" class="subtitle_head p-2">
-                                                    <strong>DESA</strong>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Gunung Condong</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Kode Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>53.19.12.2009</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Kode Pos Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>54261</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Kepala Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Aulia</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    NIP Kepala Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Alamat Kantor Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Jl.Kemranggen - Gn.Condong Km.17</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    E-mail Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>pemdesa@gunungcondong.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nomor Telepon Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nomor Ponsel Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>082377657810</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Website Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>www.gunungcondong.com</td>
-                                            </tr>
-                                            <tr>
-                                                <th colspan="3" class="subtitle_head p-2">
-                                                    <strong>KECAMATAN</strong>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Kecamatan</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Bruno</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Kode Kecamatan</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>54261</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Camat</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Saprudin.SH</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    NIP Camat</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <th colspan="3" class="subtitle_head p-2">
-                                                    <strong>KABUPATEN</strong>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Kabupaten</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Purworejo</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Kode Kabupaten</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>53.19</td>
-                                            </tr>
-                                            <tr>
-                                                <th colspan="3" class="subtitle_head p-2">
-                                                    <strong>PROVINSI</strong>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Provinsi</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Jawa Tengah</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Kode Provinsi</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>53</td>
-                                            </tr><tr>
-                                                <th colspan="3" class="subtitle_head p-2">
-                                                    <strong>KONTAK PEMBERITAHUAN</strong>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Nama Perangkat Desa</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Widya Nursita</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    No. HP/WA</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>082210587313</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2" style="width: 20%;">
-                                                    Jabatan</td>
-                                                <td class="p-2" style="width: 1%;">
-                                                    :
-                                                </td>
-                                                <td>Sekretaris</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+
+                                <div class="card-footer">
+                                    <button class="btn btn-danger">Batal</button>
+                                    <button type="submit" class="btn btn-info float-right">Simpan</button>
+                                  </div>
                             </div>
-                            <!-- /.card -->
                         </div>
                     </div>
                 </div>
-
-                <!-- /.col-->
             </div>
-
-            <!-- ./row -->
         </section>
         <!-- /.content -->
     </div>

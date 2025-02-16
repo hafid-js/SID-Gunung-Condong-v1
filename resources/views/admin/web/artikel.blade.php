@@ -139,8 +139,10 @@
                         <div class="card card-primary card-outline">
                             <!-- /.card-header -->
                             <div class="card-body">
+
                                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                                     <div class="row">
+
                                         <div class="col-sm-12 col-md-12">
                                             <div class="dt-buttons btn-group flex-wrap">
                                                 <div class="margin">
