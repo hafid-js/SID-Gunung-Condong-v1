@@ -55,6 +55,7 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
 
     // info desa
     Route::get('identitas-desa','InfoDesaController@identitasdesa');
+    Route::get('identitas-desa/form','InfoDesaController@formidentitasdesa');
 });
 
 

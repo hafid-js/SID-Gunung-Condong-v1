@@ -13,4 +13,8 @@ class InfoDesaController extends Controller
         Session::put('page','identitas-desa');
         return view('admin.info-desa.identitas_desa');
     }
+    public function formidentitasdesa() {
+        Session::put('page','form-identitas-desa');
+        return view('admin.info-desa.form_identitas_desa');
+    }
 }
