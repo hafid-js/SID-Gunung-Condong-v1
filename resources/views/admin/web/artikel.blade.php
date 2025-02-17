@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-sm-12 col-md-3 col-lg-3">
                         <a href="#" class="btn btn-lightblue btn-block mb-3 text-white">Semua Artikel Dinamis</a>
 
                         <div class="card card-primary card-outline">
@@ -135,38 +135,32 @@
                             <!-- /.card-body -->
                         </div>
                     </div>
+
                     <div class="col-sm-12 col-md-9 col-lg-9">
-                        <div class="card card-primary card-outline">
-                            <!-- /.card-header -->
-                            <div class="card-body">
-
-                                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                    <div class="row">
-
-                                        <div class="col-sm-12 col-md-12">
-                                            <div class="dt-buttons btn-group flex-wrap">
-                                                <div class="margin">
-                                                    <a href="{{ url('artikel/form') }}" id="btn-add"
-                                                        class="btn btn-social mt-1 mb-1 btn-success btn-xs"><i
-                                                            class="fa fa-plus "></i> Tambah Berita Desa</a>
-                                                    <a href="#"
-                                                        class="btn btn-social mt-1 mb-1 bg-danger btn-xs visible-xs-block"><i
-                                                            class="fa fa-trash"></i> Hapus Data Terpilih</a>
-                                                    <a href="#"
-                                                        class="btn btn-social mt-1 mb-1 bg-danger btn-xs visible-xs-block"><i
-                                                            class="fa fa-trash"></i> Hapus Artikel Kategori Berita</a>
-                                                </div>
+                        <div class="card-body p-0">
+                            <div class="card card-outline card-info">
+                                <div class="card-header">
+                                    <div class="form-group row mb-0">
+                                        <div class="col-sm-12">
+                                            <div class="margin">
+                                                <a href="{{ url('artikel/form') }}" id="btn-add"
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs"><i
+                                                        class="fa fa-plus"></i> Tambah Berita Desa</a>
+                                                <a href="#"
+                                                    class="btn btn-social mt-1 mb-1 bg-danger btn-xs visible-xs-block"><i
+                                                        class="fa fa-trash"></i> Hapus Data Terpilih</a>
+                                                <a href="#"
+                                                    class="btn btn-social mt-1 mb-1 bg-danger btn-xs visible-xs-block"><i
+                                                        class="fa fa-trash"></i> Hapus Artikel Kategori Berita</a>
                                             </div>
                                         </div>
-
-                                        <div class="col-sm-12 col-md-6">
-                                        </div>
                                     </div>
-                                    <hr>
-                                    <div class="row justify-content-between">
-                                        <div class="col-sm-12 col-md-3 col-lg-3">
+                                </div>
+                                <div class="card-header">
+                                    <div class="form-group row mb-0 justify-content-between">
+                                        <div class="col-sm-12 col-md-3 col-lg-2">
                                             <div class="form-group">
-                                                <select class="form-control form-control-sm">
+                                                <select class="form-control form-control-sm select2" style="width: 100%;">
                                                     <option>Pilih Status</option>
                                                     <option>Aktif</option>
                                                     <option>Tidak Aktif</option>
@@ -174,153 +168,143 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-9 col-lg-9">
-                                            <div id="example1_filter" class="dataTables_filter"><label>Cari:<input
-                                                        type="search" class="form-control form-control-sm"
-                                                        placeholder="Kata Kunci Pencarian" aria-controls="example1"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body table-responsive p-0">
-                                            <table class="table table-hover table-bordered text-nowrap">
-                                                <thead>
-                                                    <tr>
-                                                            <th style="width:5%">
-                                                                <input type="checkbox" id="check-all" />
-                                                            </th>
-                                                            <th style="width:5%">NO</th>
-                                                            <th style="width:5%" class="text-center">Aksi</th>
-                                                            <th>JUDUL</th>
-                                                            <th>HIT</th>
-                                                            <th>DIPOSTING PADA</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <input type="checkbox" class="check-item" />
-                                                            </td>
-                                                            <td>1</td>
-                                                            <td class="aksi">
-                                                                <a href="{{ url('artikel/form') }}"
-                                                                    class="btn bg-orange btn-sm" title="Ubah Data">
-                                                                    <i class="fa fa-edit text-white"></i>
-                                                                </a>
-                                                                <a href="#" data-dismiss="modal"
-                                                                    class="btn bg-danger btn-sm" data-toggle="modal"
-                                                                    data-target="#modal1" title="Hapus">
-                                                                    <i class="fa fa-trash text-white"></i>
-                                                                </a>
-                                                                <a href="#" data-dismiss="modal"
-                                                                    class="btn bg-purple btn-sm" data-toggle="modal"
-                                                                    data-target="#modal2" title="Ubah Kategori">
-                                                                    <i class="fa fa-folder-open text-white"></i>
-                                                                </a>
-                                                                <a href="#" id="berhasil" class="btn bg-info btn-sm"
-                                                                    title="Tutup Komentar Artikel">
-                                                                    <i class="fa fa-comment-o text-white"></i>
-                                                                </a>
-                                                                <a href="#" class="btn bg-navy btn-sm"
-                                                                    title="Non Aktifkan Artikel">
-                                                                    <i class="fa fa-unlock text-white"></i>
-                                                                </a>
-                                                                <a href="#" class="btn bg-teal btn-sm"
-                                                                    title="Jadikan Berita Utama">
-                                                                    <i class="fa fa-star-o text-white"></i>
-                                                                </a>
-                                                                <a href="#" class="btn bg-gray btn-sm"
-                                                                    title="Masukkan ke dalam slide">
-                                                                    <i class="fa fa-play text-white"></i>
-                                                                </a>
-                                                                <a href="#" class="btn bg-green btn-sm"
-                                                                    title="Lihat Artikel">
-                                                                    <i class="fa fa-eye text-white"></i>
-                                                                </a>
-                                                            </td>
-                                                            <td>Rapat membangun Komitmen antara Karang Taruna Desa Senggigi
-                                                                dengan Taruna Hotel</td>
-                                                            <td>2 Kali</td>
-                                                            <td>24 Agustus 2016 13:55:10</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
 
+                                        <div class="col-sm-12 col-md-3 col-lg-2">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control form-control-sm"
+                                                    placeholder="kata kunci pencarian">
+                                                <div class="input-group-append">
+                                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-search"></i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                    <div class="row mt-2">
-                                        <div class="col-sm-12 col-md-5">
-                                            <div class="dataTables_info" id="example1_info" role="status"
-                                                aria-live="polite">Menampilkan 1 sampai 10 dari 57 entri</div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-7">
-                                            <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
-                                                <ul class="pagination">
-                                                    <li class="paginate_button page-item previous disabled"
-                                                        id="example1_previous">
-                                                        <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
-                                                            class="page-link">Sebelumnya</a>
-                                                    </li>
-                                                    <li class="paginate_button page-item active">
-                                                        <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
-                                                            class="page-link">1</a>
-                                                    </li>
-                                                    <li class="paginate_button page-item next" id="example1_next">
-                                                        <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
-                                                            class="page-link">Selanjutnya</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-sm-12 col-md-12 col-lg-12">
+                                           <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead class="thead-gray disabled">
+                                                    <tr>
+                                                        <th>
+                                                            <input type="checkbox" id="check-all" />
+                                                        </th>
+                                                        <th style="width:5%;">NO</th>
+                                                        <th style="width:5%;" class="text-center">Aksi</th>
+                                                        <th>JUDUL</th>
+                                                        <th style="width:6%;">HIT</th>
+                                                        <th style="width:17%;">DIPOSTING PADA</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="font-12">
+                                                        <td>
+                                                            <input type="checkbox" class="check-item" />
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td class="aksi">
+                                                            <a href="{{ url('artikel/form') }}" class="btn bg-orange btn-sm"
+                                                                title="Ubah Data">
+                                                                <i class="fa fa-edit text-white"></i>
+                                                            </a>
+                                                            <a href="#" data-dismiss="modal" class="btn bg-danger btn-sm"
+                                                                data-toggle="modal" data-target="#modal1" title="Hapus">
+                                                                <i class="fa fa-trash text-white"></i>
+                                                            </a>
+                                                            <a href="#" data-dismiss="modal" class="btn bg-purple btn-sm"
+                                                                data-toggle="modal" data-target="#modal2"
+                                                                title="Ubah Kategori">
+                                                                <i class="fa fa-folder-open text-white"></i>
+                                                            </a>
+                                                            <a href="#" id="berhasil" class="btn bg-info btn-sm"
+                                                                title="Tutup Komentar Artikel">
+                                                                <i class="fa fa-comment-o text-white"></i>
+                                                            </a>
+                                                            <a href="#" class="btn bg-navy btn-sm"
+                                                                title="Non Aktifkan Artikel">
+                                                                <i class="fa fa-unlock text-white"></i>
+                                                            </a>
+                                                            <a href="#" class="btn bg-teal btn-sm"
+                                                                title="Jadikan Berita Utama">
+                                                                <i class="fa fa-star-o text-white"></i>
+                                                            </a>
+                                                            <a href="#" class="btn bg-gray btn-sm"
+                                                                title="Masukkan ke dalam slide">
+                                                                <i class="fa fa-play text-white"></i>
+                                                            </a>
+                                                            <a href="#" class="btn bg-green btn-sm" title="Lihat Artikel">
+                                                                <i class="fa fa-eye text-white"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td>Rapat membangun Komitmen antara Karang Taruna Desa Senggigi
+                                                            dengan Taruna Hotel</td>
+                                                        <td>2 Kali</td>
+                                                        <td>24 Agustus 2016 13:55:10</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                           </div>
                                         </div>
                                     </div>
+                                    <ul class="pagination pagination-smfloat-left">
+                                        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
+                                            Menampilkan 1 sampai 10 dari 57 entri</div>
+                                    </ul>
+                                    <ul class="pagination pagination-sm m-0 float-right">
+                                        <li class="paginate_button page-item previous disabled" id="example1_previous">
+                                            <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
+                                                class="page-link">Sebelumnya</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
+                                                class="page-link">1</a>
+                                        </li>
+                                        <li class="paginate_button page-item next" id="example1_next">
+                                            <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
+                                                class="page-link">Selanjutnya</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card -->
                     </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
-
-            <!-- first Modal -->
-            <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6 class="modal-title" id="modal1Label"><i class="fas fa-exclamation-triangle text-red"></i>
-                                Konfirmasi
-                            </h6>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-
-                        <div style="background-color: #00c0ef;">
-                            <div class="card-header">
-                                <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
-                                    data
-                                    ini?</h6>
-                            </div>
-                        </div>
-                        <div class="modal-footer justify-content-end">
-                            <button type="button" class="btn btn-warning btn-sm text-white" data-dismiss="modal"><i
-                                    class="fa fa-sign-out"></i> Tutup</button>
-                            <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</button>
-                        </div>
-                        </form>
-
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
                 </div>
             </div>
-            <!-- /.modal -->
 
+    <!-- first Modal -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="modal1Label"><i class="fas fa-exclamation-triangle text-red"></i>
+                        Konfirmasi
+                    </h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
-        </section>
-        <!-- /.content -->
+                <div style="background-color: #00c0ef;">
+                    <div class="card-header">
+                        <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
+                            data
+                            ini?</h6>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn btn-warning btn-sm text-white" data-dismiss="modal"><i
+                            class="fa fa-sign-out"></i> Tutup</button>
+                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</button>
+                </div>
+                </form>
+
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    </div>
+    </section>
+    <!-- /.content -->
     </div>
 
     <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">

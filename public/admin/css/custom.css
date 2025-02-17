@@ -111,6 +111,13 @@ img.penduduk_kecil {
     color: pink;
 }
 
+.btn-group-sm>.btn, .btn-sm {
+    padding: 1px 10px 1px 10px;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+
 th {
     font-size: 12px;
 }
@@ -118,6 +125,11 @@ th {
 .sidebar .nav-icon-beranda {
     transform: scale(0.6);
     /* 1.5 means 150% size */
+}
+
+.thead-gray {
+    color: #333;
+    background-color: #d2d6de !important;
 }
 
 .form-control {
