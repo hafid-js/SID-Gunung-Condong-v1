@@ -226,7 +226,7 @@ select.form-control-sm~.select2-container--default {
     color: #ffffff;
 }
 
-.select2-container--default .select2-dropdown .select2-search__field,
+/* .select2-container--default .select2-dropdown .select2-search__field,
 .select2-container--default .select2-search--inline .select2-search__field {
     border: 1px solid #ced4da;
     height: calc(1.8125rem + 2px);
@@ -240,7 +240,7 @@ select.form-control-sm~.select2-container--default {
 .select2-container--default .select2-results__option--highlighted[aria-selected]:hover {
     background-color: #ddd;
     color: #444;
-}
+} */
 
 .select2-container--default .select2-results>.select2-results__options {
     max-height: 200px;

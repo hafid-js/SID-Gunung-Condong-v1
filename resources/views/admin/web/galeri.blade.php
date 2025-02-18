@@ -140,7 +140,7 @@
                                        </div>
                                     </div>
                                 </div>
-                                <ul class="pagination pagination-sm m-0 float-left">
+                                <ul class="pagination pagination-sm float-left">
                                     <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
                                         Menampilkan 1 sampai 10 dari 57 entri</div>
                                 </ul>

@@ -39,43 +39,42 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card card-primary card-outline">
-                        <!-- /.card-header -->
-                        <div class="card-body rem85">
-                            <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12">
-                                        <div class="dt-buttons btn-group flex-wrap">
-                                            <div class="margin">
-                                                <a href="{{ url('sosmed/form') }}"
+                    <div class="card-body p-0">
+                        <div class="card card-outline card-info">
+                            <div class="card-header">
+                                <div class="form-group row mb-0">
+                                    <div class="col-sm-12">
+                                        <div class="margin">
+                                            <a href="{{ url('sosmed/form') }}"
                                                     class="btn btn-social mt-1 mb-1 btn-success btn-xs" title="Tambah Kategori"><i
                                                         class="fa fa-plus "></i> Tambah</a>
                                                 <a href="#"  data-href="#" data-target="#modal1" title="Hapus" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger mt-1 mb-1 btn-xs"><i class="fa fa-trash"></i>
                                                     Hapus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-header">
+                                <div class="form-group row mb-0 justify-content-between">
+                                    <div class="col-sm-12 col-md-3 col-lg-2">
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-3 col-lg-2">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="kata kunci pencarian">
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-12 col-md-6">
-                                    </div>
                                 </div>
-                                <hr>
-                                <div class="row justify-content-between">
-                                    <div class="col-sm-3 col-md-2 col-lg-3">
-                                    </div>
-                                    <div class="col-sm-6 col-md-9 col-lg-9">
-                                        <div id="example1_filter" class="dataTables_filter"><label>Cari:<input
-                                                    type="search" class="form-control form-control-sm"
-                                                    placeholder="Kata Kunci Pencarian" aria-controls="example1"></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
                                 <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="card-body table-responsive p-0 ">
-                                            <table class="table table-hover table-bordered table-sm text-nowrap ">
-                                                <thead>
+                                    <div class="col-md-sm-12 col-md-12 col-lg-12">
+                                       <div class="table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead class="thead-gray disabled color-palette">
                                                     <tr>
                                                         <th style="width:5%">
                                                             <input type="checkbox" id="check-all" />
@@ -203,41 +202,31 @@
                                                         <td><span class="badge bg-danger">Tidak Aktif</span></td>
                                                     </tr>
                                                 </tbody>
-                                            </table>
-
-                                        </div>
+                                        </table>
+                                       </div>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
-                                    <div class="col-sm-12 col-md-5">
-                                        <div class="dataTables_info" id="example1_info" role="status"
-                                            aria-live="polite">Menampilkan 1 sampai 10 dari 57 entri</div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-7">
-                                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
-                                            <ul class="pagination">
-                                                <li class="paginate_button page-item previous disabled"
-                                                    id="example1_previous">
-                                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
-                                                        class="page-link">Sebelumnya</a>
-                                                </li>
-                                                <li class="paginate_button page-item active">
-                                                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
-                                                        class="page-link">1</a>
-                                                </li>
-                                                <li class="paginate_button page-item next" id="example1_next">
-                                                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
-                                                        class="page-link">Selanjutnya</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ul class="pagination pagination-sm float-left">
+                                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
+                                        Menampilkan 1 sampai 10 dari 57 entri</div>
+                                </ul>
+                                <ul class="pagination pagination-sm m-0 float-right">
+                                    <li class="paginate_button page-item previous disabled" id="example1_previous">
+                                        <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
+                                            class="page-link">Sebelumnya</a>
+                                    </li>
+                                    <li class="paginate_button page-item active">
+                                        <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
+                                            class="page-link">1</a>
+                                    </li>
+                                    <li class="paginate_button page-item next" id="example1_next">
+                                        <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
+                                            class="page-link">Selanjutnya</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
                 </div>
                 <!-- /.col -->
             </div>

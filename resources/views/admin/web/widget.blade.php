@@ -81,16 +81,16 @@
                                     <div class="col-md-sm-12 col-md-12 col-lg-12">
                                        <div class="table-responsive">
                                         <table class="table table-hover table-bordered">
-                                            <thead>
+                                            <thead class="thead-gray disabled">
                                                 <tr>
                                                     <th style="width:4%;">
                                                         <input type="checkbox" id="check-all" />
                                                     </th>
                                                     <th style="width:5%;">NO</th>
                                                     <th style="width:5%;" class="text-center">Aksi</th>
-                                                    <th>Nama Kategori</th>
-                                                    <th>Aktif</th>
-                                                    <th>Link</th>
+                                                    <th>Judul</th>
+                                                    <th>Jenis Widget</th>
+                                                    <th>Isi</th>
                                                 </tr>
                                             </thead>
                                                 <tbody>
@@ -105,7 +105,7 @@
                                                         </td>
                                                         <td>Menu Kategori</td>
                                                         <td>Sistem</td>
-                                                        <td>menu_kategori.blade.php</td>
+                                                        <td>menu_kategori</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -120,7 +120,7 @@
                                                         </td>
                                                         <td>Sinergi Program</td>
                                                         <td>Sistem</td>
-                                                        <td>sinergi_program.blade.php</td>
+                                                        <td>sinergi_program</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -135,7 +135,7 @@
                                                         </td>
                                                         <td>Aparatur Desa</td>
                                                         <td>Sistem</td>
-                                                        <td>aparatur_desa.blade.php</td>
+                                                        <td>aparatur_desa</td>
                                                     </tr>
                                                 </tbody>
                                         </table>

@@ -39,7 +39,7 @@
             <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-primary">
+                            <div class="card card-outline card-info">
                                 <div class="card-header">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
@@ -68,7 +68,7 @@
                                                 <input type="text" class="form-control form-control-sm"
                                                     placeholder="kata kunci pencarian">
                                                 <div class="input-group-append">
-                                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-search"></i></button>
+                                                    <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-search"></i></button>
                                                 </div>
                                             </div>
                                         </div>

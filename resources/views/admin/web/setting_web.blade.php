@@ -6,14 +6,14 @@
         <!-- Content Header (Page header) -->
         <section class="content-header mt-min-20">
             <div class="container-fluid">
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">Pengaturan Halaman Web</h4>
+                        <h4 class="m-0" style="font-weight: 400;">Pengaturan</h4>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item active">Pengaturan Halaman Web</li>
+                            <li class="breadcrumb-item active">Pengaturan</li>
                         </ol>
                     </div>
                 </div>
@@ -33,22 +33,26 @@
             </div><!-- /.container-fluid -->
         </section>
 
+
+
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="card card-primary card-outline">
-                            <!-- /.card-header -->
-                            <div class="card-body rem85">
-                                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-
-                                        <div class="box-header">
-                                            <b>Pengaturan Dasar</b>
+                        <div class="card-body p-0">
+                            <div class="card card-outline card-info">
+                                <div class="card-header">
+                                    <div class="form-group row mb-0">
+                                        <div class="col-sm-12">
+                                            <div class="margin">
+                                              <b>Pengaturan Dasar</b>
+                                            </div>
                                         </div>
-
-                                    <hr>
-                                    <form class="form-horizontal">
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    <div class="card-body p-0">
                                         <div class="form-group row">
                                             <label for="apbDesFooter"
                                                 class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Apbdes
@@ -199,16 +203,14 @@
                                                     for="chart3D">Apakah akan tampilkan Statistik Chart 3D</label>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-sm btn-danger">Batal</button>
                                     <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
-
                                 </div>
-                                </form>
                             </div>
                         </div>
-                        <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
                 </div>

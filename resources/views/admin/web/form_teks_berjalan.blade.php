@@ -28,19 +28,21 @@
             <div class="col-md-12 col-sm-12 col-lg-12">
                 <div class="card-body p-0">
                     <div class="card card-outline card-info">
-                        <div class="card-header">
-                            <div class="col-md-12">
-                                <div class="margin">
-                                    <a href="{{ url('teks-berjalan') }}" title="Unduh Data"
-                                        class="btn btn-social btn-info btn-xs visible-xs-block"
-                                        data-title="Unduh Data"><span class="btn-label"><i
-                                                class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
-                                        Teks Berjalan</a>
+                        <div class="card-body p-0">
+                            <div class="card-header">
+                                <div class="form-group row mb-0">
+                                    <div class="col-sm-12">
+                                        <div class="margin">
+                                            <a href="{{ url('teks-berjalan') }}" title="Unduh Data"
+                                                class="btn btn-social btn-info btn-xs visible-xs-block"><span
+                                                    class="btn-label"><i class="fa fa-arrow-circle-left"></i></span>
+                                                Kembali
+                                                ke Teks Berjalan</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
                         <form class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">

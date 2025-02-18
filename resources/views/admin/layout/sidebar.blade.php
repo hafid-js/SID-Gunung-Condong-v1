@@ -1004,7 +1004,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fa fa-object-group"></i>
                                 <p>
                                     Tema

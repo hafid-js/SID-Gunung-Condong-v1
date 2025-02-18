@@ -169,12 +169,12 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-12 col-md-3 col-lg-2">
+                                        <div class="col-sm-12 col-md-3 col-lg-3">
                                             <div class="input-group mb-3">
                                                 <input type="text" class="form-control form-control-sm"
                                                     placeholder="kata kunci pencarian">
                                                 <div class="input-group-append">
-                                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-search"></i></button>
+                                                    <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-search"></i></button>
                                                 </div>
                                             </div>
                                         </div>

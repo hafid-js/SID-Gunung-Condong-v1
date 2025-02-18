@@ -8,6 +8,10 @@ use Session;
 
 class WebController extends Controller
 {
+    public function test() {
+        Session::put('page','test');
+        return view('admin.web.test');
+    }
     public function artikel() {
         Session::put('page','artikel');
         return view('admin.web.artikel');

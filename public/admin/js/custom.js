@@ -20,6 +20,7 @@ $(function () {
     bsCustomFileInput.init();
 });
 
+
 $(".select2").select2();
 
 //Initialize Select2 Elements

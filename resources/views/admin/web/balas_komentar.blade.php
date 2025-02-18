@@ -6,7 +6,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header mt-min-20">
             <div class="container-fluid">
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <h4 class="m-0" style="font-weight: 400;">Komentar</h4>
                     </div>
@@ -25,32 +25,23 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-lg-12">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
                             <div class="card card-outline card-info">
-                                <div class="form-group row">
-                                    <div class="card-header">
-                                        <div class="col-md-12">
+                                <div class="card-header">
+                                    <div class="form-group row mb-0">
+                                        <div class="col-sm-12">
                                             <div class="margin">
                                                 <a href="{{ url('komentar') }}" title="Unduh Data"
                                                     class="btn btn-social btn-info btn-xs visible-xs-block"
                                                     data-title="Unduh Data"><span class="btn-label"><i
                                                             class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
                                                     Komentar</a>
-                                                <a href="{{ url('#') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-success btn-xs visible-xs-block"
-                                                    data-title="Unduh Data"><span class="btn-label"><i
-                                                            class="fa fa-eye"></i></span> Lihat Komentar Artikel</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- /.card-header -->
-                                <!-- form start -->
-                                <!-- Conversations are loaded here -->
-                                <div class="card-body p-3">
-                                    <!-- Message. Default to the left -->
+                                <div class="card-body">
                                     <div class="direct-chat-msg">
                                         <div class="direct-chat-infos clearfix">
                                             <span class="direct-chat-name float-left">Alexander Pierce</span>
@@ -98,19 +89,12 @@
                                         </div>
                                     </form>
                                 </div>
-
-                                <!--/.direct-chat-messages-->
                             </div>
-                            <!-- /.card -->
-
                         </div>
                     </div>
-                    <!-- /.col-->
                 </div>
             </div>
-    </div>
 
-    <!-- ./row -->
     </section>
     <!-- /.content -->
     </div>

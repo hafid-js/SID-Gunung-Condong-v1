@@ -28,37 +28,39 @@
             <div class="col-md-12 col-sm-12 col-lg-12">
                 <div class="card-body p-0">
                     <div class="card card-outline card-info">
-                        <div class="card-header">
-                            <div class="col-md-12">
-                                <div class="margin">
-                                    <a href="{{ url('sosmed') }}" title="Unduh Data"
+                        <div class="card-body p-0">
+                            <div class="card-header">
+                                <div class="form-group row mb-0">
+                                    <div class="col-sm-12">
+                                        <div class="margin">
+                                            <a href="{{ url('sosmed') }}" title="Unduh Data"
                                         class="btn btn-social btn-info btn-xs visible-xs-block"
                                         data-title="Unduh Data"><span class="btn-label"><i
                                                 class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
                                         Media Sosial</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
                         <form class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="nama" class="col-sm-2 col-form-label font-13">Nama</label>
+                                    <label for="nama" class="col-sm-2 col-form-label font-12">Nama</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                        <input type="text" class="form-control form-control-sm font-13" id="nama"
+                                        <input type="text" class="form-control form-control-sm font-12" id="nama"
                                             value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="link" class="col-sm-2 col-form-label font-13">Link</label>
+                                    <label for="link" class="col-sm-2 col-form-label font-12">Link</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
-                                        <input type="text" class="form-control form-control-sm font-13" id="link"
+                                        <input type="text" class="form-control form-control-sm font-12" id="link"
                                             value="Fulan">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="exampleInputFile" class="col-sm-2 col-form-label font-13">Icon</label>
+                                    <label for="exampleInputFile" class="col-sm-2 col-form-label font-12">Icon</label>
                                     <div class="col-sm-10 col-lg-9 col-md-9">
                                     <div class="input-group">
                                         <div class="custom-file">
@@ -69,7 +71,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="tampil" class="col-sm-2 col-form-label font-13">Tampil</label>
+                                    <label for="tampil" class="col-sm-2 col-form-label font-12">Tampil</label>
                                     <div class="col-sm-10 col-lg-3 col-md-3">
                                        <select name="" id="jenis" class="form-control form-control-sm">
                                         <option value="">Tidak</option>
@@ -81,7 +83,6 @@
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-sm btn-danger">Batal</button>
                                 <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
-
                             </div>
                             <!-- /.card-footer -->
                     </div>

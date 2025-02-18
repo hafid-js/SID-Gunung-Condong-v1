@@ -38,95 +38,95 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="card card-primary card-outline">
-                            <!-- /.card-header -->
-                            <div class="card-body rem85">
-                                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-12">
-                                            <div class="dt-buttons btn-group flex-wrap">
-                                                <div class="margin">
-                                                    <a href="{{ url('pembangunan/dokumentasi/form') }}"
-                                                        class="btn btn-social mt-1 mb-1 btn-success btn-xs"
-                                                        title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
-                                                    <a href="#" data-target="#cetak" title="Cetak Data"
-                                                        data-toggle="modal" data-target="#cetak"
-                                                        class="btn mt-1 mb-1 bg-purple btn-xs"><i class="fa fa-print"></i>
-                                                        Cetak</a>
-                                                    <a href="#" data-target="#unduh" title="Unduh Data"
-                                                        data-toggle="modal" data-target="#unduh"
-                                                        class="btn mt-1 mb-1 bg-navy btn-xs"><i class="fa fa-download"></i>
-                                                        Unduh</a>
-                                                    <a href="{{ url('pembangunan') }}" title="Unduh Data"
-                                                        class="btn btn-social btn-info btn-xs visible-xs-block"
-                                                        data-title="Unduh Data"><span class="btn-label"><i
-                                                                class="fa fa-arrow-circle-left"></i></span> Kembali ke
-                                                        Daftar Pembangunan</a>
+                        <div class="card-body p-0">
+                            <div class="card card-outline card-info">
+                                <div class="card-header">
+                                    <div class="form-group row mb-0">
+                                        <div class="col-sm-12">
+                                            <div class="margin">
+                                                <a href="{{ url('pembangunan/dokumentasi/form') }}"
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs"
+                                                    title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
+                                                <a href="#" data-target="#cetak" title="Cetak Data" data-toggle="modal"
+                                                    data-target="#cetak" class="btn mt-1 mb-1 bg-purple btn-xs"><i
+                                                        class="fa fa-print"></i>
+                                                    Cetak</a>
+                                                <a href="#" data-target="#unduh" title="Unduh Data" data-toggle="modal"
+                                                    data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-xs"><i
+                                                        class="fa fa-download"></i>
+                                                    Unduh</a>
+                                                <a href="{{ url('pembangunan') }}" title="Unduh Data"
+                                                    class="btn btn-social btn-info btn-xs visible-xs-block"
+                                                    data-title="Unduh Data"><span class="btn-label"><i
+                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke
+                                                    Daftar Pembangunan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    <h6 style="font-size: 15px;"><strong>Rincian Dokumentasi Pembangunan</strong></h6>
+                                    <table class="table table-sm table-striped table-bordered"
+                                        style="border: 0px  #f4f4f4;">
+                                        <thead>
+                                        </thead>
+                                        <tbody class="font-12">
+                                            <tr>
+                                                <td class="p-2" style="width: 20%;">
+                                                    Nama Kegiatan</td>
+                                                <td class="p-2" style="width: 1%;">
+                                                    :
+                                                </td>
+                                                <td>Perbaikan Saluran Irigasi</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-2" style="width: 20%;">
+                                                    Sumber Dana</td>
+                                                <td class="p-2" style="width: 1%;">
+                                                    :
+                                                </td>
+                                                <td>Pendapatan Asli Desa (PAD)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-2" style="width: 20%;">
+                                                    Lokasi Pembangunan</td>
+                                                <td class="p-2" style="width: 1%;">
+                                                    :
+                                                </td>
+                                                <td>Jl.Kartasura No.7</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-2" style="width: 20%;">
+                                                    Keterangan</td>
+                                                <td class="p-2" style="width: 1%;">
+                                                    :
+                                                </td>
+                                                <td>Proyek berjalan baik</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row mb-0 justify-content-between">
+                                        <div class="col-sm-12 col-md-3 col-lg-2">
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-2">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control form-control-sm"
+                                                    placeholder="kata kunci pencarian">
+                                                <div class="input-group-append">
+                                                    <button type="submit" class="btn btn-info btn-sm"><i
+                                                            class="fas fa-search"></i></button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-6">
-                                        </div>
                                     </div>
-                                    <hr>
-                                    <div class="card-body p-0 mt-3">
-                                        <h6 style="font-size: 15px;"><strong>Rincian Dokumentasi Pembangunan</strong></h6>
-                                        <table class="table table-sm table-striped table-bordered"
-                                            style="border: 0px  #f4f4f4;">
-                                            <thead>
-                                            </thead>
-                                            <tbody class="font-12">
-                                                <tr>
-                                                    <td class="p-2" style="width: 20%;">
-                                                        Nama Kegiatan</td>
-                                                    <td class="p-2" style="width: 1%;">
-                                                        :
-                                                    </td>
-                                                    <td>Perbaikan Saluran Irigasi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p-2" style="width: 20%;">
-                                                        Sumber Dana</td>
-                                                    <td class="p-2" style="width: 1%;">
-                                                        :
-                                                    </td>
-                                                    <td>Pendapatan Asli Desa (PAD)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p-2" style="width: 20%;">
-                                                        Lokasi Pembangunan</td>
-                                                    <td class="p-2" style="width: 1%;">
-                                                        :
-                                                    </td>
-                                                    <td>Jl.Kartasura No.7</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p-2" style="width: 20%;">
-                                                        Keterangan</td>
-                                                    <td class="p-2" style="width: 1%;">
-                                                        :
-                                                    </td>
-                                                    <td>Proyek berjalan baik</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.card-body -->
-                                    <div class="row justify-content-between mt-3">
-                                        <div class="col-sm-3 col-md-2 col-lg-3">
-                                        </div>
-                                        <div class="col-sm-6 col-md-9 col-lg-9">
-                                            <div id="example1_filter" class="dataTables_filter"><label>Cari:<input
-                                                        type="search" class="form-control form-control-sm"
-                                                        placeholder="Kata Kunci Pencarian" aria-controls="example1"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body table-responsive p-0">
-                                            <table class="table table-hover table-bordered text-nowrap">
-                                                <thead>
-                                                    <tr>
+                                    <div class="row">
+                                        <div class="col-md-sm-12 col-md-12 col-lg-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover table-bordered">
+                                                    <thead class="thead-gray disabled color-palette">
+                                                        <tr>
                                                             <th style="width:1%">NO</th>
                                                             <th class="text-center" style="width:5%">AKSI</th>
                                                             <th style="width:5%">GAMBAR</th>
@@ -149,7 +149,8 @@
                                                             </td>
                                                             <td>
                                                                 <div class="product-img">
-                                                                    <img src="https://depobeta.com/pub/media/Artikel/Sistem_Irigasi/Irigas_2.png" class="penduduk_kecil" alt="Gambar Dokumentasi"/>
+                                                                    <img src="https://depobeta.com/pub/media/Artikel/Sistem_Irigasi/Irigas_2.png"
+                                                                        class="penduduk_kecil" alt="Gambar Dokumentasi" />
                                                                 </div>
                                                             </td>
                                                             <td>70%</td>
@@ -160,36 +161,28 @@
                                                 </table>
                                             </div>
                                         </div>
-                                    <div class="row mt-2">
-                                        <div class="col-sm-12 col-md-5">
-                                            <div class="dataTables_info" id="example1_info" role="status"
-                                                aria-live="polite">Menampilkan 1 sampai 10 dari 57 entri</div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-7">
-                                            <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
-                                                <ul class="pagination">
-                                                    <li class="paginate_button page-item previous disabled"
-                                                        id="example1_previous">
-                                                        <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
-                                                            class="page-link">Sebelumnya</a>
-                                                    </li>
-                                                    <li class="paginate_button page-item active">
-                                                        <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
-                                                            class="page-link">1</a>
-                                                    </li>
-                                                    <li class="paginate_button page-item next" id="example1_next">
-                                                        <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
-                                                            class="page-link">Selanjutnya</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
+                                    <ul class="pagination pagination-sm float-left">
+                                        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
+                                            Menampilkan 1 sampai 10 dari 57 entri</div>
+                                    </ul>
+                                    <ul class="pagination pagination-sm m-0 float-right">
+                                        <li class="paginate_button page-item previous disabled" id="example1_previous">
+                                            <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
+                                                class="page-link">Sebelumnya</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
+                                                class="page-link">1</a>
+                                        </li>
+                                        <li class="paginate_button page-item next" id="example1_next">
+                                            <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
+                                                class="page-link">Selanjutnya</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card -->
                     </div>
                     <!-- /.col -->
                 </div>
@@ -213,19 +206,19 @@
                                     <div class="form-group">
                                         <label for="laporanD">Laporan Ditandatangani</label>
                                         <select name="" class="form-control form-control-sm select2" id="laporanD"
-                                        style="width: 100%;">
-                                        <option value="" selected>Pilih Staf Perangkat Desa</option>
-                                        <option value="">Hafid</option>
-                                        <option value="">Aulia Rachma L</option>
-                                    </select>
+                                            style="width: 100%;">
+                                            <option value="" selected>Pilih Staf Perangkat Desa</option>
+                                            <option value="">Hafid</option>
+                                            <option value="">Aulia Rachma L</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="Ldiketahui">Laporan Diketahui</label>
                                         <select name="" class="form-control form-control-sm select2" id="Ldiketahui"
-                                        style="width: 100%;">
-                                        <option value="">Hafid</option>
-                                        <option value="" selected>Aulia Rachma L</option>
-                                    </select>
+                                            style="width: 100%;">
+                                            <option value="">Hafid</option>
+                                            <option value="" selected>Aulia Rachma L</option>
+                                        </select>
                                     </div>
                                 </div>
                         </div>
@@ -253,19 +246,19 @@
                                     <div class="form-group">
                                         <label for="laporan">Laporan Ditandatangani</label>
                                         <select name="" class="form-control form-control-sm select2" id="laporan"
-                                        style="width: 100%;">
-                                        <option value="" selected>Pilih Staf Perangkat Desa</option>
-                                        <option value="">Hafid</option>
-                                        <option value="">Aulia Rachma L</option>
-                                    </select>
+                                            style="width: 100%;">
+                                            <option value="" selected>Pilih Staf Perangkat Desa</option>
+                                            <option value="">Hafid</option>
+                                            <option value="">Aulia Rachma L</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="diketahui">Laporan Diketahui</label>
                                         <select name="" class="form-control form-control-sm select2" id="diketahui"
-                                        style="width: 100%;">
-                                        <option value="">Hafid</option>
-                                        <option value="" selected>Aulia Rachma L</option>
-                                    </select>
+                                            style="width: 100%;">
+                                            <option value="">Hafid</option>
+                                            <option value="" selected>Aulia Rachma L</option>
+                                        </select>
                                     </div>
                                 </div>
                         </div>
