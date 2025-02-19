@@ -39,24 +39,24 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
+                            <div class="card-outline card-info">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
                                                 <a href="{{ url('pembangunan/dokumentasi/form') }}"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs"
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm"
                                                     title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
                                                 <a href="#" data-target="#cetak" title="Cetak Data" data-toggle="modal"
-                                                    data-target="#cetak" class="btn mt-1 mb-1 bg-purple btn-xs"><i
+                                                    data-target="#cetak" class="btn mt-1 mb-1 bg-purple btn-sm"><i
                                                         class="fa fa-print"></i>
                                                     Cetak</a>
                                                 <a href="#" data-target="#unduh" title="Unduh Data" data-toggle="modal"
-                                                    data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-xs"><i
+                                                    data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-sm"><i
                                                         class="fa fa-download"></i>
                                                     Unduh</a>
                                                 <a href="{{ url('pembangunan') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-xs visible-xs-block"
+                                                    class="btn btn-social btn-info btn-sm visible-xs-block"
                                                     data-title="Unduh Data"><span class="btn-label"><i
                                                             class="fa fa-arrow-circle-left"></i></span> Kembali ke
                                                     Daftar Pembangunan</a>
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-header">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <h6 style="font-size: 15px;"><strong>Rincian Dokumentasi Pembangunan</strong></h6>
                                     <table class="table table-sm table-striped table-bordered"
                                         style="border: 0px  #f4f4f4;">
@@ -105,8 +105,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                                <div class="card-body">
+
                                     <div class="form-group row mb-0 justify-content-between">
                                         <div class="col-sm-12 col-md-3 col-lg-2">
                                         </div>
@@ -285,7 +284,7 @@
                         </div>
 
                         <div style="background-color: #00c0ef;">
-                            <div class="card-header">
+                            <div class="card-header" style="background-color: #ffffff;">
                                 <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
                                     data
                                     ini?</h6>

@@ -25,33 +25,34 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-12">
+                <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card-body p-0">
-                        <div class="card card-outline card-info">
-                            <div class="form-group row">
-                            <div class="card-header">
-                                <div class="col-md-12">
-                                    <div class="margin">
-                                        <a href="{{ url('pembangunan/dokumentasi') }}" title="Unduh Data"
-                                            class="btn btn-social btn-info btn-xs visible-xs-block"
+                        <div class="card-outline card-info">
+                            <div class="card-header" style="background-color: #ffffff;">
+                                <div class="form-group row mb-0">
+                                    <div class="col-sm-12">
+                                        <div class="margin">
+                                            <a href="{{ url('pembangunan/dokumentasi') }}" title="Unduh Data"
+                                            class="btn btn-social btn-info btn-sm visible-xs-block"
                                             data-title="Unduh Data"><span class="btn-label"><i
                                                     class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
                                             Dokumentasi</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                            <div class="card-body p-3">
+                            <div class="card-header" style="background-color: #ffffff;">
+                            <div class="card-body p-0">
                                 <div class="form-group row">
                                     <label for="lokasiPembangunan" class="col-sm-2 col-form-label font-12">Persentase
                                         Pembangunan</label>
                                     <div class="col-sm-10 col-lg-10 col-md-10">
                                         <div class="input-group input-group-sm">
                                             <div id="radioBtn" class="btn-group">
-                                                <a class="btn btn-info btn-xs active"
+                                                <a class="btn btn-info btn-sm active"
                                                     data-toggle="lokasiPembangunan" data-title="Pilih Lokasi"
                                                     id="pilihLokasi">Pilih Persentase</a>
-                                                <a class="btn btn-info btn-xs notActive"
+                                                <a class="btn btn-info btn-sm notActive"
                                                     data-toggle="lokasiPembangunan" data-title="Tulis Manual"
                                                     id="tulisManual">Tulis Manual</a>
                                             </div>
@@ -101,15 +102,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-sm btn-danger">Batal</button>
-                                <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
 
-                            </div>
-                            <!--/.direct-chat-messages-->
                         </div>
-                        <!-- /.card -->
-
+                        <div class="card-header" style="background-color: #ffffff;">
+                            <button type="submit" class="btn btn-sm btn-danger">Batal</button>
+                            <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 <!-- /.col-->
@@ -137,7 +136,7 @@
             </div>
 
             <div style="background-color: #00c0ef;">
-                <div class="card-header">
+                <div class="card-header" style="background-color: #ffffff;">
                     <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
                         data
                         ini?</h6>

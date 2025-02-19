@@ -28,21 +28,21 @@
                         <div class="card-body p-0">
                             <div class="card card-outline card-info">
                                 <div class="form-group">
-                                    <div class="card-header">
+                                    <div class="card-header" style="background-color: #ffffff;">
                                         <div class="form-group row mb-0">
                                             <div class="col-sm-12">
                                                 <div class="margin">
                                                     <a href="{{ url('identitas-desa/form') }}" title="Ubah Data Desa"
-                                                        class="btn btn-warning btn-xs visible-xs-block"
+                                                        class="btn btn-warning btn-sm visible-xs-block"
                                                         data-title="Ubah Data Desa"><span class="btn-label"><i
                                                                 class="fa fa-arrow-circle-left"></i></span> Ubah Data
                                                         Desa</a>
-                                                    <a href="{{ url('identitas-desa/lokasi') }}" title="Lokasi Kantor Desa"
-                                                        class="btn bg-purple btn-xs visible-xs-block"
+                                                    <a href="{{ url('identitas-desa/maps/kantor') }}" title="Lokasi Kantor Desa"
+                                                        class="btn bg-purple btn-sm visible-xs-block"
                                                         data-title="Lokasi Kantor Desa"><span class="btn-label"><i
-                                                                class="fa fa-map-marker"></i></span> Ubah Data Desa</a>
-                                                    <a href="{{ url('identitas-desa/peta') }}" title="Peta Wilayah Desa"
-                                                        class="btn btn-info btn-xs visible-xs-block"
+                                                                class="fa fa-map-marker"></i></span> Lokasi Kantor Desa</a>
+                                                    <a href="{{ url('identitas-desa/maps/wilayah') }}" title="Peta Wilayah Desa"
+                                                        class="btn btn-info btn-sm visible-xs-block"
                                                         data-title="Peta Wilayah Desa"><span class="btn-label"><i
                                                                 class="fa fa-arrow-circle-left"></i></span> Peta Wilayah
                                                         Desa</a>

@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-lg-3">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
+                            <div class="card-outline card-info">
                                 <div class="form-group mt-3">
                                     <div class="text-center">
                                         <img class="img-responsive img-circle profile-user-img"
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
+                            <div class="card-outline card-info">
                                 <div class="form-group mt-3">
                                     <div class="text-center p-3">
                                         <img class="img-fluid pad"
@@ -76,13 +76,13 @@
                     </div>
                     <div class="col-md-8 col-sm-12 col-lg-9">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
+                            <div class="card-outline card-info">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
                                                 <a href="{{ url('identitas-desa') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-xs visible-xs-block"><span
+                                                    class="btn btn-social btn-info btn-sm visible-xs-block"><span
                                                         class="btn-label"><i class="fa fa-arrow-circle-left"></i></span>
                                                     Kembali
                                                     ke Data Identitas Desa</a>
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group row">
-                                        <label for="namaDesa" class="font-12 col-sm-2">Nama Desa</label>
+                                        <label for="namaDesa" class="col-sm-2 font-12">Nama Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-9">
                                             <select name="" id="namaDesa" class="form-control form-control-sm select2"
                                                 style="width:100%;">
@@ -103,14 +103,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kodeDesa" class="col-sm-2 col-form-label font-12">Kode Desa</label>
+                                        <label for="kodeDesa" class="col-sm-2 font-12">Kode Desa</label>
                                         <div class="col-sm-10 col-lg-2 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kodeDesa"
                                                 disabled value="11.01.01.2003" placeholder="Kode Desa">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kodePosDesa" class="col-sm-2 col-form-label font-12">Kode Pos
+                                        <label for="kodePosDesa" class="col-sm-2 font-12">Kode Pos
                                             Desa</label>
                                         <div class="col-sm-10 col-lg-2 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kodePosDesa"
@@ -118,14 +118,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kepalaDesa" class="col-sm-2 col-form-label font-12">Kepala Desa</label>
+                                        <label for="kepalaDesa" class="col-sm-2 font-12">Kepala Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-9">
                                             <input type="text" class="form-control form-control-sm font-12" id="kepalaDesa"
                                                 value="Agus Sulistyo" disabled placeholder="Kepala Desa">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="nipKades" class="col-sm-2 col-form-label font-12">NIP Kepala
+                                        <label for="nipKades" class="col-sm-2 font-12">NIP Kepala
                                             Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="nipKades"
@@ -133,7 +133,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="alamat" class="col-sm-2 col-form-label font-12">Alamat Kantor
+                                        <label for="alamat" class="col-sm-2 font-12">Alamat Kantor
                                             Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <textarea class="form-control font-12" rows="3"
@@ -141,14 +141,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="email" class="col-sm-2 col-form-label font-12">E-Mail Desa</label>
+                                        <label for="email" class="col-sm-2 font-12">E-Mail Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="email"
                                                 placeholder="Email Desa" value="pemdes@gunungcondong.com">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="telepon" class="col-sm-2 col-form-label font-12">Nomor Telepon
+                                        <label for="telepon" class="col-sm-2 font-12">Nomor Telepon
                                             Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="telepon"
@@ -156,7 +156,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="ponsel" class="col-sm-2 col-form-label font-12">Nomor Ponsel
+                                        <label for="ponsel" class="col-sm-2 font-12">Nomor Ponsel
                                             Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="ponsel"
@@ -164,14 +164,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="website" class="col-sm-2 col-form-label font-12">Website Desa</label>
+                                        <label for="website" class="col-sm-2 font-12">Website Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="website"
                                                 value="www.gunungcondong.com" placeholder="Website Desa">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kecamatan" class="col-sm-2 col-form-label font-12">Nama
+                                        <label for="kecamatan" class="col-sm-2 font-12">Nama
                                             Kecamatan</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kecamatan"
@@ -179,49 +179,49 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kode" class="col-sm-2 col-form-label font-12">Kode Kecamatan</label>
+                                        <label for="kode" class="col-sm-2 font-12">Kode Kecamatan</label>
                                         <div class="col-sm-10 col-lg-2 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kode"
                                                 value="54261" disabled placeholder="Kode Kecamatan">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="camat" class="col-sm-2 col-form-label font-12">Nama Camat</label>
+                                        <label for="camat" class="col-sm-2 font-12">Nama Camat</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="camat"
                                                 value="Agus Budianto.SH" placeholder="Nama Camat">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="nipCamat" class="col-sm-2 col-form-label font-12">NIP Camat</label>
+                                        <label for="nipCamat" class="col-sm-2 font-12">NIP Camat</label>
                                         <div class="col-sm-10 col-lg-4 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="nipCamat"
                                                 value="" placeholder="NIP Camat">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kab" class="col-sm-2 col-form-label font-12">Nama Kabupaten</label>
+                                        <label for="kab" class="col-sm-2 font-12">Nama Kabupaten</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kab"
                                                 value="Purworejo" disabled placeholder="Nama Kabupaten">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kodeKab" class="col-sm-2 col-form-label font-12">Kode Kabupaten</label>
+                                        <label for="kodeKab" class="col-sm-2 font-12">Kode Kabupaten</label>
                                         <div class="col-sm-10 col-lg-2 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kodeKab"
                                                 value="5319" disabled placeholder="Kode Kabupaten">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="prov" class="col-sm-2 col-form-label font-12">Nama Provinsi</label>
+                                        <label for="prov" class="col-sm-2 font-12">Nama Provinsi</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="prov"
                                                 value="Jawa Tengah" disabled placeholder="Nama Provinsi">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="kodeProv" class="col-sm-2 col-form-label font-12">Kode Provinsi</label>
+                                        <label for="kodeProv" class="col-sm-2 font-12">Kode Provinsi</label>
                                         <div class="col-sm-10 col-lg-2 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="kodeProv"
                                                 value="53" disabled placeholder="Kode Provinsi">
@@ -232,7 +232,7 @@
                                         <h6><strong>Kontak Pemberitahuan</strong></h6>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="perDes" class="col-sm-2 col-form-label font-12">Nama Perangkat
+                                        <label for="perDes" class="col-sm-2 font-12">Nama Perangkat
                                             Desa</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="perDes"
@@ -240,14 +240,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="noHp" class="col-sm-2 col-form-label font-12">No. HP/WA</label>
+                                        <label for="noHp" class="col-sm-2 font-12">No. HP/WA</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="noHp"
                                                 value="082377656433" placeholder="No. HP/WA">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="jabatan" class="col-sm-2 col-form-label font-12">Jabatan</label>
+                                        <label for="jabatan" class="col-sm-2 font-12">Jabatan</label>
                                         <div class="col-sm-10 col-lg-9 col-md-4">
                                             <input type="text" class="form-control form-control-sm font-12" id="jabatan"
                                                 value="Sekretaris" placeholder="Jabatan">

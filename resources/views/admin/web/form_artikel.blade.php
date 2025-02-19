@@ -26,14 +26,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="card card-outline card-info">
+                        <div class="card-outline card-info">
                             <div class="card-body p-0">
-                                <div class="card-header">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
                                                 <a href="{{ url('identitas-desa') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-xs visible-xs-block"><span
+                                                    class="btn btn-social btn-info btn-sm visible-xs-block"><span
                                                         class="btn-label"><i class="fa fa-arrow-circle-left"></i></span>
                                                     Kembali
                                                     ke Data Identitas Desa</a>
@@ -42,8 +42,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-header" style="background-color: #ffffff;">
+
                                 <div class="form-group row">
-                                    <div class="card-body">
+                                    <div class="card-body p-0">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="judulArtikel">Judul Artikel</label>
@@ -62,151 +64,159 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /.col-->
-                        <div class="col-md-4">
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
-                                    <h4 class="card-title">Unggah Gambar</h4>
+                    </div>
 
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                            title="Collapse">
-                                            <i class="fas fa-plus"></i>
-                                        </button>
-                                    </div>
+
+                    <!-- /.col-->
+                    <div class="col-md-4">
+                        <div class="card card-outline card-info">
+                            <div class="card-header" style="background-color: #ffffff;">
+                                <h4 class="card-title">Unggah Gambar</h4>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
                                 </div>
-                                <div class="card-body collapse" id="collapseContent"> <!-- Tambahkan kelas collapse -->
-                                    <div class="form-group">
-                                        <label style="font-size: 12px;" for="exampleInputFile">Gambar Utama</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                <label class="custom-file-label" for="exampleInputFile"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label style="font-size: 12px;" for="exampleInputFile2">Gambar Tambahan</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile2">
-                                                <label class="custom-file-label" for="exampleInputFile2"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label style="font-size: 12px;" for="exampleInputFile3">Gambar Tambahan</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile3">
-                                                <label class="custom-file-label" for="exampleInputFile3"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label style="font-size: 12px;" for="exampleInputFile4">Gambar Tambahan</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile4">
-                                                <label class="custom-file-label" for="exampleInputFile4"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
                             </div>
-                            <!-- /.card -->
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
-                                    <h4 class="card-title">Pengaturan Tampilan</h4>
-
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                            title="Collapse">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Posisi</label>
-                                        <select class="form-control select2" style="width: 100%;">
-                                            <option selected>Konten + Sidebar Kanan</option>
-                                            <option>Konten + Sidebar Kiri</option>
-                                            <option>Konten Lebar Penuh</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
-                                    <h4 class="card-title">Pengaturan Lainnya</h4>
-
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                            title="Collapse">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
-                                    <div class="form-group">
-                                        <button type="button" class="btn bg-black btn-block"><i style="color:#666;"
-                                                class="fa fa-paperclip float-left"></i>
-                                            <h6 style="color: #666;" class="float-left"> &nbsp;Unduh Dokumen</h6>
-                                        </button>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Dokumen Lampiran</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="input-group input-group" id="exampleInputFile">
-                                                <label class="custom-file-label" for="exampleInputFile"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="namaDokumen">Nama Dokumen</label>
-                                        <input type="text" class="form-control form-control-sm" id="namaDokumen">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="id_start_datetime">Tanggal Posting</label>
-                                        <div class="input-group date" id="id_1">
-                                            <input type="text" class="form-control" required />
-                                            <div class="input-group-addon input-group-append">
-                                                <div class="input-group-text">
-                                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                                                </div>
-                                            </div>
+                            <div class="card-body collapse" id="collapseContent"> <!-- Tambahkan kelas collapse -->
+                                <div class="form-group">
+                                    <label style="font-size: 12px;" for="exampleInputFile">Gambar Utama</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile"></label>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
-
-                            <div class="card card-outline card-info">
-                                <div class="card-body mb-min-20">
-                                    <div class="form-group">
-                                        <button type="button" class="btn btn-xs btn-danger">
-                                            <span class="btn-label"><i class="fa fa-times"></i></span> Batal</button>
-                                        <button type="submit" class="btn btn-xs btn-info float-right"><span
-                                                class="btn-label"><i class="fa fa-check"></i></span> Simpan</button>
+                                <div class="form-group">
+                                    <label style="font-size: 12px;" for="exampleInputFile2">Gambar Tambahan</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile2">
+                                            <label class="custom-file-label" for="exampleInputFile2"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label style="font-size: 12px;" for="exampleInputFile3">Gambar Tambahan</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile3">
+                                            <label class="custom-file-label" for="exampleInputFile3"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label style="font-size: 12px;" for="exampleInputFile4">Gambar Tambahan</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile4">
+                                            <label class="custom-file-label" for="exampleInputFile4"></label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
+                        <!-- /.card -->
+                        <div class="card card-outline card-info">
+                            <div class="card-header" style="background-color: #ffffff;">
+                                <h4 class="card-title">Pengaturan Tampilan</h4>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Posisi</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected>Konten + Sidebar Kanan</option>
+                                        <option>Konten + Sidebar Kiri</option>
+                                        <option>Konten Lebar Penuh</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                        <div class="card card-outline card-info">
+                            <div class="card-header" style="background-color: #ffffff;">
+                                <h4 class="card-title">Pengaturan Lainnya</h4>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
+                                <div class="form-group">
+                                    <button type="button" class="btn bg-black btn-block"><i style="color:#666;"
+                                            class="fa fa-paperclip float-left"></i>
+                                        <h6 style="color: #666;" class="float-left"> &nbsp;Unduh Dokumen</h6>
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Dokumen Lampiran</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="input-group input-group" id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="namaDokumen">Nama Dokumen</label>
+                                    <input type="text" class="form-control form-control-sm" id="namaDokumen">
+                                </div>
+                                <div class="form-group">
+                                    <label for="id_start_datetime">Tanggal Posting</label>
+                                    <div class="input-group date" id="id_1">
+                                        <input type="text" class="form-control" required />
+                                        <div class="input-group-addon input-group-append">
+                                            <div class="input-group-text">
+                                                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+
+                        <div class="card card-outline card-info">
+                            <div class="card-body mb-min-20">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <span class="btn-label"><i class="fa fa-times"></i></span> Batal</button>
+                                    <button type="submit" class="btn btn-sm btn-info float-right"><span class="btn-label"><i
+                                                class="fa fa-check"></i></span> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
                 </div>
             </div>
+    </div>
 
-            <!-- ./row -->
-        </section>
-        <!-- /.content -->
+    <!-- ./row -->
+    </section>
+    <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
 
 @endsection

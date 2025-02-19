@@ -39,17 +39,17 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card-body p-0">
-                        <div class="card card-outline card-info">
-                            <div class="card-header">
+                        <div class="card-outline card-info">
+                            <div class="card-header" style="background-color: #ffffff;">
                                 <div class="form-group row mb-0">
                                     <div class="col-sm-12">
                                         <div class="margin">
                                             <a href="#" data-toggle="modal" data-target="#modal2" title="Tambah Data Menu" id="btn-add"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs" ><i
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm" ><i
                                                         class="fa fa-plus "></i> Tambah</a>
-                                                <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs" data-toggle="modal" data-target="#modal1" title="Hapus Data"><i class="fa fa-trash"></i>
+                                                <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-sm" data-toggle="modal" data-target="#modal1" title="Hapus Data"><i class="fa fa-trash"></i>
                                                     Hapus</a>
-                                                    <a href="{{ url('menu') }}" title="Unduh Data" class="btn btn-social bg-info btn-xs visible-xs-block" data-title="Unduh Data"><i class="fa fa-arrow-circle-left"></i> Kembali ke Daftar Menu</a>
+                                                    <a href="{{ url('menu') }}" title="Unduh Data" class="btn btn-social bg-info btn-sm visible-xs-block" data-title="Unduh Data"><i class="fa fa-arrow-circle-left"></i> Kembali ke Daftar Menu</a>
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12">
                                     <div class="card-body p-0">
-                                            <div class="card-header">
+                                            <div class="card-header" style="background-color: #ffffff;">
                                                 <div class="form-group row mb-0">
                                                     <div class="col-sm-12">
                                                         <div class="box-header with-border">
@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-header">
+                            <div class="card-header" style="background-color: #ffffff;">
                                 <div class="form-group row mb-0 justify-content-between">
                                     <div class="col-sm-12 col-md-3 col-lg-2">
                                         <div class="form-group">
@@ -170,7 +170,7 @@
                     </div>
 
                     <div style="background-color: #00c0ef;">
-                        <div class="card-header">
+                        <div class="card-header" style="background-color: #ffffff;">
                             <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
                                 data
                                 ini?</h6>

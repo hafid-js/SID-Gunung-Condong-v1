@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card card-info card-outline">
-                        <div class="card-header">
+                        <div class="card-header" style="background-color: #ffffff;">
                             <h3 class="card-title">Pilih sumber gambar untuk ditampilkan di slider besar:</h3>
                           </div>
                           <div class="card-body row">

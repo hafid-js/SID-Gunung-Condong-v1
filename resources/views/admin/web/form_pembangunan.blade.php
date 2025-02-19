@@ -27,24 +27,23 @@
                 <div class="row">
                     <div class="col-md-9 col-sm-12 col-lg-9">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
-                                    <div class="col-md-12">
-                                        <div class="form-group row">
+                            <div class="card-outline card-info">
+                                <div class="card-header" style="background-color: #ffffff;">
+                                    <div class="form-group row mb-0">
+                                        <div class="col-sm-12">
                                             <div class="margin">
-                                                <a href="{{ url('sosmed') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-xs visible-xs-block"
-                                                    data-title="Unduh Data"><span class="btn-label"><i
+                                                <a href="{{ url('pembangunan') }}" title="Kembali ke Daftar Pembangunan"
+                                                    class="btn btn-social btn-info btn-sm visible-xs-block"
+                                                    data-title="Kembali ke Daftar Pembangunan"><span class="btn-label"><i
                                                             class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
-                                                    Media Sosial</a>
+                                                    Pembangunan</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /.card-header -->
-                                <!-- form start -->
                                 <form class="form-horizontal">
-                                    <div class="card-body">
+                                    <div class="card-header" style="background-color: #ffffff;">
+                                    <div class="card-body p-0">
                                         <div class="form-group row">
                                             <label for="kegiatan" class="col-sm-2 col-form-label font-12">Nama
                                                 Kegiatan</label>
@@ -181,10 +180,10 @@
                                             <div class="col-sm-10 col-lg-10 col-md-10">
                                                 <div class="input-group input-group-sm">
                                                     <div id="radioBtn" class="btn-group">
-                                                        <a class="btn btn-info btn-xs active"
+                                                        <a class="btn btn-info btn-sm active"
                                                             data-toggle="lokasiPembangunan" data-title="Pilih Lokasi"
                                                             id="pilihLokasi">Pilih Lokasi</a>
-                                                        <a class="btn btn-info btn-xs notActive"
+                                                        <a class="btn btn-info btn-sm notActive"
                                                             data-toggle="lokasiPembangunan" data-title="Tulis Manual"
                                                             id="tulisManual">Tulis Manual</a>
                                                     </div>
@@ -229,14 +228,15 @@
                                                 placeholder="Keterangan"></textarea>
                                         </div>
                                     </div>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-sm btn-danger">Batal</button>
-                                <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
-
-                            </div>
-                            <!-- /.card-footer -->
                         </div>
+                        <div class="card-header" style="background-color: #ffffff;">
+                            <button type="submit" class="btn btn-sm btn-danger">Batal</button>
+                            <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
+
+                        </div>
+                        <!-- /.card-footer -->
                         <!-- /.card-body -->
                         </form>
                     </div>
@@ -245,7 +245,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-12">
                     <div class="card card-outline card-info">
-                        <div class="card-header">
+                        <div class="card-header" style="background-color: #ffffff;">
                             <h4 class="card-title">Unggah Gambar</h4>
 
                             <div class="card-tools">
@@ -254,6 +254,7 @@
                                 </button>
                             </div>
                         </div>
+
                         <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                             <div class="form-group">
                                 <img class="img-responsive" id="previewImage"

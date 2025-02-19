@@ -27,14 +27,14 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
                 <div class="card-body p-0">
-                    <div class="card card-outline card-info">
+                    <div class="card-outline card-info">
                         <div class="card-body p-0">
-                            <div class="card-header">
+                            <div class="card-header" style="background-color: #ffffff;">
                                 <div class="form-group row mb-0">
                                     <div class="col-sm-12">
                                         <div class="margin">
                                             <a href="{{ url('sosmed') }}" title="Unduh Data"
-                                        class="btn btn-social btn-info btn-xs visible-xs-block"
+                                        class="btn btn-social btn-info btn-sm visible-xs-block"
                                         data-title="Unduh Data"><span class="btn-label"><i
                                                 class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
                                         Media Sosial</a>
@@ -44,6 +44,7 @@
                             </div>
                         </div>
                         <form class="form-horizontal">
+                            <div class="card-header" style="background-color: #ffffff;">
                             <div class="card-body">
                                 <div class="form-group row">
                                     <label for="nama" class="col-sm-2 col-form-label font-12">Nama</label>
@@ -80,11 +81,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-sm btn-danger">Batal</button>
-                                <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
-                            </div>
+
                             <!-- /.card-footer -->
+                    </div>
+                    <div class="card-header" style="background-color: #ffffff;">
+                        <button type="submit" class="btn btn-sm btn-danger">Batal</button>
+                        <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
                     </div>
                     <!-- /.card-body -->
                     </form>

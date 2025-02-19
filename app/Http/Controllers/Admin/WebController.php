@@ -108,8 +108,4 @@ class WebController extends Controller
         Session::put('page','form-pembangunan');
         return view('admin.web.form_dokumentasi_pembangunan');
     }
-    public function maps() {
-        Session::put('page','maps');
-        return view('admin.web.maps');
-    }
 }

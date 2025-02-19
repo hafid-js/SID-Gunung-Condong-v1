@@ -41,8 +41,8 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
+                            <div class="card-outline card-info">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
@@ -51,11 +51,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-header">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="card-body p-0">
                                         <div class="form-group row">
                                             <label for="apbDesFooter"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Apbdes
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Apbdes
                                                 Footer</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" id="apbDesFooter"
@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="apbDesFooterAll"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Apbdes Footer
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Apbdes Footer
                                                 All</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" id="apbDesFooterAll"
@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="apbDesMI"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Apbdes Manual
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Apbdes Manual
                                                 Input</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" id="apbDesMI"
@@ -105,7 +105,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="artikelStatis"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Artikel Statis /
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Artikel Statis /
                                                 Halaman</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" multiple="multiple"
@@ -129,7 +129,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="covidDesa"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Covid
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Covid
                                                 Desa</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" id="covidDesa"
@@ -145,7 +145,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="covidRSS"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Covid RSS</label>
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Covid RSS</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" id="covidRSS"
                                                     style="width: 100%;">
@@ -159,7 +159,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="DPB" class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Daftar
+                                            <label for="DPB" class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Daftar
                                                 Penerima
                                                 Bantuan</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
@@ -176,7 +176,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="linkFeed"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12">Link Feed</label>
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12">Link Feed</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <input type="text" class="form-control form-control-sm font-11"
                                                     id="linkFeed" value="https:\/\/www.covid19.go.id\/feed\/">
@@ -189,7 +189,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <label for="chart3D"
-                                                class="col-sm-12 col-md-2 col-lg-2 form-label font-12 text-red">Link
+                                                class="col-sm-12 col-md-2 col-lg-2 col-form-label font-12 text-red">Link
                                                 Feed</label>
                                             <div class="col-sm-12 col-lg-5 col-md-5">
                                                 <select class="form-control form-control-sm select2" id="chart3D"

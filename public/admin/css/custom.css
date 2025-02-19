@@ -58,6 +58,17 @@ body {
 }
 
 
+
+/* .box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+} */
+
 img.penduduk_kecil {
     width: auto;
     max-width: 45px;
@@ -89,9 +100,20 @@ img.penduduk_kecil {
     font-size: 0.8rem;
     /* Larger font size for zoom effect */
 }
+.card {
+    border: 0px;
+}
+
+.nav-sidebar .nav-link>.right, .nav-sidebar .nav-link>p>.right {
+    position: absolute;
+    right: 1rem;
+    top: .7rem;
+    font-size: 10px;
+    font-weight: bolder;
+}
 
 .sidebar .nav-item {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     /* Larger font size for zoom effect */
 }
 
@@ -246,6 +268,7 @@ select.form-control-sm~.select2-container--default {
     max-height: 200px;
     /* overflow-y: auto; */
     font-size: 12px;
+
 }
 
 
@@ -253,6 +276,7 @@ td.aksi {
     width: 1%;
     white-space: nowrap;
     text-align: left;
+
 }
 
 /* radio button modif */

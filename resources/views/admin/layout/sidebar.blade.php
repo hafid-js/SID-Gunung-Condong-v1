@@ -44,7 +44,7 @@
                with font-awesome or any other icon font library -->
                 <li class="nav-header" style="font-size: 12px;">MENU UTAMA</li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ url('/') }}" class="nav-link">
                         <i class="nav-icon nav-icon-beranda fas fa-home"></i>
                         <p>
                             Beranda

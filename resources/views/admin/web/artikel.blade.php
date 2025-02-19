@@ -34,10 +34,10 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-3 col-lg-3">
-                        <a href="#" class="btn btn-lightblue btn-block mb-3 text-white">Semua Artikel Dinamis</a>
+                        <a href="#" class="btn btn-primary btn-block mb-3 text-white">Semua Artikel Dinamis</a>
 
                         <div class="card card-primary card-outline">
-                            <div class="card-header" style="border-bottom: 0px solid #f4f4f4;">
+                            <div class="card-header" style="background-color: #ffffff;" style="border-bottom: 0px solid #f4f4f4;">
                                 <h3 class="card-title">Kategori Artikel</h3>
 
                                 <div class="card-tools">
@@ -102,7 +102,7 @@
                             <!-- /.card-body -->
                         </div>
                         <div class="card card-primary card-outline">
-                            <div class="card-header" style="border-bottom: 0px solid #f4f4f4;">
+                            <div class="card-header" style="background-color: #ffffff;" style="border-bottom: 0px solid #f4f4f4;">
                                 <h3 class="card-title">Artikel Statis</h3>
 
                                 <div class="card-tools">
@@ -138,25 +138,25 @@
 
                     <div class="col-sm-12 col-md-9 col-lg-9">
                         <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header">
+                            <div class="card-outline card-info">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
                                                 <a href="{{ url('artikel/form') }}" id="btn-add"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-xs"><i
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm"><i
                                                         class="fa fa-plus"></i> Tambah Berita Desa</a>
                                                 <a href="#"
-                                                    class="btn btn-social mt-1 mb-1 bg-danger btn-xs visible-xs-block"><i
+                                                    class="btn btn-social mt-1 mb-1 bg-danger btn-sm visible-xs-block"><i
                                                         class="fa fa-trash"></i> Hapus Data Terpilih</a>
                                                 <a href="#"
-                                                    class="btn btn-social mt-1 mb-1 bg-danger btn-xs visible-xs-block"><i
+                                                    class="btn btn-social mt-1 mb-1 bg-danger btn-sm visible-xs-block"><i
                                                         class="fa fa-trash"></i> Hapus Artikel Kategori Berita</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-header">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0 justify-content-between">
                                         <div class="col-sm-12 col-md-3 col-lg-2">
                                             <div class="form-group">
@@ -285,7 +285,7 @@
                 </div>
 
                 <div style="background-color: #00c0ef;">
-                    <div class="card-header">
+                    <div class="card-header" style="background-color: #ffffff;">
                         <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
                             data
                             ini?</h6>
@@ -347,5 +347,6 @@
             </div>
         </div>
     </div>
+
 
 @endsection

@@ -28,12 +28,12 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
                             <div class="card card-outline card-info">
-                                <div class="card-header">
+                                <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
                                                 <a href="{{ url('komentar') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-xs visible-xs-block"
+                                                    class="btn btn-social btn-info btn-sm visible-xs-block"
                                                     data-title="Unduh Data"><span class="btn-label"><i
                                                             class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
                                                     Komentar</a>
@@ -70,7 +70,7 @@
                                         <div class="direct-chat-text bg-secondary text-white">
                                             You better believe it!
                                             <br>
-                                            <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs"
+                                            <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-sm"
                                                 data-toggle="modal" data-target="#modal1" title="Hapus Data"><i
                                                     class="fa fa-trash"></i>
                                                 Hapus</a>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div style="background-color: #00c0ef;">
-                    <div class="card-header">
+                    <div class="card-header" style="background-color: #ffffff;">
                         <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
                             data
                             ini?</h6>
