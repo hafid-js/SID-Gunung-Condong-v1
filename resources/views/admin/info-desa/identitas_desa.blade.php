@@ -55,7 +55,7 @@
                                     <img class="img-fluid pad" src="{{ url('admin/images/photo2.png') }}"
                                         style="width: 600px;height: auto;" alt="Photo">
                                 </div>
-                                <div class="card-body mt-3">
+                                <div class="card-body">
                                     <table class="table table-sm table-striped table-bordered"
                                         style="border: 0px  #f4f4f4;">
                                         <thead>

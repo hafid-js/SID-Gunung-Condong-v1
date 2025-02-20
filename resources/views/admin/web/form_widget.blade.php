@@ -26,14 +26,16 @@
         <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-lg-12">
-                    <div class="card-outline card-info">
+                    <div class="card card-outline card-info">
                         <div class="card-header" style="background-color: #ffffff;">
-                            <div class="col-md-12">
-                                <div class="margin">
-                                    <a href="{{ url('artikel') }}" title="Unduh Data"
-                                        class="btn btn-social btn-info btn-sm visible-xs-block"
-                                        data-title="Unduh Data"><span class="btn-label"><i
-                                                class="fa fa-arrow-circle-left"></i></span> Kembali ke Widget</a>
+                            <div class="form-group row mb-0">
+                                <div class="col-sm-12">
+                                    <div class="margin">
+                                        <a href="{{ url('widget') }}" title="Kembali ke Daftar Pembangunan"
+                                            class="btn btn-social btn-info btn-sm visible-xs-block"
+                                            data-title="Kembali ke Daftar Pembangunan"><span class="btn-label"><i
+                                                    class="fa fa-arrow-circle-left"></i></span> Kembali ke Widget</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

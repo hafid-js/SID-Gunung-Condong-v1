@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-lg-3">
                         <div class="card-body p-0">
-                            <div class="card-outline card-info">
+                            <div class="card card-outline card-info">
                                 <div class="form-group mt-3">
                                     <div class="text-center">
                                         <img class="img-responsive img-circle profile-user-img"
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="card-body p-0">
-                            <div class="card-outline card-info">
+                            <div class="card card-outline card-info">
                                 <div class="form-group mt-3">
                                     <div class="text-center p-3">
                                         <img class="img-fluid pad"
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-md-8 col-sm-12 col-lg-9">
                         <div class="card-body p-0">
-                            <div class="card-outline card-info">
+                            <div class="card card-outline card-info">
                                 <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">

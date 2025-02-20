@@ -30,8 +30,6 @@
     <link rel="stylesheet" href="{{ url('admin/plugins/jsgrid/jsgrid-theme.min.css') }}">
     <!-- Bootstrap Color Picker -->
     <link rel="stylesheet" href="{{ url('admin/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
-    {{-- custom css --}}
-    <link rel="stylesheet" href="{{ url('admin/css/custom.css') }}">
 
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ url('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
@@ -53,16 +51,22 @@
         #map {
             height: 630px;
         }
-    </style>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.min.js"></script>
+        .bg-primary {
+            background-color: #0d6efd;
+        }
+    </style>
+        {{-- custom css --}}
+        <link rel="stylesheet" href="{{ url('admin/css/custom.css') }}">
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js') }}"></script>
+    <script src="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.min.js') }}"></script>
 
 </head>
 
 {{-- <x-head.tinymce-config /> --}}
 <!-- Place the first <script> tag in your HTML's <head> -->
-<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js') }}" referrerpolicy="origin"></script>
 
 <style>
     body {
@@ -137,18 +141,26 @@
 
     {{-- datetimepicker --}}
     <script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
-        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        src="https://code.jquery.com/jquery-3.2.1.min.js') }}"></script>
     <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js') }}"></script>
     <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript"
-        src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+        src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js') }}"></script>
     <script type="text/javascript"
-        src="https://monim67.github.io/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="https://monim67.github.io/bootstrap-datetimepicker/js/demo.js"></script>
+        src="https://monim67.github.io/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script type="text/javascript" src="https://monim67.github.io/bootstrap-datetimepicker/js/demo.js') }}"></script>
 
 
+{{-- <script>
+    $(document).ready(function() {
+        // Mengaktifkan DataTables
+        $('table').DataTable({
+            "order": []  // Optional: jika Anda ingin menyetel urutan default
+        });
+    });
+</script> --}}
     <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
 
     <!-- Place the following <script> and <textarea> tags your HTML's <body> -->

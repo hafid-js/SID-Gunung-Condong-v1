@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-md-9 col-sm-12 col-lg-9">
                         <div class="card-body p-0">
-                            <div class="card-outline card-info">
+                            <div class="card card-outline card-info">
                                 <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
@@ -230,12 +230,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card-header" style="background-color: #ffffff;">
-                            <button type="submit" class="btn btn-sm btn-danger">Batal</button>
-                            <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
+                            <div class="card-header" style="background-color: #ffffff;">
+                                <button type="submit" class="btn btn-sm btn-danger">Batal</button>
+                                <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
 
+                            </div>
                         </div>
+
                         <!-- /.card-footer -->
                         <!-- /.card-body -->
                         </form>

@@ -10,7 +10,7 @@
 
 
         <!-- Content Wrapper. Contains page content -->
-
+{{--
         @extends('admin.layout.layout')
 @section('content')
         <div class="content-wrapper">
@@ -1748,4 +1748,79 @@
             </section>
             <!-- /.content -->
         </div>
-        @endsection
+        @endsection --}}
+
+
+
+        <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Sorting Example</title>
+    <!-- Tambahkan DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+<body>
+
+<table class="table table-hover table-bordered">
+    <thead class="thead-gray disabled color-palette">
+        <tr>
+            <th style="width:4%;">
+                <input type="checkbox" id="check-all" />
+            </th>
+            <th style="width:5%;">NO</th>
+            <th style="width:5%;" class="text-center">AKSI</th>
+            <th class="text-center">PELAPAK</th>
+            <th class="text-center">PRODUK</th>
+            <th class="text-center">KATEGORI</th>
+            <th class="text-center">HARGA</th>
+            <th class="text-center">SATUAN</th>
+            <th class="text-center">POTONGAN</th>
+            <th class="text-center" style="width:30%;">DESKRIPSI</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input type="checkbox" class="check-item" />
+            </td>
+            <td>1</td>
+            <td class="aksi">
+                <a href="{{ url('kategori/sub') }}" class="btn bg-purple btn-sm" title="Rincian Sub Kategori">
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="#" data-toggle="modal" data-target="#modal2" class="btn bg-orange btn-sm" title="Ubah">
+                    <i class="fa fa-edit text-white"></i>
+                </a>
+                <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                    <i class="fa fa-unlock"></i>
+                </a>
+            </td>
+            <td>Berita Desa</td>
+            <td>Ya</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+    </tbody>
+</table>
+
+<!-- Tambahkan jQuery dan DataTables JS -->
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Mengaktifkan DataTables
+        $('table').DataTable({
+            "order": []  // Optional: jika Anda ingin menyetel urutan default
+        });
+    });
+</script>
+
+</body>
+</html>

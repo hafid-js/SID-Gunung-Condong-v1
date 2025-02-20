@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="card-outline card-info">
+                        <div class="card card-outline card-info">
                             <div class="card-body p-0">
                                 <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
@@ -48,13 +48,14 @@
                                     <div class="card-body p-0">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="judulArtikel">Judul Artikel</label>
-                                                <input type="judul" class="form-control" id="judulArtikel"
+                                                <label for="judulArtikel" class="col-form-label">Judul Artikel</label>
+                                                <input type="judul" class="form-control font-12" id="judulArtikel"
                                                     placeholder="Judul Artikel">
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
+                                            <label class="col-form-label">Isi Artikel</label>
                                             <div class="card-body p-0">
                                                 {{-- textarea --}}
                                                 <x-forms.tinymce-editor />
@@ -81,7 +82,7 @@
                             </div>
                             <div class="card-body collapse" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                                 <div class="form-group">
-                                    <label style="font-size: 12px;" for="exampleInputFile">Gambar Utama</label>
+                                    <label class="col-form-label" for="exampleInputFile">Gambar Utama</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="exampleInputFile">
@@ -90,7 +91,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label style="font-size: 12px;" for="exampleInputFile2">Gambar Tambahan</label>
+                                    <label class="col-form-label" for="exampleInputFile2">Gambar Tambahan</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="exampleInputFile2">
@@ -99,7 +100,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label style="font-size: 12px;" for="exampleInputFile3">Gambar Tambahan</label>
+                                    <label class="col-form-label" for="exampleInputFile3">Gambar Tambahan</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="exampleInputFile3">
@@ -108,7 +109,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label style="font-size: 12px;" for="exampleInputFile4">Gambar Tambahan</label>
+                                    <label class="col-form-label" for="exampleInputFile4">Gambar Tambahan</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="exampleInputFile4">
@@ -132,7 +133,7 @@
                             </div>
                             <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Posisi</label>
+                                    <label for="exampleInputFile" class="col-form-label">Posisi</label>
                                     <select class="form-control select2" style="width: 100%;">
                                         <option selected>Konten + Sidebar Kanan</option>
                                         <option>Konten + Sidebar Kiri</option>
@@ -155,13 +156,13 @@
                             </div>
                             <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                                 <div class="form-group">
-                                    <button type="button" class="btn bg-black btn-block"><i style="color:#666;"
+                                    <button type="button" class="btn bg-black btn-block" style="background-color: rgb(8, 8, 8);"><i style="color:#666;"
                                             class="fa fa-paperclip float-left"></i>
                                         <h6 style="color: #666;" class="float-left"> &nbsp;Unduh Dokumen</h6>
                                     </button>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Dokumen Lampiran</label>
+                                    <label for="exampleInputFile" class="col-form-label">Dokumen Lampiran</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="input-group input-group" id="exampleInputFile">
@@ -170,11 +171,11 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="namaDokumen">Nama Dokumen</label>
+                                    <label for="namaDokumen" class="col-form-label">Nama Dokumen</label>
                                     <input type="text" class="form-control form-control-sm" id="namaDokumen">
                                 </div>
                                 <div class="form-group">
-                                    <label for="id_start_datetime">Tanggal Posting</label>
+                                    <label for="id_start_datetime" class="col-form-label">Tanggal Posting</label>
                                     <div class="input-group date" id="id_1">
                                         <input type="text" class="form-control" required />
                                         <div class="input-group-addon input-group-append">

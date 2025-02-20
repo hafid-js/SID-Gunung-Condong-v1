@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card-body p-0">
-                        <div class="card-outline card-info">
+                        <div class="card card-outline card-info">
                             <div class="card-header" style="background-color: #ffffff;">
                                 <div class="form-group row mb-0">
                                     <div class="col-sm-12">
@@ -129,24 +129,7 @@
                                        </div>
                                     </div>
                                 </div>
-                                <ul class="pagination pagination-sm float-left">
-                                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
-                                        Menampilkan 1 sampai 10 dari 57 entri</div>
-                                </ul>
-                                <ul class="pagination pagination-sm m-0 float-right">
-                                    <li class="paginate_button page-item previous disabled" id="example1_previous">
-                                        <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
-                                            class="page-link">Sebelumnya</a>
-                                    </li>
-                                    <li class="paginate_button page-item active">
-                                        <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
-                                            class="page-link">1</a>
-                                    </li>
-                                    <li class="paginate_button page-item next" id="example1_next">
-                                        <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
-                                            class="page-link">Selanjutnya</a>
-                                    </li>
-                                </ul>
+
                             </div>
                         </div>
                     </div>

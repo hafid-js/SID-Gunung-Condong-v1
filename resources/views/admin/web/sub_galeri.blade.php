@@ -45,12 +45,12 @@
                                     <div class="col-sm-12">
                                         <div class="margin">
                                             <a href="{{ url('galeri/form') }}"
-                                            class="btn btn-social mt-1 mb-1 btn-success btn-sm" title="Tambah Galeri"><i
+                                            class="btn btn-social mt-1 mb-1 btn-success btn-xs" title="Tambah Galeri"><i
                                                 class="fa fa-plus "></i> Tambah</a>
-                                        <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-sm"><i class="fa fa-trash"></i>
+                                        <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-xs"><i class="fa fa-trash"></i>
                                             Hapus</a>
                                             <a href="{{ url('galeri') }}" title="Unduh Data"
-                                            class="btn btn-social btn-info btn-sm visible-xs-block"
+                                            class="btn btn-social btn-info btn-xs visible-xs-block"
                                             data-title="Unduh Data"><span class="btn-label"><i
                                                     class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
                                             Album</a>

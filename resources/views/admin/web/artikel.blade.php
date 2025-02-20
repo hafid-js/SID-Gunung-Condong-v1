@@ -138,7 +138,7 @@
 
                     <div class="col-sm-12 col-md-9 col-lg-9">
                         <div class="card-body p-0">
-                            <div class="card-outline card-info">
+                            <div class="card card-outline card-info">
                                 <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
@@ -246,7 +246,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <ul class="pagination pagination-smfloat-left">
+                                    <ul class="pagination pagination-sm float-left">
                                         <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
                                             Menampilkan 1 sampai 10 dari 57 entri</div>
                                     </ul>

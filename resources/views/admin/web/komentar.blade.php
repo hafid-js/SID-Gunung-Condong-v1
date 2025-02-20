@@ -39,7 +39,7 @@
             <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
-                            <div class="card-outline card-info">
+                            <div class="card card-outline card-info">
                                 <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">

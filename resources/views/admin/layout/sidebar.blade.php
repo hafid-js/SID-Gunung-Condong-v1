@@ -1,17 +1,16 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <span class="brand-text font-weight-light"><strong>Sistem Informasi Desa</strong></span>
+    <a href="#" class="brand-link text-center">
+        <span class="brand-text font-weight-light"><strong style="font-size: 14px; font-weight: bold;">OpenDESA</strong></span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="user-panel mt-2 mb-2 pb-1 d-flex align-items-center">
             <div class="image">
-                <img src="https://berputar.opendesa.id/assets/files/logo/opensid_logo.png" class="img-circle"
-                    alt="User Image">
+                <img src="https://berputar.opendesa.id/assets/files/logo/opensid_logo.png" class="img-circle" alt="User Image" style="width: 50px; height: 50px;">
             </div>
             <a href="#" class="d-block">
                 <div class="info">
@@ -24,18 +23,18 @@
             </a>
         </div>
 
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sm form-control-sidebar" type="search" placeholder="Search"
-                    aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-sidebar btn-sm">
-                        <i class="fas fa-search fa-fw"></i>
-                    </button>
+            <!-- SidebarSearch Form -->
+            <div class="form-inline">
+                <div class="input-group" data-widget="sidebar-search">
+                    <input class="form-control form-control-sm form-control-sidebar" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-sidebar btn-sm">
+                            <i class="fas fa-search fa-fw"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -639,7 +638,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ url('lapak-admin/produk') }}" class="nav-link">
                         <i class="nav-icon fas fa-cart-plus"></i>
                         <p>
                             Lapak

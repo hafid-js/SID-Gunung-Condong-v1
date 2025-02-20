@@ -59,6 +59,9 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('identitas-desa/form','InfoDesaController@formidentitasdesa');
     Route::get('identitas-desa/maps/wilayah','InfoDesaController@petawilayahdesa');
     Route::get('identitas-desa/maps/kantor','InfoDesaController@petakantordesa');
+
+    // lapak
+    Route::get('lapak-admin/produk','LapakController@produk');
 });
 
 
