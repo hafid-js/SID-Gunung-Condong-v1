@@ -153,7 +153,7 @@
                     </div>
 
                     <div style="background-color: #00c0ef;">
-                        <div class="card-header" style="background-color: #ffffff;">
+                        <div class="card-header">
                             <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
                                 data
                                 ini?</h6>

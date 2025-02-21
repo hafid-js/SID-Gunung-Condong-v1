@@ -13,4 +13,8 @@ class LapakController extends Controller
         Session::put('page','lapak-admin');
         return view('admin.lapak.produk');
     }
+    public function formproduk() {
+        Session::put('page','form_produk');
+        return view('admin.lapak.form_produk');
+    }
 }

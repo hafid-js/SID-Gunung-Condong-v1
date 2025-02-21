@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | General Form Elements</title>
+    <!-- BS Stepper -->
+    <link rel="stylesheet" href="{{ url('admin/plugins/bs-stepper/css/bs-stepper.min.css') }}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{ url('admin/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ url('admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
@@ -23,8 +25,7 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ url('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="{{ url('admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+
     <!-- jsGrid -->
     <link rel="stylesheet" href="{{ url('admin/plugins/jsgrid/jsgrid.min.css') }}">
     <link rel="stylesheet" href="{{ url('admin/plugins/jsgrid/jsgrid-theme.min.css') }}">
@@ -45,19 +46,30 @@
         href="https://monim67.github.io/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" type="text/css"
         media="all" />
 
+
     {{-- maps leaflet --}}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
-            height: 630px;
+            height: 555px;
         }
 
         .bg-primary {
             background-color: #0d6efd;
         }
+
+        /* Mengubah font untuk seluruh body */
+        /* body {
+    font-family: 'Roboto', sans-serif !important;
+} */
+
+        /* Mengubah ukuran font di sidebar */
+        /* .main-sidebar .nav-pills .nav-link {
+    font-size: 13px !important;
+} */
     </style>
-        {{-- custom css --}}
-        <link rel="stylesheet" href="{{ url('admin/css/custom.css') }}">
+    {{-- custom css --}}
+    <link rel="stylesheet" href="{{ url('admin/css/custom.css') }}">
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js') }}"></script>
     <script src="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.min.js') }}"></script>
@@ -66,7 +78,8 @@
 
 {{-- <x-head.tinymce-config /> --}}
 <!-- Place the first <script> tag in your HTML's <head> -->
-<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js') }}" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js') }}"
+    referrerpolicy="origin"></script>
 
 <style>
     body {
@@ -151,16 +164,30 @@
     <script type="text/javascript"
         src="https://monim67.github.io/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
     <script type="text/javascript" src="https://monim67.github.io/bootstrap-datetimepicker/js/demo.js') }}"></script>
+    <!-- Bootstrap Switch -->
+    <script src="{{ url('admin/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}"></script>
+
+    <script>
+        $(function () {
+            $("input[data-bootstrap-switch]").each(function () {
+                $(this).bootstrapSwitch('state', $(this).prop('checked'));
+            })
+
+        })
+    </script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 
-{{-- <script>
-    $(document).ready(function() {
-        // Mengaktifkan DataTables
-        $('table').DataTable({
-            "order": []  // Optional: jika Anda ingin menyetel urutan default
+    {{--
+    <script>
+        $(document).ready(function () {
+            // Mengaktifkan DataTables
+            $('table').DataTable({
+                "order": []  // Optional: jika Anda ingin menyetel urutan default
+            });
         });
-    });
-</script> --}}
+    </script> --}}
     <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
 
     <!-- Place the following <script> and <textarea> tags your HTML's <body> -->

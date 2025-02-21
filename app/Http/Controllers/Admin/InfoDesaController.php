@@ -25,4 +25,12 @@ class InfoDesaController extends Controller
         Session::put('page','peta-kantor-desa');
         return view('admin.info-desa.peta_kantor_desa');
     }
+    public function dusun() {
+        Session::put('page','dusun');
+        return view('admin.info-desa.dusun');
+    }
+    public function formdusun() {
+        Session::put('page','dusun');
+        return view('admin.info-desa.form_dusun');
+    }
 }

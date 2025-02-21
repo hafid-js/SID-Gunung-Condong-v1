@@ -115,13 +115,21 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
-                                                <a href="#" data-dismiss="modal" id="btn-add"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm" data-toggle="modal"
-                                                    data-target="#modal1" title="Tambah Kategori">
+                                                <a href="{{ url('lapak-admin/produk/form') }}"
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm" title="Tambah Produk">
                                                     <i class="fa fa-plus "></i> Tambah
                                                 </a>
-                                                <a href="#" class="btn btn-danger mt-1 mb-1 btn-success btn-sm">
+                                                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#hapus"
+                                                    class="btn mt-1 mb-1 btn-danger btn-sm">
                                                     <i class="fa fa-trash"></i> Hapus
+                                                </a>
+                                                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#cetak"
+                                                    class="btn mt-1 mb-1 bg-purple btn-sm" title="Cetak">
+                                                    <i class="fa fa-print"></i> Cetak
+                                                </a>
+                                                <a href="#" href="#" data-dismiss="modal" data-toggle="modal"
+                                                    data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-sm">
+                                                    <i class="fa fa-download"></i> Unduh
                                                 </a>
                                             </div>
                                         </div>
@@ -134,23 +142,18 @@
                                                 <option>Pilih Status</option>
                                                 <option>Aktif</option>
                                                 <option>Tidak Aktif</option>
-                                                <option>Belum Dibaca</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-12 col-md-3 col-lg-2" style="margin-right: -25px;">
                                             <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Status</option>
-                                                <option>Aktif</option>
-                                                <option>Tidak Aktif</option>
-                                                <option>Belum Dibaca</option>
+                                                <option>Pilih Pelapak</option>
+                                                <option>3306132287560002 - Khafid</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-12 col-md-3 col-lg-2" style="margin-right: -25px;">
                                             <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Status</option>
-                                                <option>Aktif</option>
-                                                <option>Tidak Aktif</option>
-                                                <option>Belum Dibaca</option>
+                                                <option>Pilih Kategori</option>
+                                                <option>Makanan</option>
                                             </select>
                                         </div>
                                     </div>
@@ -200,28 +203,30 @@
                                                             </td>
                                                             <td>1</td>
                                                             <td class="aksi">
-                                                                <a href="{{ url('kategori/sub') }}"
-                                                                    class="btn bg-purple btn-sm"
-                                                                    title="Rincian Sub Kategori">
-                                                                    <i class="fa fa-list"></i>
-                                                                </a>
                                                                 <a href="#" data-toggle="modal" data-target="#modal2"
                                                                     class="btn bg-orange btn-sm" title="Ubah">
                                                                     <i class="fa fa-edit text-white"></i>
                                                                 </a>
-                                                                <a href="#" data-href="#" class="btn bg-dark btn-sm"
-                                                                    title="Hapus" data-toggle="modal"
-                                                                    data-target="#confirm-delete">
+                                                                <a href="#" class="btn bg-navy btn-sm"
+                                                                    title="Non Aktifkan Produk">
                                                                     <i class="fa fa-unlock"></i>
                                                                 </a>
+                                                                <a href="#" class="btn btn-danger btn-sm"
+                                                                    title="Hapus Produk">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </a>
+                                                                <a href="#" class="btn btn-primary btn-sm"
+                                                                    title="Lihat Produk">
+                                                                    <i class="fa fa-eye"></i>
+                                                                </a>
                                                             </td>
-                                                            <td>Berita Desa</td>
-                                                            <td>Ya</td>
-                                                            <td>-</td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
+                                                            <td>Hafid</td>
+                                                            <td>Keripik Singkong</td>
+                                                            <td>Makanan</td>
+                                                            <td>12.000</td>
+                                                            <td class="text-center">kg</td>
+                                                            <td>0%</td>
+                                                            <td>mantap gurih renyah</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -258,13 +263,12 @@
         <!-- /.content -->
     </div>
     <!-- End Content Wrapper -->
-
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal fade" id="cetak" tabindex="-1" aria-labelledby="cetakLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content rem85">
                 <div>
                     <div class="modal-header">
-                        <h6 class="modal-title" id="modal1Label">Tambah Kategori</h6>
+                        <h6 class="modal-title" id="cetakLabel">Cetak Data</h6>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -272,8 +276,21 @@
                     <form action="#">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label for="nama">Nama Kategori</label>
-                                <input type="text" class="form-control form-control-sm" id="nama">
+                                <label for="laporan">Laporan Ditandatangani</label>
+                                <select name="" class="form-control form-control-sm select2" id="laporan"
+                                    style="width: 100%;">
+                                    <option value="" selected>Pilih Staf Perangkat Desa</option>
+                                    <option value="">Hafid</option>
+                                    <option value="">Aulia Rachma L</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="diketahui">Laporan Diketahui</label>
+                                <select name="" class="form-control form-control-sm select2" id="diketahui"
+                                    style="width: 100%;">
+                                    <option value="">Hafid</option>
+                                    <option value="" selected>Aulia Rachma L</option>
+                                </select>
                             </div>
                         </div>
                 </div>
@@ -286,11 +303,45 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rem85">
+<div class="modal fade" id="hapus" tabindex="-1" aria-labelledby="hapusLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="hapusLabel"><i class="fas fa-exclamation-triangle text-red"></i>
+                    Konfirmasi
+                </h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div style="background-color: #00c0ef;">
+                <div class="card-header">
+                    <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
+                        data
+                        ini?</h6>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-end">
+                <button type="button" class="btn btn-warning btn-sm text-white" data-dismiss="modal"><i
+                        class="fa fa-sign-out"></i> Tutup</button>
+                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</button>
+            </div>
+            </form>
+
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+
+
+<div class="modal fade" id="unduh" tabindex="-1" aria-labelledby="unduhLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rem85">
+            <div>
                 <div class="modal-header">
-                    <h6 class="modal-title" id="modal2Label">Ubah Kategori</h6>
+                    <h6 class="modal-title" id="unduhLabel">Unduh Data</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -298,18 +349,40 @@
                 <form action="#">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="nama">Nama Kategori</label>
-                            <input type="text" class="form-control form-control-sm" value="Berita Desa" id="nama">
+                            <label for="laporan">Laporan Ditandatangani</label>
+                            <select name="" class="form-control form-control-sm select2" id="laporan"
+                                style="width: 100%;">
+                                <option value="" selected>Pilih Staf Perangkat Desa</option>
+                                <option value="">Hafid</option>
+                                <option value="">Aulia Rachma L</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="diketahui">Laporan Diketahui</label>
+                            <select name="" class="form-control form-control-sm select2" id="diketahui"
+                                style="width: 100%;">
+                                <option value="">Hafid</option>
+                                <option value="" selected>Aulia Rachma L</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                    </div>
             </div>
-            </form>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+            </div>
         </div>
+        </form>
     </div>
+</div>
+
 
 
 @endsection
+
+
+
+
+
+
+

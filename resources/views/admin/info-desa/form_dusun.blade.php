@@ -8,13 +8,13 @@
             <div class="container-fluid">
                 <div class="row mb-4">
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">Pengaturan Album</h4>
+                        <h4 class="m-0" style="font-weight: 400;">Wilayah Administratif Dusun</h4>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item active">Daftar Album</li>
-                            <li class="breadcrumb-item active">Pengaturan Album</li>
+                            <li class="breadcrumb-item">Wilayah Administratif Dusun</li>
+                            <li class="breadcrumb-item active">Tambah Data</li>
                         </ol>
                     </div>
                 </div>
@@ -32,11 +32,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="margin">
-                                                <a href="{{ url('galeri') }}" title="Unduh Data"
+                                                <a href="{{ url('dusun') }}" title="Unduh Data"
                                                     class="btn btn-social btn-info btn-sm visible-xs-block"
                                                     data-title="Unduh Data"><span class="btn-label"><i
-                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke Daftar
-                                                    Album</a>
+                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke Wilayah Administratif Dusn</a>
                                             </div>
                                         </div>
                                     </div>
@@ -46,35 +45,22 @@
                                 <form class="form-horizontal">
                                         <div class="card-body">
                                             <div class="form-group row">
-                                                <label for="namaAlbum" class="col-sm-2 col-form-label font-12">Nama
-                                                    Album</label>
+                                                <label for="namaDusun" class="col-sm-2 col-form-label font-12">Nama
+                                                    Dusun</label>
                                                 <div class="col-sm-10 col-lg-9 col-md-9">
                                                     <input type="text" class="form-control form-control-sm font-12"
-                                                        id="namaAlbum" value="Fulan">
+                                                        id="namaDusun" value="Nama Dusun">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="jenis" class="col-sm-2 col-form-label font-12">Jenis</label>
+                                                <label for="ketua" class="col-sm-2 col-form-label font-12">Nama
+                                                    Dusun</label>
                                                 <div class="col-sm-10 col-lg-9 col-md-9">
-                                                    <select name="" id="jenis" class="form-control form-control-sm">
-                                                        <option value="">File</option>
-                                                        <option value="">URL</option>
+                                                    <select name="" id="" class="form-control form-control-sm select2" style="width:100%;">
+                                                        <option value="">-- Silakan Masukan NIK / Nama --</option>
+                                                        <option value="">NIK : 3306132287560002 - KHAFID RT003, RW001, DUSUN KRAJAN</option>
+                                                        <option value="">NIK : 3306132287531990 - AULIA RACHMA RT--, RW--, DUSUN--</option>
                                                     </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="exampleInputFile" class="col-sm-2 col-form-label font-12">Unggah
-                                                    Gambar</label>
-                                                <div class="col-sm-10 col-lg-9 col-md-9">
-                                                    <div class="input-group">
-                                                        <div class="custom-file">
-                                                            <input type="file" class="input-group input-group-sm"
-                                                                id="exampleInputFile">
-                                                            <label class="custom-file-label-form"
-                                                                for="exampleInputFile"></label>
-                                                        </div>
-                                                    </div>
-                                                    <code>Batas maksimal pengunggahan berkas 2 MB.</code>
                                                 </div>
                                             </div>
                                         </div>

@@ -2,10 +2,6 @@
 @section('content')
 
 
-    <!-- Link CDN Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -39,25 +35,25 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                  <label for="inputEmail3" class="col-sm-2 col-form-label font-12">Email</label>
+                                  <label for="latitude" class="col-sm-2 col-form-label font-12">Latitude</label>
                                   <div class="col-sm-10">
-                                    <input type="email" class="form-control form-control-sm" id="inputEmail3" placeholder="Email">
+                                    <input type="text" class="form-control form-control-sm" id="latitude">
                                   </div>
                                 </div>
                                 <div class="form-group row">
-                                  <label for="inputPassword3" class="col-sm-2 col-form-label font-12">Password</label>
+                                  <label for="longitude" class="col-sm-2 col-form-label font-12">Longitude</label>
                                   <div class="col-sm-10">
-                                    <input type="password" class="form-control form-control-sm" id="inputPassword3" placeholder="Password">
+                                    <input type="text" class="form-control form-control-sm" id="longitude">
                                   </div>
                                 </div>
-                                <div class="float-right">
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-check"></i> Simpan</a>
-                                </div>
-                                <a href="{{ url('identitas-desa') }}" class="btn bg-purple btn-sm"><i
-                                        class="fa fa-arrow-circle-left font-12"></i> Kembali</a>
-                                <a href="#" class="btn btn-success btn-sm"><i class="fa fa-download"></i> Export ke GPX</a>
-                                <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Reset</a>
                             </div>
+                            <div class="card-footer border-0">
+                                <a href="{{ url('identitas-desa') }}" class="btn bg-purple btn-sm"><i
+                                    class="fa fa-arrow-circle-left font-12"></i> Kembali</a>
+                                    <a href="#" class="btn btn-success btn-sm"><i class="fa fa-download"></i> Export ke GPX</a>
+                                    <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Reset</a>
+                                <a type="submit" class="btn btn-info btn-sm float-right">Simpan</a>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -68,36 +64,42 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <script>
-        // Membuat peta
-        var map = L.map('map').setView([-7.579834, 109.879237], 15); // Koordinat [lat, long] dan zoom level
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+        <script>
+            // Inisialisasi peta
+            var map = L.map('map').setView([51.505, -0.09], 13); // Set posisi awal dan zoom level
 
-        // Menambahkan layer tile OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+            // Menambahkan tile layer (peta dasar dari OpenStreetMap)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        // Menambahkan marker di peta
-        L.marker([-7.579834, 109.879237]).addTo(map)
-            .bindPopup("<b>Akun : Hafid</b><br />Lokasi saat pembuatan akun.")
-            .openPopup();
+            // Cek apakah geolocation tersedia di browser
+            if (navigator.geolocation) {
+                // Dapatkan posisi lokasi saat ini
+                navigator.geolocation.watchPosition(function(position) {
+                    var lat = position.coords.latitude;  // Latitude
+                    var lon = position.coords.longitude; // Longitude
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    </script>
+                    // Update posisi peta ke koordinat lokasi pengguna
+                    map.setView(new L.LatLng(lat, lon), 13); // Atur posisi peta
 
-    <script>
-        $(function () {
-            $('.my-colorpicker1').colorpicker()
-            //color picker with addon
-            $('.my-colorpicker2').colorpicker()
+                    // Tambahkan marker di lokasi pengguna
+                    var marker = L.marker([lat, lon]).addTo(map);
+                    marker.bindPopup("Lokasi Saya: " + lat.toFixed(4) + ", " + lon.toFixed(4));
 
-            $('.my-colorpicker2').on('colorpickerChange', function (event) {
-                $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
-            })
-        })
-    </script>
+                    // Update nilai input form dengan nilai latitude dan longitude
+                    document.getElementById("latitude").value = lat.toFixed(4);
+                    document.getElementById("longitude").value = lon.toFixed(4);
+                }, function(error) {
+                    alert("Gagal mendapatkan lokasi: " + error.message);
+                });
+            } else {
+                alert("Geolocation tidak didukung di browser ini.");
+            }
+        </script>
 
 
-@endsection
+    @endsection

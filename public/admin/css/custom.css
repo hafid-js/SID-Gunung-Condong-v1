@@ -292,3 +292,8 @@ td.aksi {
     color: #3276b1;
     background-color: #fff;
 }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[aria-selected]:hover {
+    background-color: #3c8dbc;
+    color: white;
+}

@@ -60,7 +60,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/wilayah') }}" class="nav-link">
+                            <a href="{{ url('/dusun') }}" class="nav-link">
                                 <i class="nav-icon fa fa-map text-red"></i>
                                 <p>
                                     Wilayah Administratif

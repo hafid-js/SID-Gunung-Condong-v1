@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer">
+                        <div class="card-footer border-0">
                                 <button type="submit" class="btn btn-sm btn-danger">Batal</button>
                                 <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
 

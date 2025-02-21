@@ -72,26 +72,15 @@
                                     <div class="form-group row">
                                         <label for="judulWidget" class="col-sm-2 col-form-label font-12">Status</label>
                                         <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <!-- Radio Buttons -->
-                                            <div class="card">
-                                                <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
-                                                    <label class="btn bg-olive active">
-                                                        <input type="radio" name="aktif" id="option_b1" autocomplete="off"
-                                                            checked> Aktif
-                                                    </label>
-                                                    <label class="btn bg-olive">
-                                                        <input type="radio" name="tidak_aktif" id="option_b2"
-                                                            autocomplete="off"> Tidak Aktif
-                                                    </label>
-                                                </div>
-                                            </div>
+                                            <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="info" data-size="mini">
+
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-sm btn-danger">Batal</button>
-                                    <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
-                                </div>
+                            <div class="card-footer border-0">
+                                <button type="submit" class="btn btn-sm btn-danger">Batal</button>
+                                <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
                             </div>
                         </div>
                     </div>

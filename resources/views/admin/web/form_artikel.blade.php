@@ -1,6 +1,8 @@
 @extends('admin.layout.layout')
 @section('content')
 
+<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
