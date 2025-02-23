@@ -120,7 +120,7 @@
                                                             </a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm"
                                                                 title="Hapus" data-toggle="modal"
-                                                                data-target="#confirm-delete">
+                                                                >
                                                                 <i class="fa fa-unlock"></i>
                                                             </a>
                                                         </td>
@@ -146,12 +146,12 @@
                                                             </a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm"
                                                                 title="Hapus" data-toggle="modal"
-                                                                data-target="#confirm-delete">
+                                                                >
                                                                 <i class="fa fa-lock"></i>
                                                             </a>
                                                             <a href="#" data-href="#" class="btn bg-danger btn-sm"
                                                                 title="Hapus" data-toggle="modal"
-                                                                data-target="#confirm-delete">
+                                                                >
                                                                 <i class="fa fa-trash-o"></i>
                                                             </a>
                                                         </td>
@@ -177,7 +177,7 @@
                                                             </a>
                                                             <a href="#" data-href="#" class="btn bg-dark btn-sm"
                                                                 title="Hapus" data-toggle="modal"
-                                                                data-target="#confirm-delete">
+                                                                >
                                                                 <i class="fa fa-unlock"></i>
                                                             </a>
                                                         </td>

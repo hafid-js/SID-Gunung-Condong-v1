@@ -126,7 +126,7 @@
                                                             </a>
                                                             <a href="#" data-target="#hapus" class="btn bg-danger btn-sm"
                                                                 title="Hapus Data" data-toggle="modal"
-                                                                data-target="#confirm-delete" title="Hapus Data">
+                                                                 title="Hapus Data">
                                                                 <i class="fa fa-trash text-white"></i>
                                                             </a>
                                                             <a href="#" class="btn bg-info btn-sm" title="Lihat Summary">
@@ -171,7 +171,7 @@
                                                             </a>
                                                             <a href="#" data-target="#hapus" class="btn bg-danger btn-sm"
                                                                 title="Hapus Data" data-toggle="modal"
-                                                                data-target="#confirm-delete" title="Hapus Data">
+                                                                 title="Hapus Data">
                                                                 <i class="fa fa-trash text-white"></i>
                                                             </a>
                                                             <a href="#" class="btn bg-info btn-sm" title="Lihat Summary">
@@ -216,7 +216,7 @@
                                                             </a>
                                                             <a href="#" data-target="#hapus" class="btn bg-danger btn-sm"
                                                                 title="Hapus Data" data-toggle="modal"
-                                                                data-target="#confirm-delete" title="Hapus Data">
+                                                                 title="Hapus Data">
                                                                 <i class="fa fa-trash text-white"></i>
                                                             </a>
                                                             <a href="#" class="btn bg-info btn-sm" title="Lihat Summary">

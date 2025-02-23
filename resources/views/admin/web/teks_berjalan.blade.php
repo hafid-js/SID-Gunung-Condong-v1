@@ -104,7 +104,7 @@
                                                     <td class="aksi">
                                                         <a href="{{ url('teks-berjalan/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                             <i class="fa fa-edit text-white"></i></a>
-                                                        <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                        <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                             <i class="fa fa-lock"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-danger btn-sm" data-toggle="modal" data-target="#modal1" title="Hapus Data">
                                                                 <i class="fa fa-trash-o"></i></a>

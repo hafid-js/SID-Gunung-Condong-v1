@@ -90,7 +90,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
+                            <a href="{{ url('lembaga-desa') }}" class="nav-link">
                                 <i class="nav-icon fa fa-list"></i>
                                 <p>
                                     Lembaga Desa

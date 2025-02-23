@@ -72,7 +72,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="row">
                                         <div class="col-md-sm-12 col-md-12 col-lg-12">
@@ -106,9 +105,9 @@
                                                             <a href="{{ url('komentar/balas') }}" class="btn bg-info btn-sm" title="Rincian Sub Menu">
                                                                 <i class="fa fa-mail-forward"></i></a>
 
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Fulan</td>

@@ -143,7 +143,7 @@
                                                                     <i class="fa fa-edit text-white"></i></a>
                                                                 <a href="#" data-target="#hapus"
                                                                     class="btn bg-danger btn-sm" title="Hapus Data"
-                                                                    data-toggle="modal" data-target="#confirm-delete">
+                                                                    data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                             </td>
                                                             <td>

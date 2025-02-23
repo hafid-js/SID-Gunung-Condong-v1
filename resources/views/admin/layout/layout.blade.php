@@ -64,9 +64,9 @@
 } */
 
         /* Mengubah ukuran font di sidebar */
-        /* .main-sidebar .nav-pills .nav-link {
-    font-size: 13px !important;
-} */
+        .main-sidebar .nav-pills .nav-link {
+    font-size: 14px !important;
+}
     </style>
     {{-- custom css --}}
     <link rel="stylesheet" href="{{ url('admin/css/custom.css') }}">

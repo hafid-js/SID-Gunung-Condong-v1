@@ -103,11 +103,11 @@
                                                             <i class="fa fa-list"></i></a>
                                                         <a href="{{ url('galeri/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                             <i class="fa fa-edit text-white"></i></a>
-                                                        <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Kunci" data-toggle="modal" data-target="#confirm-delete">
+                                                        <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Kunci" data-toggle="modal" >
                                                             <i class="fa fa-lock"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-gray btn-sm" title="Eject">
                                                                 <i class="fa fa-eject" style="color: black;"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-trash-o"></i></a>
                                                     </td>
                                                     <td><strong>Karnaval Hari Kemerdekaan</strong></td>
@@ -124,11 +124,11 @@
                                                             <i class="fa fa-list"></i></a>
                                                         <a href="{{ url('galeri/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                             <i class="fa fa-edit text-white"></i></a>
-                                                        <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Kunci" data-toggle="modal" data-target="#confirm-delete">
+                                                        <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Kunci" data-toggle="modal" >
                                                             <i class="fa fa-lock"></i></a>
                                                             <a href="#" data-href="#" class="btn bg-gray btn-sm" title="Eject">
                                                                 <i class="fa fa-eject" style="color: black;"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-trash-o"></i></a>
                                                     </td>
                                                     <td><strong>Panorama Wisata</strong></td>

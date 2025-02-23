@@ -48,7 +48,7 @@
                                             <a href="{{ url('sosmed/form') }}"
                                                     class="btn btn-social mt-1 mb-1 btn-success btn-sm" title="Tambah Kategori"><i
                                                         class="fa fa-plus "></i> Tambah</a>
-                                                <a href="#"  data-href="#" data-target="#modal1" title="Hapus" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger mt-1 mb-1 btn-sm"><i class="fa fa-trash"></i>
+                                                <a href="#"  data-href="#" data-target="#modal1" title="Hapus" data-toggle="modal"  class="btn btn-danger mt-1 mb-1 btn-sm"><i class="fa fa-trash"></i>
                                                     Hapus</a>
                                         </div>
                                     </div>
@@ -95,9 +95,9 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('sosmed/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Facebook</td>
@@ -114,9 +114,9 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('sosmed/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Instagram</td>
@@ -133,9 +133,9 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('sosmed/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Telegram</td>
@@ -152,9 +152,9 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('sosmed/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Twitter</td>
@@ -171,9 +171,9 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('sosmed/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Whatsapp</td>
@@ -190,9 +190,9 @@
                                                         <td class="aksi">
                                                             <a href="{{ url('sosmed/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                            <a href="#" data-href="#" class="btn bg-dark btn-sm" title="Hapus" data-toggle="modal" >
                                                                 <i class="fa fa-lock"></i></a>
-                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete">
+                                                                <a href="#" data-href="#" data-target="#modal1" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
                                                                     <i class="fa fa-trash-o"></i></a>
                                                         </td>
                                                         <td>Youtube</td>

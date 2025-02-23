@@ -8,12 +8,12 @@
          <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h4 class="m-0" style="font-weight: 400;">Wilayah Administratif Dusun</h4>
+                    <h4 class="m-0" style="font-weight: 400;">Pengelolaan Lembaga</h4>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                        <li class="breadcrumb-item active">Wilayah Administratif Dusun</li>
+                        <li class="breadcrumb-item active">Pengelolaan Lembaga</li>
                     </ol>
                 </div>
             </div>
@@ -44,9 +44,10 @@
                                 <div class="form-group row mb-0">
                                     <div class="col-sm-12">
                                         <div class="margin">
-                                            <a href="{{ url('dusun/form') }}"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm"
+                                            <a href="{{ url('lembaga-desa/form') }}"
+                                                    class="btn mt-1 mb-1 btn-success btn-sm"
                                                     title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
+                                                    <a href="#" class="btn btn-danger mt-1 mb-1 btn-sm"><i class="fa fa-trash"></i> Hapus</a>
                                                 <a href="#" data-target="#cetak" title="Cetak Data" data-toggle="modal"
                                                     data-target="#cetak" class="btn mt-1 mb-1 bg-purple btn-sm"><i
                                                         class="fa fa-print"></i>
@@ -55,6 +56,8 @@
                                                     data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-sm"><i
                                                         class="fa fa-download"></i>
                                                     Unduh</a>
+                                                    <a href="{{ url('lembaga-desa/kategori') }}" class="btn btn-sm btn-warning mt-1 mb-1 text-white"><i class="fa fa-list"></i> Kategori</a>
+                                                    <a href="#" class="btn btn-sm bg-purple mt-1 mb-1"><i class="fa fa-refresh"></i> Bersihkan</a>
                                         </div>
                                     </div>
                                 </div>
@@ -62,8 +65,21 @@
                             <div class="card-header" style="background-color: #ffffff;">
                                 <div class="form-group row mb-0 justify-content-between">
                                     <div class="col-sm-12 col-md-3 col-lg-2">
+                                      <div class="btn-group">
+                                        <div class="form-group mr-1">
+                                            <select class="form-control form-control-sm select2" style="width: 100%;">
+                                                <option>Pilih Status</option>
+                                                <option>Aktif</option>
+                                                <option>Tidak Aktif</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control form-control-sm select2" style="width: 100%;">
+                                                <option>Pilih Kategori Lembaga</option>
+                                            </select>
+                                        </div>
+                                      </div>
                                     </div>
-
                                     <div class="col-sm-12 col-md-3 col-lg-2">
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control form-control-sm"
@@ -73,7 +89,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="row">
                                     <div class="col-md-sm-12 col-md-12 col-lg-12">
@@ -81,68 +96,36 @@
                                         <table class="table table-hover table-bordered">
                                             <thead class="thead-gray disabled">
                                                 <tr>
+                                                    <th>
+                                                        <input type="checkbox" id="check-all" />
+                                                    </th>
                                                     <th style="width:5%;">NO</th>
-                                                    <th style="width:5%;" class="text-center">Aksi</th>
-                                                    <th>Dusun</th>
-                                                    <th>Ketua</th>
-                                                    <th>NIK</th>
-                                                    <th>RW</th>
-                                                    <th>RT</th>
-                                                    <th>KK</th>
-                                                    <th>L+P</th>
-                                                    <th>L</th>
-                                                    <th>P</th>
+                                                    <th style="width:5%;" class="text-center">AKSI</th>
+                                                    <th>KODE LEMBAGA</th>
+                                                    <th style="width: 30%;">NAMA LEMBAGA</th>
+                                                    <th>KETUA LEMBAGA</th>
+                                                    <th>KATEGORI LEMBAGA</th>
+                                                    <th class="text-center">JUMLAH ANGGOTA LEMBAGA</th>
                                                 </tr>
                                             </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="check-item" />
+                                                        </td>
+
                                                         <td>1</td>
                                                         <td class="aksi">
                                                             <a href="{{ url('dusun/rw') }}" class="btn bg-purple btn-sm" title="Rincian Sub Wilayah">
                                                                 <i class="fa fa-list"></i></a>
                                                             <a href="{{ url('dusun/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
-                                                                <a href="#" data-href="#" data-target="#hapus" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" >
-                                                                    <i class="fa fa-trash-o"></i></a>
                                                         </td>
-                                                        <td>Krajan</td>
-                                                        <td>Widadi</td>
-                                                        <td>3306452265250004</td>
-                                                        <td>0</td>
-                                                        <td>1</td>
-                                                        <td>1</td>
-                                                        <td>3</td>
-                                                        <td>1</td>
-                                                        <td>2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td class="aksi">
-                                                            <a href="{{ url('dusun/rw') }}" class="btn bg-purple btn-sm" title="Rincian Sub Wilayah">
-                                                                <i class="fa fa-list"></i></a>
-                                                                <a href="{{ url('dusun/form') }}" class="btn bg-orange btn-sm" title="Ubah">
-                                                                    <i class="fa fa-edit text-white"></i></a>
-                                                                <a href="#" data-href="#" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus">
-                                                                    <i class="fa fa-trash-o"></i></a>
-                                                        </td>
-                                                        <td>Krajan</td>
-                                                        <td>Widadi</td>
-                                                        <td>3306452265250004</td>
-                                                        <td>0</td>
-                                                        <td>1</td>
-                                                        <td>1</td>
-                                                        <td>3</td>
-                                                        <td>1</td>
-                                                        <td>2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th colspan="5" class="text-center">Total</th>
-                                                        <th>0</th>
-                                                        <th>1</th>
-                                                        <th>1</th>
-                                                        <th>4</th>
-                                                        <th>2</th>
-                                                        <th>2</th>
+                                                        <td>BPD</td>
+                                                        <td>Badan Permusyawatan Desa</td>
+                                                        <td>WIDADI</td>
+                                                        <td>Badan Permusyawatan Desa</td>
+                                                        <td class="text-center">1</td>
                                                     </tr>
                                                 </tbody>
                                         </table>

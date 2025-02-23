@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-4">
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">Wilayah Administratif Dusun</h4>
+                        <h4 class="m-0" style="font-weight: 400;">Wilayah Administratif RW</h4>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item">Wilayah Administratif Dusun</li>
+                            <li class="breadcrumb-item">Wilayah Administratif RW</li>
                             <li class="breadcrumb-item active">Tambah Data</li>
                         </ol>
                     </div>
@@ -32,10 +32,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="margin">
-                                                <a href="{{ url('dusun') }}" title="Kembali"
+                                                <a href="{{ url('dusun/rw') }}" title="Kembali"
                                                     class="btn btn-social btn-info btn-sm visible-xs-block"
                                                     data-title="Kembali"><span class="btn-label"><i
-                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke Wilayah Administratif Dusun</a>
+                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke Wilayah Administratif RW</a>
                                             </div>
                                         </div>
                                     </div>
@@ -45,16 +45,15 @@
                                 <form class="form-horizontal">
                                         <div class="card-body">
                                             <div class="form-group row">
-                                                <label for="namaDusun" class="col-sm-2 col-form-label font-12">Nama
-                                                    Dusun</label>
+                                                <label for="namaRW" class="col-sm-2 col-form-label font-12">Nama
+                                                    RW</label>
                                                 <div class="col-sm-10 col-lg-9 col-md-9">
                                                     <input type="text" class="form-control form-control-sm font-12"
-                                                        id="namaDusun" placeholder="Nama Dusun">
+                                                        id="namaRW" placeholder="Nama RW">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="ketua" class="col-sm-2 col-form-label font-12">Nama
-                                                    Dusun</label>
+                                                <label for="ketua" class="col-sm-2 col-form-label font-12">NIK / Nama Kepala RW</label>
                                                 <div class="col-sm-10 col-lg-9 col-md-9">
                                                     <select name="" id="" class="form-control form-control-sm select2" style="width:100%;">
                                                         <option value="">-- Silakan Masukan NIK / Nama --</option>

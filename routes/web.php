@@ -61,6 +61,16 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('identitas-desa/maps/kantor','InfoDesaController@petakantordesa');
     Route::get('dusun','InfoDesaController@dusun');
     Route::get('dusun/form','InfoDesaController@formdusun');
+    Route::get('dusun/rw','InfoDesaController@rw');
+    Route::get('dusun/rw/cetak','InfoDesaController@cetakdatarw');
+    Route::get('dusun/rw/form','InfoDesaController@formrw');
+    Route::get('dusun/rt','InfoDesaController@rt');
+    Route::get('dusun/rt/cetak','InfoDesaController@cetakdatart');
+    Route::get('dusun/rt/form','InfoDesaController@formrt');
+    Route::get('lembaga-desa','InfoDesaController@lembagadesa');
+    Route::get('lembaga-desa/form','InfoDesaController@formlembagadesa');
+    Route::get('lembaga-desa/kategori','InfoDesaController@kategorilembaga');
+    Route::get('lembaga-desa/kategori/form','InfoDesaController@formkategorilembaga');
 
     // lapak
     Route::get('lapak-admin/produk','LapakController@produk');
