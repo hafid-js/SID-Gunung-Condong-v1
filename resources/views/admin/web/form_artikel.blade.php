@@ -1,7 +1,8 @@
 @extends('admin.layout.layout')
 @section('content')
 
-<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -158,7 +159,8 @@
                             </div>
                             <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                                 <div class="form-group">
-                                    <button type="button" class="btn bg-black btn-block" style="background-color: rgb(8, 8, 8);"><i style="color:#666;"
+                                    <button type="button" class="btn bg-black btn-block"
+                                        style="background-color: rgb(8, 8, 8);"><i style="color:#666;"
                                             class="fa fa-paperclip float-left"></i>
                                         <h6 style="color: #666;" class="float-left"> &nbsp;Unduh Dokumen</h6>
                                     </button>
@@ -177,8 +179,8 @@
                                     <input type="text" class="form-control form-control-sm" id="namaDokumen">
                                 </div>
                                 <div class="form-group">
-                                    <label for="id_start_datetime" class="col-form-label">Tanggal Posting</label>
-                                    <div class="input-group date" id="id_1">
+                                    <label for="tglPost" class="col-form-label">Tanggal Posting</label>
+                                    <div class="input-group input-group-sm" id="tglPost">
                                         <input type="text" class="form-control" required />
                                         <div class="input-group-addon input-group-append">
                                             <div class="input-group-text">
@@ -220,6 +222,10 @@
             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
+        $('#tglPost input').datepicker({
+        });
+
+
     </script>
 
 @endsection

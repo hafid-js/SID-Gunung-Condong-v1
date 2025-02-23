@@ -258,7 +258,7 @@
                                 <div class="card-footer border-0">
                                     <button class="btn btn-danger">Batal</button>
                                     <button type="submit" class="btn btn-info float-right">Simpan</button>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
