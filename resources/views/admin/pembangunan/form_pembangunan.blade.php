@@ -44,27 +44,27 @@
                                 <form class="form-horizontal">
                                         <div class="card-body">
                                             <div class="form-group row">
-                                                <label for="kegiatan" class="col-sm-2 col-form-label font-12">Nama
+                                                <label for="kegiatan" class="col-sm-3 col-form-label font-12">Nama
                                                     Kegiatan</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <input type="text" placeholder="Nama Kegiatan Pembangunan"
                                                         class="form-control form-control-sm font-12" id="kegiatan">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="volume" class="col-sm-2 col-form-label font-12">Volume</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <label for="volume" class="col-sm-3 col-form-label font-12">Volume</label>
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <input type="text" placeholder="Volume Pembangunan"
                                                         class="form-control form-control-sm font-12" id="volume">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="waktu" class="col-sm-2 col-form-label font-12">Waktu</label>
+                                                <label for="waktu" class="col-sm-3 col-form-label font-12">Waktu</label>
                                                 <div class="col-sm-6 col-lg-6 col-md-6 mb-2">
                                                     <input type="text" placeholder="Lamanya Pembangunan"
                                                         class="form-control form-control-sm font-12" id="waktu">
                                                 </div>
-                                                <div class="col-sm-4 col-lg-4 col-md-4">
+                                                <div class="col-sm-3 col-lg-3 col-md-3">
                                                     <select name="" class="form-control form-control-sm"
                                                         style="width: 100%;">
                                                         <option value="" selected>Hari</option>
@@ -75,9 +75,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="sumberDana" class="col-sm-2 col-form-label font-12">Sumber
+                                                <label for="sumberDana" class="col-sm-3 col-form-label font-12">Sumber
                                                     Dana</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <select name="" class="form-control form-control-sm select2"
                                                         id="sumberDana" style="width: 100%;">
                                                         <option value="" selected>Pendapatan Asli Desa (PAD)</option>
@@ -167,9 +167,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="sifatProyek" class="col-sm-2 col-form-label font-12">Sifat
+                                                <label for="sifatProyek" class="col-sm-3 col-form-label font-12">Sifat
                                                     Proyek</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <select name="" class="form-control form-control-sm select2"
                                                         id="sifatProyek" style="width: 100%;">
                                                         <option value="" selected>-- Pilih Sifat Proyek</option>
@@ -180,9 +180,9 @@
                                             </div>
                                             <div class="form-group row">
                                                 <label for="lokasiPembangunan"
-                                                    class="col-sm-2 col-form-label font-12">Lokasi
+                                                    class="col-sm-3 col-form-label font-12">Lokasi
                                                     Pembangunan</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <div class="input-group input-group-sm">
                                                         <div id="radioBtn" class="btn-group">
                                                             <a class="btn btn-info btn-sm active"
@@ -196,8 +196,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label font-12"></label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10" id="tampilPilihLokasi">
+                                                <label class="col-sm-3 col-form-label font-12"></label>
+                                                <div class="col-sm-9 col-md-9 col-lg-9" id="tampilPilihLokasi">
                                                     <select name="" class="form-control form-control-sm select2"
                                                         style="width: 100%;">
                                                         <option value="" selected>-- Pilih Lokasi Pembangunan --</option>
@@ -205,65 +205,32 @@
                                                         <option value="">A - RW / RT --</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <textarea class="form-control font-12" rows="3" style="display: none;"
                                                         id="tampilTulisManual" placeholder="Lokasi"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="pelaksana" class="col-sm-2 col-form-label font-12">Pelaksana
+                                                <label for="pelaksana" class="col-sm-3 col-form-label font-12">Pelaksana
                                                     Kegiatan</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <input type="text" placeholder="Pelaksana Kegiatan Pembangunan"
                                                         class="form-control form-control-sm font-12" id="pelaksana">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="manfaat" class="col-sm-2 col-form-label font-12">Manfaat</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                <label for="manfaat" class="col-sm-3 col-form-label font-12">Manfaat</label>
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <textarea class="form-control font-12" rows="3" id="manfaat"
                                                         placeholder="Manfaat"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="keterangan"
-                                                    class="col-sm-2 col-form-label font-12">Keterangan</label>
-                                                <div class="col-sm-10 col-lg-10 col-md-10">
+                                                    class="col-sm-3 col-form-label font-12">Keterangan</label>
+                                                <div class="col-sm-9 col-md-9 col-lg-9">
                                                     <textarea class="form-control font-12" rows="3" id="keterangan"
-                                                        placeholder="Keterangan"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="form-group row">
-                                                <label for="exampleInputFile"
-                                                    class="col-sm-2 col-form-label font-12"></label>
-                                                <div class="col-sm-10 col-lg-8 col-md-10">
-                                                    <img class="attachment-img img-responsive" style="border-radius: 10%;"
-                                                        src="https://berputar.opendesa.id/desa/upload/galeri/0qWY517394450121632624563dc2677b837ae5edd00a5__sid__ciPbAUf.jpg"
-                                                        alt="Gambar Dokumentasi" width="200" height="200">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="exampleInputFile" class="col-sm-2 col-form-label font-12">Unggah
-                                                    Dokumentasi</label>
-                                                <div class="col-sm-10 col-lg-8 col-md-10">
-                                                    <div class="input-group">
-                                                        <div class="custom-file">
-                                                            <input type="file" class="input-group input-group"
-                                                                id="exampleInputFile">
-                                                            <label class="custom-file-label" for="exampleInputFile"></label>
-                                                        </div>
-                                                    </div>
-                                                    <code>(kosongkan jika tidak ingin mengubah gambar)</code>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="keterangan"
-                                                    class="col-sm-2 col-form-label font-12">Keterangan</label>
-                                                <div class="col-sm-10 col-lg-8 col-md-8">
-                                                    <textarea class="form-control font-12" rows="4" id="keterangan"
                                                         placeholder="Keterangan"></textarea>
                                                 </div>
                                             </div>
@@ -290,16 +257,18 @@
 
                             <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                                 <div class="form-group">
-                                    <img class="img-responsive" id="previewImage"
+                                    <img class="image_pembangunan" id="image_pembangunan"
                                         src="https://berputar.opendesa.id/assets/images/404-image-not-found.jpg?v1b31d555fd0886e1002839f5b442f1f2"
                                         alt="Gambar Utama Pembangunan">
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile"></label>
-                                        </div>
+                                        <input type="text" class="form-control" id="filePath"
+                                               />
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-info btn-sm" id="file_browser"><i class="fas fa-search"></i></button>
+                                                <input type="file" id="file_input" onchange="showPreview(event)" style="display: none;" />
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -315,5 +284,71 @@
     <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+    <script>
+        // Ambil tombol dan input file
+        const button = document.getElementById('file_browser');
+       const fileInput = document.getElementById('file_input');
+       const cameraButton = document.getElementById('camera_browser');
+       const imagePembangunan = document.getElementById('image_pembangunan');
+       const filePath = document.getElementById('filePath');
+
+       function showPreview(event) {
+           var file = event.target.files[0];
+           var preview = document.getElementById('filePreview');
+
+           if (file) {
+               var reader = new FileReader();
+               reader.onload = function (e) {
+                   preview.innerHTML = `<img src="${e.target.result}" alt="File Preview" class="image_pembangunan">`;
+               };
+               reader.readAsDataURL(file);
+           }
+       }
+
+
+       // Ketika tombol diklik, buka file browser
+       button.addEventListener('click', function () {
+           fileInput.click();  // Memicu input file untuk dibuka
+       });
+
+       // Jika file dipilih, ubah gambar menjadi gambar yang dipilih
+       fileInput.addEventListener('change', function () {
+           const file = fileInput.files[0];  // Ambil file pertama yang dipilih
+           if (file) {
+               const reader = new FileReader();
+
+               // Ketika file berhasil dibaca, ubah src gambar
+               reader.onload = function (e) {
+                   imagePembangunan.src = e.target.result;
+               };
+
+               reader.readAsDataURL(file);  // Membaca file sebagai DataURL
+           }
+       });
+
+       // JavaScript untuk menampilkan path file dan preview gambar
+    document.getElementById('file_input').addEventListener('change', function(event) {
+        var file = event.target.files[0];
+        if (file) {
+            // Menampilkan path file
+            filePath.textContent = 'Path file: ' + file.name; // Hanya menampilkan nama file
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var img = document.createElement('img');
+                img.src = e.target.result;
+
+                // Menunggu gambar dimuat dan mengubah ukuran gambar
+                img.onload = function() {
+                    imagePembangunan.src = img.src;
+                    imagePembangunan.style.display = 'block';
+                };
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+   </script>
 
 @endsection

@@ -314,3 +314,21 @@ img.penduduk {
     padding: 2px;
     border: 2px solid #d2d6de;
 }
+img.image_pembangunan {
+    width: auto;
+    height: 280px;
+    max-width: 280px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+img.logo_lembaga {
+
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+    border: 2px solid #d2d6de;
+}

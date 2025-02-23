@@ -30,18 +30,20 @@
                             <div class="card card-outline card-info">
                                 <div class="form-group mt-3">
                                     <div class="text-center">
-                                        <img class="img-responsive img-circle profile-user-img"
+                                        <img class="logo_lembaga" id="logo_lembaga"
                                             src="https://berputar.opendesa.id/assets/files/logo/opensid_logo.png"
-                                            style="width: 200px;height:200px;" alt="Photo">
+                                            alt="Foto Penduduk">
                                     </div>
                                 </div>
-                                <code class="text-center">(Kosongkan, jika logo tidak berubah)</code>
+                                <code class="text-center font-11">(Kosongkan, jika logo tidak berubah)</code>
                                 <div class="card-body">
                                     <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="input-group" id="exampleInputFile">
-                                            <label class="custom-file-label " for="exampleInputFile"></label>
-                                        </div>
+                                        <input type="text" class="form-control form-control-sm"
+                                                disabled>
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-info btn-sm" id="file_browser"><i class="fas fa-search"></i></button>
+                                                <input type="file" id="file_input" onchange="showPreview(event)" style="display: none;" />
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -125,5 +127,49 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+
+    <script>
+        // Ambil tombol dan input file
+        const button = document.getElementById('file_browser');
+       const fileInput = document.getElementById('file_input');
+       const cameraButton = document.getElementById('camera_browser');
+       const logoLembaga = document.getElementById('logo_lembaga');
+
+       function showPreview(event) {
+           var file = event.target.files[0];
+           var preview = document.getElementById('filePreview');
+
+           if (file) {
+               var reader = new FileReader();
+               reader.onload = function (e) {
+                   preview.innerHTML = `<img src="${e.target.result}" alt="File Preview" class="penduduk">`;
+               };
+               reader.readAsDataURL(file);
+           }
+       }
+
+
+       // Ketika tombol diklik, buka file browser
+       button.addEventListener('click', function () {
+           fileInput.click();  // Memicu input file untuk dibuka
+       });
+
+       // Jika file dipilih, ubah gambar menjadi gambar yang dipilih
+       fileInput.addEventListener('change', function () {
+           const file = fileInput.files[0];  // Ambil file pertama yang dipilih
+           if (file) {
+               const reader = new FileReader();
+
+               // Ketika file berhasil dibaca, ubah src gambar
+               reader.onload = function (e) {
+                   logoLembaga.src = e.target.result;
+               };
+
+               reader.readAsDataURL(file);  // Membaca file sebagai DataURL
+           }
+       });
+
+   </script>
 
 @endsection

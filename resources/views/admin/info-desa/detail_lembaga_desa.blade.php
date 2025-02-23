@@ -39,14 +39,21 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
+
                             <div class="card card-outline card-info">
                                 <div class="card-header" style="background-color: #ffffff;">
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
-                                                <a href="{{ url('pembangunan/dokumentasi/form') }}"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm"
+                                                <div class="btn-group">
+                                                <a href="#"
+                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm " style="box-shadow: none !important;"  data-toggle="dropdown"
                                                     title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a class="dropdown-item" href="{{ url('lembaga-desa/anggota/form') }}"><i class="fa fa-plus"></i> Tambah Satu Anggota Lembaga</a>
+                                                        <a class="dropdown-item" href="{{ url('lembaga-desa/anggota/form') }}"><i class="fa fa-plus"></i> Tambah Beberapa Anggota Lembaga</a>
+                                                      </div>
+                                                </div>
                                                 <a href="#" data-target="#hapus" title="Hapus Data" data-toggle="modal"
                                                     data-target="#hapus" class="btn mt-1 mb-1 btn-danger btn-sm"><i
                                                         class="fa fa-trash"></i>
@@ -59,11 +66,11 @@
                                                     data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-sm"><i
                                                         class="fa fa-download"></i>
                                                     Unduh</a>
-                                                <a href="{{ url('pembangunan') }}" title="Unduh Data"
+                                                <a href="{{ url('lembaga-desa') }}" title="Unduh Data"
                                                     class="btn btn-social btn-info btn-sm visible-xs-block"
                                                     data-title="Unduh Data"><span class="btn-label"><i
                                                             class="fa fa-arrow-circle-left"></i></span> Kembali ke
-                                                    Daftar Pembangunan</a>
+                                                    Daftar Lembaga</a>
                                             </div>
                                         </div>
                                     </div>

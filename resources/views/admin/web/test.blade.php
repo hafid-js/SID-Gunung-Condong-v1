@@ -1,27 +1,36 @@
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<form action="" method="POST" enctype="multipart/form-data">
+    @csrf
+    <label for="imageInput">Pilih Gambar:</label>
+    <input type="file" id="imageInput" name="image" accept="image/*">
+    <div id="filePath" style="margin-top: 10px;"></div> <!-- Tempat untuk menampilkan path -->
+    <div id="imagePreview" style="margin-top: 10px; max-width: 200px; height: auto;">
+        <img id="previewImage" src="#" alt="Image preview" style="display:none; max-width: 100%; height: auto;">
+    </div>
+    <button type="submit">Upload Image</button>
+</form>
 
-<!-- Bootstrap Datepicker CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
+<script>
+    // JavaScript untuk menampilkan path file dan preview gambar
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+        var file = event.target.files[0];
+        if (file) {
+            // Menampilkan path file
+            var filePath = document.getElementById('filePath');
+            filePath.textContent = 'Path file: ' + file.name; // Hanya menampilkan nama file
 
-<!-- jQuery dan Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var img = document.createElement('img');
+                img.src = e.target.result;
 
-<!-- Bootstrap Datepicker JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
-
-
-
-    <input type="text" id="datepicker" name="date" class="form-control">
-
-
-    <script>
-    $(document).ready(function() {
-    $('#datepicker').datepicker({
-        format: 'yyyy-mm-dd', // Format tanggal yang digunakan, bisa disesuaikan
-        autoclose: true
+                // Menunggu gambar dimuat dan mengubah ukuran gambar
+                img.onload = function() {
+                    var previewImage = document.getElementById('previewImage');
+                    previewImage.src = img.src;
+                    previewImage.style.display = 'block';
+                };
+            };
+            reader.readAsDataURL(file);
+        }
     });
-});
-
-    </script>
+</script>
