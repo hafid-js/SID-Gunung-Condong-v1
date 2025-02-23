@@ -116,9 +116,9 @@
 
                                                         <td>1</td>
                                                         <td class="aksi">
-                                                            <a href="{{ url('dusun/rw') }}" class="btn bg-purple btn-sm" title="Rincian Sub Wilayah">
+                                                            <a href="{{ url('lembaga-desa/detail') }}" class="btn bg-purple btn-sm" title="Rincian Sub Wilayah">
                                                                 <i class="fa fa-list"></i></a>
-                                                            <a href="{{ url('dusun/form') }}" class="btn bg-orange btn-sm" title="Ubah">
+                                                            <a href="{{ url('lembaga-desa/form') }}" class="btn bg-orange btn-sm" title="Ubah">
                                                                 <i class="fa fa-edit text-white"></i></a>
                                                         </td>
                                                         <td>BPD</td>

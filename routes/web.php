@@ -46,10 +46,10 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
 
 
     //menu pembangunan
-    Route::get('pembangunan','WebController@pembangunan');
-    Route::get('pembangunan/form','WebController@formpembangunan');
-    Route::get('pembangunan/dokumentasi','WebController@dokumentasipembangunan');
-    Route::get('pembangunan/dokumentasi/form','WebController@formdokumentasipembangunan');
+    Route::get('pembangunan','PembangunanController@pembangunan');
+    Route::get('pembangunan/form','PembangunanController@formpembangunan');
+    Route::get('pembangunan/dokumentasi','PembangunanController@dokumentasipembangunan');
+    Route::get('pembangunan/dokumentasi/form','PembangunanController@formdokumentasipembangunan');
 
     // maps
     Route::get('maps','WebController@maps');
@@ -68,9 +68,11 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     Route::get('dusun/rt/cetak','InfoDesaController@cetakdatart');
     Route::get('dusun/rt/form','InfoDesaController@formrt');
     Route::get('lembaga-desa','InfoDesaController@lembagadesa');
+    Route::get('lembaga-desa/detail','InfoDesaController@detaillembagadesa');
     Route::get('lembaga-desa/form','InfoDesaController@formlembagadesa');
     Route::get('lembaga-desa/kategori','InfoDesaController@kategorilembaga');
     Route::get('lembaga-desa/kategori/form','InfoDesaController@formkategorilembaga');
+    Route::get('lembaga-desa/anggota/form','InfoDesaController@formanggotalembaga');
 
     // lapak
     Route::get('lapak-admin/produk','LapakController@produk');

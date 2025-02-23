@@ -59,6 +59,10 @@ class InfoDesaController extends Controller
         Session::put('page','lembaga-desa');
         return view('admin.info-desa.lembaga_desa');
     }
+    public function detaillembagadesa() {
+        Session::put('page','detail-lembaga-desa');
+        return view('admin.info-desa.detail_lembaga_desa');
+    }
     public function kategorilembaga() {
         Session::put('page','kategori-lembaga');
         return view('admin.info-desa.kategori_lembaga');
@@ -70,5 +74,9 @@ class InfoDesaController extends Controller
     public function formlembagadesa() {
         Session::put('page','form-lembaga-desa');
         return view('admin.info-desa.form_lembaga_desa');
+    }
+    public function formanggotalembaga() {
+        Session::put('page','form-anggota-lembaga');
+        return view('admin.info-desa.form_anggota_lembaga');
     }
 }

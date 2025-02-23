@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Session;
+
+
+class PembangunanController extends Controller
+{
+    public function pembangunan() {
+        Session::put('page','pembangunan');
+        return view('admin.pembangunan.pembangunan');
+    }
+    public function formpembangunan() {
+        Session::put('page','form-pembangunan');
+        return view('admin.pembangunan.form_pembangunan');
+    }
+    public function dokumentasipembangunan() {
+        Session::put('page','dokumentasi-pembangunan');
+        return view('admin.pembangunan.dokumentasi_pembangunan');
+    }
+    public function formdokumentasipembangunan() {
+        Session::put('page','form-pembangunan');
+        return view('admin.pembangunan.form_dokumentasi_pembangunan');
+    }
+}

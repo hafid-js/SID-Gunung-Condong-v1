@@ -297,3 +297,9 @@ td.aksi {
     background-color: #3c8dbc;
     color: white;
 }
+
+.padat {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
