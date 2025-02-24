@@ -77,7 +77,13 @@ Route::namespace('App\Http\Controllers\Admin')->group(function() {
     // lapak
     Route::get('lapak-admin/produk','LapakController@produk');
     Route::get('lapak-admin/produk/form','LapakController@formproduk');
+
+
+    // penduduk
+    Route::get('penduduk','PendudukController@penduduk');
 });
+
+
 
 
 

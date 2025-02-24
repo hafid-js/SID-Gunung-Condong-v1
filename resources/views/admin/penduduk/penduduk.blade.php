@@ -10,14 +10,14 @@
             <div class="container-fluid">
                 <div class="row mb-4">
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">PRODUK</h4>
+                        <h4 class="m-0" style="font-weight: 400;">Data Penduduk</h4>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
                                 <a href="#"><i class="fa fa-home"></i> Beranda</a>
                             </li>
-                            <li class="breadcrumb-item active">Daftar Data</li>
+                            <li class="breadcrumb-item active">Data Penduduk</li>
                         </ol>
                     </div>
                 </div>
@@ -39,74 +39,10 @@
             </div><!-- /.container-fluid -->
         </section>
 
+
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-lg-4">
-                        <div class="info-box bg-info">
-                            <span class="info-box-icon" style="background-color: #71717141;"><i class="fa fa-cubes"
-                                    style="font-size: 48px;"></i></span>
-
-                            <div class="info-box-content ">
-                                <span class="info-box-text">PRODUK</span>
-                                <span class="info-box-number">1</span>
-
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 100%"></div>
-                                </div>
-                                <span class="progress-description">
-                                    Total : 1
-                                </span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-4 col-sm-12 col-lg-4">
-                        <div class="info-box bg-success">
-                            <span class="info-box-icon" style="background-color:  #207f366b;"><i class="fa fa-users"
-                                    style="font-size: 48px;"></i></span>
-
-                            <div class="info-box-content">
-                                <span class="info-box-text">PELAPAK</span>
-                                <span class="info-box-number">41,410</span>
-
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 100%"></div>
-                                </div>
-                                <span class="progress-description">
-                                    Total : 1
-                                </span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-4 col-sm-12 col-lg-4">
-                        <div class="info-box bg-warning">
-                            <span class="info-box-icon" style="background-color:  #98813b54;"><i
-                                    class="fa fa-tags text-white"></i></span>
-
-                            <div class="info-box-content">
-                                <span class="info-box-text text-white">Bookmarks</span>
-                                <span class="info-box-number text-white">41,410</span>
-
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 100%"></div>
-                                </div>
-                                <span class="progress-description text-white">
-                                    Total : 1
-                                </span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
-                </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="card-body p-0">
@@ -115,17 +51,18 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12">
                                             <div class="margin">
+
                                                 <a href="{{ url('lapak-admin/produk/form') }}"
                                                     class="btn btn-social mt-1 mb-1 btn-success btn-sm" title="Tambah Produk">
-                                                    <i class="fa fa-plus "></i> Tambah
+                                                    <i class="fa fa-plus "></i> <span class="btn-label">&nbsp;Tambah</span>
                                                 </a>
                                                 <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#hapus"
                                                     class="btn mt-1 mb-1 btn-danger btn-sm">
-                                                    <i class="fa fa-trash"></i> Hapus
+                                                    <i class="fa fa-trash"></i>&nbsp;Hapus Data Terpilih
                                                 </a>
                                                 <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#cetak"
                                                     class="btn mt-1 mb-1 bg-purple btn-sm" title="Cetak">
-                                                    <i class="fa fa-print"></i> Cetak
+                                                    <i class="fa fa-print"></i>&nbsp;Cetak
                                                 </a>
                                                 <a href="#" href="#" data-dismiss="modal" data-toggle="modal"
                                                     data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-sm">
@@ -139,94 +76,147 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-sm-12 col-md-3 col-lg-2" style="margin-right: -25px;">
                                             <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Status</option>
-                                                <option>Aktif</option>
-                                                <option>Tidak Aktif</option>
+                                                <option>Pilih Status Hidup</option>
+                                                <option>Tetap</option>
+                                                <option>Tidak Tetap</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-12 col-md-3 col-lg-2" style="margin-right: -25px;">
                                             <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Pelapak</option>
-                                                <option>3306132287560002 - Khafid</option>
+                                                <option>Pilih Status Dasar</option>
+                                                <option>Hidup</option>
+                                                <option>Mati</option>
+                                                <option>Pindah</option>
+                                                <option>Hilang</option>
+                                                <option>Pergi</option>
+                                                <option>Tidak Valid</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-12 col-md-3 col-lg-2" style="margin-right: -25px;">
                                             <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Kategori</option>
-                                                <option>Makanan</option>
+                                                <option>Pilih Jenis Kelamin</option>
+                                                <option>Laki-Laki</option>
+                                                <option>Perempuan</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-2" style="margin-right: -25px;">
+                                            <select class="form-control form-control-sm select2" style="width: 100%;">
+                                                <option>Pilih Dusun</option>
+                                                <option>Krajan</option>
+                                                <option>Kepudang</option>
+                                                <option>Karanganyar</option>
+                                                <option>Kemplung</option>
+                                                <option>Brembet</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-header" style="background-color: #ffffff;">
-                                    {{-- <div class="form-group row mb-0 justify-content-between">
-                                        <div class="col-sm-12 col-md-3 col-lg-2">
-
-                                        </div>
-
-                                        <div class="col-sm-12 col-md-3 col-lg-2">
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control form-control-sm"
-                                                    placeholder="kata kunci pencarian">
-                                                <div class="input-group-append">
-                                                    <button type="submit" class="btn btn-info btn-sm"><i
-                                                            class="fas fa-search"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div> --}}
                                     <div class="row">
                                         <div class="col-md-sm-12 col-md-12 col-lg-12">
                                             <div class="table-responsive">
-                                                <table id="example1" class="table table-hover table-bordered">
+                                                <table id="example1" class="table table-hover bordered">
                                                     <thead class="thead-gray disabled color-palette">
                                                         <tr>
                                                             <th style="width:4%;">
                                                                 <input type="checkbox" id="check-all" />
                                                             </th>
-                                                            <th style="width:5%;">NO</th>
-                                                            <th style="width:5%;" class="text-center">AKSI</th>
-                                                            <th class="text-center">PELAPAK</th>
-                                                            <th class="text-center">PRODUK</th>
-                                                            <th class="text-center">KATEGORI</th>
-                                                            <th class="text-center">HARGA</th>
-                                                            <th class="text-center">SATUAN</th>
-                                                            <th class="text-center">POTONGAN</th>
-                                                            <th class="text-center" style="width:30%;">DESKRIPSI</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">NO</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">AKSI</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">FOTO</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">NIK</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">TAG ID CARD</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">NAMA</th>
+                                                            <th nowrap="" rowspan="1" colspan="1" style="width:10%;">NO.KK</th>
+                                                            <th nowrap="" rowspan="1" colspan="1" >NAMA AYAH</th>
+                                                            <th nowrap="" rowspan="1" colspan="1" style="width:15%;">NAMA IBU</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">NO. RUMAH TANGGA</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">ALAMAT</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">DUSUN</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">RW</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">RT</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">PENDIDIKAN DALAM KK</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">UMUR</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">PEKERJAAN</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">KAWIN</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">TGL PERISTIWA</th>
+                                                            <th nowrap="" rowspan="1" colspan="1">TGL TERDAFTAR</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
+                                                    <tbody style="background-color:#f2dede;">
                                                         <tr>
                                                             <td>
                                                                 <input type="checkbox" class="check-item" />
                                                             </td>
                                                             <td>1</td>
-                                                            <td class="aksi">
-                                                                <a href="#" data-toggle="modal" data-target="#modal2"
-                                                                    class="btn bg-orange btn-sm" title="Ubah">
-                                                                    <i class="fa fa-edit text-white"></i>
-                                                                </a>
-                                                                <a href="#" class="btn bg-navy btn-sm"
-                                                                    title="Non Aktifkan Produk">
-                                                                    <i class="fa fa-unlock"></i>
-                                                                </a>
-                                                                <a href="#" class="btn btn-danger btn-sm"
-                                                                    title="Hapus Produk">
-                                                                    <i class="fa fa-trash"></i>
-                                                                </a>
-                                                                <a href="#" class="btn btn-primary btn-sm"
-                                                                    title="Lihat Produk">
-                                                                    <i class="fa fa-eye"></i>
-                                                                </a>
+                                                            <td class=" aksi"><div class="btn-group open">
+                                                                <button type="button" class="btn btn-social btn-info btn-sm" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-arrow-circle-down"></i> Pilih Aksi</button>
+                                                                <div class="dropdown-menu" role="menu">
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-list-ol"></i> Lihat Detail Biodata Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-edit"></i> Ubah Biodata Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-map-marker"></i> Lihat Lokasi Tempat Tinggal</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-map-marker"></i> Lihat Lokasi Tempat Tinggal</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-upload"></i> Upload Dokumen Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-print"></i> Cetak Biodata Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i> Hapus</a>
+                                                                  </div>
+                                                            </div></td>
+
+                                                            <td><img class="penduduk_kecil" src="https://berputar.opendesa.id/assets/images/pengguna/kuser.png" alt="Foto Penduduk"></td>
+                                                            <td><a href="#">0531912200900002</a></td>
+                                                            <td>-</td>
+                                                            <td>JUNAIDI EFENDI</td>
+                                                            <td><a href="#">0531912200900001</a></td>
+                                                            <td>KROMO SEMITO</td>
+                                                            <td>MAYA MARIAMAH</td>
+                                                            <td>-</td>
+                                                            <td>Jl. Jenderal Sudirman RT - / RW - Dusun -</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>SLTA / SEDERAJAT</td>
+                                                            <td>53</td>
+                                                            <td>BURUH HARIAN LEPAS</td>
+                                                            <td>KAWIN BELUM TERCATAT</td>
+                                                            <td>14 Februari 2025</td>
+                                                            <td>14 Februari 2025</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="checkbox" class="check-item" />
                                                             </td>
-                                                            <td>Hafid</td>
-                                                            <td>Keripik Singkong</td>
-                                                            <td>Makanan</td>
-                                                            <td>12.000</td>
-                                                            <td class="text-center">kg</td>
-                                                            <td>0%</td>
-                                                            <td>mantap gurih renyah</td>
+                                                            <td>4</td>
+                                                            <td class=" aksi"><div class="btn-group open">
+                                                                <button type="button" class="btn btn-social btn-info btn-sm" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-arrow-circle-down"></i> Pilih Aksi</button>
+                                                                <div class="dropdown-menu" role="menu">
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-list-ol"></i> Lihat Detail Biodata Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-edit"></i> Ubah Biodata Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-map-marker"></i> Lihat Lokasi Tempat Tinggal</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-map-marker"></i> Lihat Lokasi Tempat Tinggal</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-upload"></i> Upload Dokumen Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-print"></i> Cetak Biodata Penduduk</a>
+                                                                    <a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i> Hapus</a>
+                                                                  </div>
+                                                            </div></td>
+
+                                                            <td><img class="penduduk_kecil" src="https://berputar.opendesa.id/assets/images/pengguna/wuser.png" alt="Foto Penduduk"></td>
+                                                            <td><a href="#">0531912200900002</a></td>
+                                                            <td>-</td>
+                                                            <td>JUNAIDI EFENDI</td>
+                                                            <td><a href="#">0531912200900001</a></td>
+                                                            <td>KROMO SEMITO</td>
+                                                            <td>MAYA MARIAMAH</td>
+                                                            <td>-</td>
+                                                            <td>Jl. Jenderal Sudirman RT - / RW - Dusun -</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>SLTA / SEDERAJAT</td>
+                                                            <td>53</td>
+                                                            <td>BURUH HARIAN LEPAS</td>
+                                                            <td>KAWIN BELUM TERCATAT</td>
+                                                            <td>14 Februari 2025</td>
+                                                            <td>14 Februari 2025</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

@@ -69,21 +69,20 @@
                             </div>
                         </div>
                     </div>
-
-
                     <!-- /.col-->
                     <div class="col-md-4">
-                        <div class="card card-outline card-info">
+                        <div class="card card-outline card-info collapsed-card">
                             <div class="card-header" style="background-color: #ffffff;">
-                                <h4 class="card-title">Unggah Gambar</h4>
+                              <h3 class="card-title">Gambar Utama</h3>
 
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
+                              <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <!-- /.card-tools -->
                             </div>
-                            <div class="card-body collapse" id="collapseContent"> <!-- Tambahkan kelas collapse -->
+                            <!-- /.card-header -->
+                            <div class="card-body">
                                 <div class="form-group">
                                     <label class="col-form-label" for="exampleInputFile">Gambar Utama</label>
                                     <div class="input-group">
@@ -122,7 +121,8 @@
                                 </div>
                             </div>
                             <!-- /.card-body -->
-                        </div>
+                          </div>
+                          <!-- /.card -->
                         <!-- /.card -->
                         <div class="card card-outline card-info">
                             <div class="card-header" style="background-color: #ffffff;">
@@ -158,36 +158,41 @@
                                 </div>
                             </div>
                             <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
-                                <div class="form-group">
+                                <div class="form-group" style="display: none;">
                                     <button type="button" class="btn bg-black btn-block"
                                         style="background-color: rgb(8, 8, 8);"><i style="color:#666;"
                                             class="fa fa-paperclip float-left"></i>
                                         <h6 style="color: #666;" class="float-left"> &nbsp;Unduh Dokumen</h6>
                                     </button>
                                 </div>
+                                <style></style>
                                 <div class="form-group">
-                                    <label for="exampleInputFile" class="col-form-label">Dokumen Lampiran</label>
+                                    <label for="dokLampiran" class="col-form-label">Dokumen Lampiran</label>
                                     <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="input-group input-group" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile"></label>
-                                        </div>
+                                        <input type="file" class="form-control font-control-sm font-11" id="dokLampiran"
+                                               />
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-info btn-sm" id="file_browser"><i class="fas fa-search"></i></button>
+                                                <input type="file" id="file_input" onchange="showPreview(event)" style="display: none;" />
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="namaDokumen" class="col-form-label">Nama Dokumen</label>
                                     <input type="text" class="form-control form-control-sm" id="namaDokumen">
+                                    <code class="font-11">(Nantinya akan menjadi link unduh/download)</code>
                                 </div>
                                 <div class="form-group">
                                     <label for="tglPost" class="col-form-label">Tanggal Posting</label>
                                     <div class="input-group input-group-sm" id="tglPost">
-                                        <input type="text" class="form-control" required />
                                         <div class="input-group-addon input-group-append">
                                             <div class="input-group-text">
                                                 <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                                             </div>
                                         </div>
+                                        <input type="text" class="form-control" required />
                                     </div>
+                                    <code class="font-11">(Kosongkan jika ingin langsung di post, bisa digunakan untuk artikel terjadwal)</code>
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -227,5 +232,4 @@
 
 
     </script>
-
 @endsection

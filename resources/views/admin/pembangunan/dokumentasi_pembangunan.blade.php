@@ -148,7 +148,8 @@
                                                             </td>
                                                             <td>
                                                                 <div class="product-img">
-                                                                    <img src="https://depobeta.com/pub/media/Artikel/Sistem_Irigasi/Irigas_2.png"
+                                                                      <img src="{{ asset('admin/images/prod-2.jpg') }}"
+
                                                                         class="penduduk_kecil" alt="Gambar Dokumentasi" />
                                                                 </div>
                                                             </td>

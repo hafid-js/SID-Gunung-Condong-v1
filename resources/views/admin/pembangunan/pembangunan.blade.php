@@ -89,17 +89,17 @@
                                             <table class="table table-hover table-bordered">
                                                 <thead class="thead-gray disabled color-palette">
                                                     <tr>
-                                                        <th>NO</th>
-                                                        <th class="text-center">AKSI</th>
-                                                        <th>NAMA KEGIATAN</th>
-                                                        <th>SUMBER DANA</th>
-                                                        <th>ANGGARAN</th>
-                                                        <th>PERSENTASE</th>
-                                                        <th>VOLUME</th>
-                                                        <th>TAHUN</th>
-                                                        <th>PELAKSANA</th>
-                                                        <th>LOKASI</th>
-                                                        <th>GAMBAR</th>
+                                                        <th nowrap="">NO</th>
+                                                        <th nowrap="">AKSI</th>
+                                                        <th nowrap="">NAMA KEGIATAN</th>
+                                                        <th nowrap="">SUMBER DANA</th>
+                                                        <th nowrap="">ANGGARAN</th>
+                                                        <th nowrap="">PERSENTASE</th>
+                                                        <th nowrap="">VOLUME</th>
+                                                        <th nowrap="">TAHUN</th>
+                                                        <th nowrap="">PELAKSANA</th>
+                                                        <th nowrap="">LOKASI</th>
+                                                        <th nowrap="">GAMBAR</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -143,7 +143,7 @@
                                                         <td>Jl.Kartasura No.7</td>
                                                         <td>
                                                             <div class="product-img">
-                                                                <img src="https://depobeta.com/pub/media/Artikel/Sistem_Irigasi/Irigas_2.png"
+                                                                <img src="{{ asset('admin/images/prod-2.jpg') }}"
                                                                     class="penduduk_kecil" alt="Gambar Dokumentasi" />
                                                             </div>
                                                         </td>
@@ -188,7 +188,7 @@
                                                         <td>Jl.Kartasura No.7</td>
                                                         <td>
                                                             <div class="product-img">
-                                                                <img src="https://depobeta.com/pub/media/Artikel/Sistem_Irigasi/Irigas_2.png"
+                                                                 <img src="{{ asset('admin/images/prod-2.jpg') }}"
                                                                     class="penduduk_kecil" alt="Gambar Dokumentasi" />
                                                             </div>
                                                         </td>
@@ -233,7 +233,7 @@
                                                         <td>Jl.Kartasura No.7</td>
                                                         <td>
                                                             <div class="product-img">
-                                                                <img src="https://depobeta.com/pub/media/Artikel/Sistem_Irigasi/Irigas_2.png"
+                                                                  <img src="{{ asset('admin/images/prod-2.jpg') }}"
                                                                     class="penduduk_kecil" alt="Gambar Dokumentasi" />
                                                             </div>
                                                         </td>

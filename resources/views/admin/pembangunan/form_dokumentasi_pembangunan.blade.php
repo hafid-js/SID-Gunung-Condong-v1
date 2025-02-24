@@ -83,7 +83,7 @@
                                             <label for="exampleInputFile" class="col-sm-2 col-form-label font-12"></label>
                                             <div class="col-sm-10 col-lg-8 col-md-10">
                                                 <img class="attachment-img img-responsive" style="border-radius: 10%;"
-                                                    src="https://berputar.opendesa.id/desa/upload/galeri/0qWY517394450121632624563dc2677b837ae5edd00a5__sid__ciPbAUf.jpg"
+                                                    src="{{ asset('admin/images/prod-1.jpg') }}"
                                                     alt="Gambar Dokumentasi" width="200" height="200">
                                             </div>
                                         </div>
@@ -110,7 +110,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <div class="card-footer">
+                                <div class="card-footer border-0">
                                     <button type="submit" class="btn btn-sm btn-danger">Batal</button>
                                     <button type="submit" class="btn btn-info btn-sm float-right">Simpan</button>
                                 </div>

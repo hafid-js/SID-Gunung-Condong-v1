@@ -263,7 +263,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="filePath"
+                                        <input type="text" class="form-control font-control-sm font-11" id="filePath" disabled
                                                />
                                             <div class="input-group-append">
                                                 <button type="submit" class="btn btn-info btn-sm" id="file_browser"><i class="fas fa-search"></i></button>
@@ -332,7 +332,7 @@
         var file = event.target.files[0];
         if (file) {
             // Menampilkan path file
-            filePath.textContent = 'Path file: ' + file.name; // Hanya menampilkan nama file
+            document.getElementById("filePath").placeholder = 'C:/fakepath/'+file.name;
 
             var reader = new FileReader();
             reader.onload = function(e) {
