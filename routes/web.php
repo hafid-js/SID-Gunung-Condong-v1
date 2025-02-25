@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\WebController;
 
 
 Route::namespace('App\Http\Controllers\Admin')->group(function() {
-    Route::get('/',[DashboardController::class,'index']);
+    Route::get('/',[DashboardController::class,'index2']);
 
     Route::get('test','WebController@test');
 

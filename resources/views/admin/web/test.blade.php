@@ -1,38 +1,42 @@
-@extends('admin.layout.layout')
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel with Leaflet</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>Leaflet Map Example in Laravel</h1>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header mt-min-20">
-    <div class="card-body">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-sm col-lg-3">
-                  <button type="button" class="btn btn-primary d-flex align-items-center w-100">
-                    <i class="fa fa-bell"></i>
-                    <span class="ml-2">.btn-block</span>
-                  </button>
-                </div>
-                <div class="col-sm">
-                  <button type="button" class="btn btn-info d-flex align-items-center w-100 btn-flat">
-                    <i class="fa fa-bell"></i>
-                    <span class="ml-2">.btn-block .btn-flat</span>
-                  </button>
-                </div>
-                <div class="col-sm">
-                  <button type="button" class="btn btn-danger d-flex align-items-center w-100 btn-sm">
-                    <i class="fa fa-bell"></i>
-                    <span class="ml-2">.btn-block .btn-sm</span>
-                  </button>
-                </div>
-              </div>
+    <!-- Map container -->
+    <div id="map"></div>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-          </div>
-    </div>
-</section>
-</div>
+    <script>
+        // Initialize the map and set its view to a specific latitude and longitude
+        var map = L.map('map').setView([51.505, -0.09], 13);  // Example coordinates: London
 
- @endsection
+        // Add a tile layer to the map (using OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker at the center of the map
+        L.marker([51.505, -0.09]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+    </script>
+</body>
+</html>

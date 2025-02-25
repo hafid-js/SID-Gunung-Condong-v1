@@ -10,6 +10,6 @@ class PendudukController extends Controller
 {
     public function penduduk() {
         Session::put('page','penduduk');
-        return view('admin.penduduk.penduduk');
+        return view('admin-2.penduduk.penduduk');
     }
 }

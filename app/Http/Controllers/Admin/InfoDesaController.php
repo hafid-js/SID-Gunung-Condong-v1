@@ -11,72 +11,72 @@ class InfoDesaController extends Controller
 {
     public function identitasdesa() {
         Session::put('page','identitas-desa');
-        return view('admin.info-desa.identitas_desa');
+        return view('admin-2.info-desa.identitas_desa');
     }
     public function formidentitasdesa() {
         Session::put('page','form-identitas-desa');
-        return view('admin.info-desa.form_identitas_desa');
+        return view('admin-2.info-desa.form_identitas_desa');
     }
     public function petawilayahdesa() {
         Session::put('page','peta-wilayah-desa');
-        return view('admin.info-desa.peta_wilayah_desa');
+        return view('admin-2.info-desa.peta_wilayah_desa');
     }
     public function petakantordesa() {
         Session::put('page','peta-kantor-desa');
-        return view('admin.info-desa.peta_kantor_desa');
+        return view('admin-2.info-desa.peta_kantor_desa');
     }
     public function dusun() {
         Session::put('page','dusun');
-        return view('admin.info-desa.dusun');
+        return view('admin-2.info-desa.dusun');
     }
     public function formdusun() {
         Session::put('page','form-dusun');
-        return view('admin.info-desa.form_dusun');
+        return view('admin-2.info-desa.form_dusun');
     }
     public function rw() {
         Session::put('page','rw');
-        return view('admin.info-desa.rw');
+        return view('admin-2.info-desa.rw');
     }
     public function cetakdatarw() {
-        return view('admin.info-desa.cetak_data_rw');
+        return view('admin-2.info-desa.cetak_data_rw');
     }
     public function formrw() {
         Session::put('page','form-rw');
-        return view('admin.info-desa.form_rw');
+        return view('admin-2.info-desa.form_rw');
     }
     public function rt() {
         Session::put('page','rt');
-        return view('admin.info-desa.rt');
+        return view('admin-2.info-desa.rt');
     }
     public function cetakdatart() {
-        return view('admin.info-desa.cetak_data_rt');
+        return view('admin-2.info-desa.cetak_data_rt');
     }
     public function formrt() {
         Session::put('page','form-rt');
-        return view('admin.info-desa.form_rt');
+        return view('admin-2.info-desa.form_rt');
     }
     public function lembagadesa() {
         Session::put('page','lembaga-desa');
-        return view('admin.info-desa.lembaga_desa');
+        return view('admin-2.info-desa.lembaga_desa');
     }
     public function detaillembagadesa() {
         Session::put('page','detail-lembaga-desa');
-        return view('admin.info-desa.detail_lembaga_desa');
+        return view('admin-2.info-desa.detail_lembaga_desa');
     }
     public function kategorilembaga() {
         Session::put('page','kategori-lembaga');
-        return view('admin.info-desa.kategori_lembaga');
+        return view('admin-2.info-desa.kategori_lembaga');
     }
     public function formkategorilembaga() {
         Session::put('page','form-kategori-lembaga');
-        return view('admin.info-desa.form_kategori_lembaga');
+        return view('admin-2.info-desa.form_kategori_lembaga');
     }
     public function formlembagadesa() {
         Session::put('page','form-lembaga-desa');
-        return view('admin.info-desa.form_lembaga_desa');
+        return view('admin-2.info-desa.form_lembaga_desa');
     }
     public function formanggotalembaga() {
         Session::put('page','form-anggota-lembaga');
-        return view('admin.info-desa.form_anggota_lembaga');
+        return view('admin-2.info-desa.form_anggota_lembaga');
     }
 }
