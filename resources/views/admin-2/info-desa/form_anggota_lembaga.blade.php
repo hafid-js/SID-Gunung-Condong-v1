@@ -1,364 +1,308 @@
-@extends('admin.layout.layout')
+@extends('admin-2.layout.layout')
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header mt-min-20">
-            <div class="container-fluid">
-                <div class="row mb-4">
-                    <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">Data Anggota Lembaga</h4>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item">Daftar Lembaga</li>
-                            <li class="breadcrumb-item active">Data Anggota Lembaga</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
+    <div class="content-wrapper" style="min-height: 912.43px;">
+        <section class="content-header">
+            <h1>
+                Data Anggota Lembaga
+            </h1>
+
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
+                </li>
+                <li><a href="{{ url('/lembaga-desa') }}"> Daftar Lembaga</a></li>
+                <li class="active">Data Anggota Lembaga</li>
+            </ol>
+
         </section>
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
+        <section id="maincontent" class="content">
+
+
+            <form action="#" class="form-horizontal" id="validasi"
+                enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                <input type="hidden" name="sidcsrf" value="66fa58f300d5c2bdb1472f2fd97d0ceb">
+
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 col-lg-3">
-                        <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="form-group mt-3" style="margin-bottom: -0px;">
-                                    <div class="text-center">
-                                        <img class="penduduk" id="profile_image"
-                                            src="https://berputar.opendesa.id/assets/images/pengguna/kuser.png"
-                                            alt="Foto Penduduk">
-                                        <canvas id="camera_canvas" style="display: none;"></canvas>
-                                        <video id="camera_preview"
-                                            style="width: auto;max-height: 250px;max-width: 200px;border-radius: 15px;display: block;margin: 0 auto;padding: 2px;border: 2px solid #d2d6de; display: none;"
-                                            autoplay></video>
-                                        <code id="keterangan"
-                                            class="text-center font-11">(Kosongkan, jika logo tidak berubah)</code>
-                                        <code id="capture" style="display: none;"
-                                            class="text-center">(klik video untuk capture foto)</code>
-                                    </div>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-info btn-block" id="file_browser"><i
+                    <div class="col-md-3">
+                        <div class="box box-primary">
+                            <div class="box-body box-profile">
+                                <img class="penduduk" id="foto"
+                                    src="https://berputar.opendesa.id/assets/images/pengguna/kuser.png" alt="Foto Penduduk">
+                                <br>
+
+                                <div class="input-group input-group-sm text-center">
+                                    <input type="file" class="hidden" id="file" name="foto" accept=".jpg,.jpeg,.png">
+                                    <input type="text" class="hidden" id="file_path" name="foto">
+                                    <input type="hidden" name="old_foto" id="old_foto" value="">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info btn-block btn-mb-5" id="file_browser"><i
                                                 class="fa fa-upload"></i> Unggah</button>
-                                        <button type="button" class="btn btn-info btn-block" id="camera_browser"><i
-                                                class="fa fa-camera"></i>
-                                            Kamera</button>
-                                    </div>
+                                        <button type="button" class="btn btn-danger btn-block btn-mb-5" onclick="kamera();"
+                                            id="ambil_kamera"><i class="fa fa-camera"></i> Kamera</button>
+                                    </span>
                                 </div>
-
-
-                                <!-- Input file yang tersembunyi -->
-                                <input type="file" id="file_input" onchange="showPreview(event)" style="display: none;" />
-                                <input type="file" id="camera_input" style="display: none;" accept="image/*"
-                                    capture="camera" />
-
-
                             </div>
                         </div>
+                        <div class="modal fade" id="modal-camera">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4 class="modal-title text-center">Ambil Gambar</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="kamera"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="text-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="ambil();"><i
+                                                        class="fa fa-camera"></i>&nbsp; Ambil Gambar</button>
+                                            </div>
+                                            <select class="input-sm" id="mode">
+                                                <option value="user" selected="">Kamera Depan</option>
+                                                <option value="environment">Kamera Belakang</option>
+                                                <option value="computer">Webcam</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal" id="modal-crop">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4 class="modal-title text-center">Ubah Gambar</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="cropimage"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="text-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-danger btn-sm" title="Ambil Gambar"
+                                                    onclick="kamera();"><i class="fa fa-camera"></i>&nbsp;</button>
+                                                <button type="button" class="btn btn-primary btn-sm" id="rotateL"
+                                                    title="Putar ke kiri"><i class="fa fa-undo"></i>&nbsp;</button>
+                                                <button type="button" class="btn btn-primary btn-sm" id="rotateR"
+                                                    title="Putar ke kanan"><i class="fa fa-repeat"></i>&nbsp;</button>
+                                                <button type="button" class="btn btn-primary btn-sm" id="scaleX"
+                                                    title="Balik Horizontal"><i class="fa fa-arrows-h"></i>&nbsp;</button>
+                                                <button type="button" class="btn btn-primary btn-sm" id="scaleY"
+                                                    title="Balik Vertikal"><i class="fa fa-arrows-v"></i>&nbsp;</button>
+                                                <button type="button" class="btn btn-primary btn-sm" id="reset-ini"
+                                                    title="Default"><i class="fa fa-refresh"></i>&nbsp;</button>
+                                                <button type="button" class="btn btn-success btn-sm" id="simpan-gambar"
+                                                    title="Simpan"><i class="fa fa-save"></i>&nbsp;</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <select class="input-sm" id="ratio">
+                                                    <option value="NaN">Pilih Ratio (NaN)</option>
+                                                    <option value="1.777">16 : 9</option>
+                                                    <option value="1.500">3 : 2</option>
+                                                    <option value="1.333" selected="">4 : 3</option>
+                                                    <option value="1.000">1 : 1</option>
+                                                    <option value="0.666">2 : 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel"><i
+                                                class="fa fa-exclamation-triangle text-red"></i> Konfirmasi</h4>
+                                    </div>
+                                    <div class="modal-body btn-info">
+                                        Apakah Anda yakin ingin menghapus data ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-social btn-warning btn-sm"
+                                            data-dismiss="modal"><i class="fa fa-sign-out"></i> Tutup</button>
+                                        <a class="btn-ok">
+                                            <div class="btn btn-social btn-danger btn-sm" id="ok-delete"><i
+                                                    class="fa fa-trash-o"></i> Hapus</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-md-8 col-sm-12 col-lg-9">
-                        <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header" style="background-color: #ffffff;">
-                                    <div class="form-group row mb-0">
-                                        <div class="col-sm-12">
-                                            <div class="margin">
-                                                <a href="{{ url('lembaga-desa') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-sm visible-xs-block"><span
-                                                        class="btn-label"><i class="fa fa-arrow-circle-left"></i></span>
-                                                    Kembali
-                                                    ke Anggota Lembaga</a>
+                    <div class="col-md-9">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <a href="{{ url('lembaga-desa/detail') }}" class="btn btn-social btn-info btn-sm
+            visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i
+                                        class="fa fa-arrow-circle-left "></i> Kembali Ke Anggota
+                                    Lembaga</a>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="id_penduduk">Nama Anggota</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control input-sm required select2-hidden-accessible"
+                                            id="kelompok_penduduk" name="id_penduduk" data-kelompok="2" data-tipe="lembaga"
+                                            onchange="loadDataPenduduk(this)" data-select2-id="kelompok_penduduk"
+                                            tabindex="-1" aria-hidden="true">
+                                            <option value="" data-select2-id="3">-- Silakan Masukan NIK / Nama --</option>
+                                        </select><span class="select2 select2-container select2-container--default"
+                                            dir="ltr" data-select2-id="4" style="width: 661.664px;"><span
+                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                    role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                    aria-labelledby="select2-kelompok_penduduk-container"><span
+                                                        class="select2-selection__rendered"
+                                                        id="select2-kelompok_penduduk-container" role="textbox"
+                                                        aria-readonly="true" title="-- Silakan Masukan NIK / Nama --"><span
+                                                            class="select2-selection__clear" title="Remove all items"
+                                                            data-select2-id="5">×</span>-- Silakan Masukan NIK / Nama
+                                                        --</span><span class="select2-selection__arrow"
+                                                        role="presentation"><b
+                                                            role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                                <div class="data_penduduk_desa"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="no_anggota">Nomor Anggota</label>
+                                    <div class="col-sm-8">
+                                        <input id="no_anggota" class="form-control input-sm number required" type="text"
+                                            placeholder="Nomor Anggota" name="no_anggota" value="">
+                                        <p><code>*Pastikan nomor anggota belum pernah dipakai.</code></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="jabatan">Jabatan</label>
+                                    <div class="col-sm-8">
+                                        <select
+                                            class="form-control input-sm select2-tags required select2-hidden-accessible"
+                                            id="jabatan" name="jabatan" data-select2-id="jabatan" tabindex="-1"
+                                            aria-hidden="true">
+                                            <option option="" value="" data-select2-id="2">-- Silakan Pilih Jabatan --
+                                            </option>
+                                            <option value="1">
+                                                KETUA
+                                            </option>
+                                            <option value="2">
+                                                WAKIL KETUA
+                                            </option>
+                                            <option value="3">
+                                                SEKRETARIS
+                                            </option>
+                                            <option value="4">
+                                                BENDAHARA
+                                            </option>
+                                            <option value="90">
+                                                ANGGOTA
+                                            </option>
+                                        </select><span class="select2 select2-container select2-container--default"
+                                            dir="ltr" data-select2-id="1" style="width: 661.664px;"><span
+                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                    role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                    aria-labelledby="select2-jabatan-container"><span
+                                                        class="select2-selection__rendered" id="select2-jabatan-container"
+                                                        role="textbox" aria-readonly="true"
+                                                        title="-- Silakan Pilih Jabatan --">-- Silakan Pilih Jabatan
+                                                        --</span><span class="select2-selection__arrow"
+                                                        role="presentation"><b
+                                                            role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="no_sk_jabatan">Nomor SK Jabatan</label>
+                                    <div class="col-sm-8">
+                                        <input id="no_sk_jabatan" class="form-control input-sm nomor_sk" type="text"
+                                            placeholder="Nomor SK Jabatan" name="no_sk_jabatan" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Nomor SK Pengangkatan</label>
+                                    <div class="col-sm-5">
+                                        <input name="nmr_sk_pengangkatan" class="form-control input-sm" type="text"
+                                            maxlength="30" placeholder="Nomor SK Pengangkatan" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Tanggal SK Pengangkatan</label>
+                                    <div class="col-sm-5">
+                                        <div class="input-group input-group-sm date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
                                             </div>
+                                            <input class="form-control input-sm pull-right tgl_1" name="tgl_sk_pengangkatan"
+                                                type="text" value="-">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="form-group row">
-                                        <label for="namLem" class="col-3 font-12 col-form-label">Nama Anggota</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <select name="" id="namLem" class="form-control form-control-sm select2"
-                                                disabled style="width:100%;">
-                                                <option value="">NIK : 33061233765980002 - HAFID - Jl.Kliwonan RT003/RW001
-                                                    Dusun Krajan</option>
-                                            </select>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Nomor SK Pemberhentian</label>
+                                    <div class="col-sm-5">
+                                        <input name="nmr_sk_pemberhentian" class="form-control input-sm" type="text"
+                                            placeholder="Nomor SK Pemberhentian" value="">
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="ttl" class="col-3 font-12 col-form-label">Tempat Tanggal Lahir /
-                                            Umur</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="ttl"
-                                                value="PURWOREJO" placeholder="Tempat Lahir" disabled>
-                                        </div>
-
-                                        <div class="col-sm-10 col-lg-2 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="ttl"
-                                                value="29 MARET 1998" placeholder="Tanggal Lahir" disabled>
-                                        </div>
-                                        <div class="col-sm-10 col-lg-2 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="ttl"
-                                                value="27 TAHUN" placeholder="Umur" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="alamat" class="col-3 font-12 col-form-label">Alamat</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-4">
-                                            <input type="text" class="form-control form-control-sm font-12" id="alamat"
-                                                value="JL.KLIWONAN RT003/RW001 DUSUN KRAJAN" placeholder="Alamat" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="pwa" class="col-3 font-12 col-form-label">Pendidikan / Warga Negara /
-                                            Agama</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="pwa"
-                                                value="SARJANA S1" placeholder="Pendidikan" disabled>
-                                        </div>
-
-                                        <div class="col-sm-10 col-lg-2 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="pwa"
-                                                value="WNI" placeholder="Warga Negara" disabled>
-                                        </div>
-                                        <div class="col-sm-10 col-lg-2 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="pwa"
-                                                value="ISLAM" placeholder="Agama" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="noAnggota" class="col-3 font-12 col-form-label">Nomor Anggota</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="noAnggota"
-                                                placeholder="Nomor Anggota" value="1">
-                                            <code class="font-11">*Pastikan nomor anggota belum pernah dipakai.</code>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="jabatan" class="col-3 font-12">Jabatan</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <select name="" id="jabatan" class="form-control form-control-sm select2"
-                                                style="width:100%;">
-                                                <option value="">-- Silahkan Pilih Jabatan --</option>
-                                                <option value="">KETUA</option>
-                                                <option value="">WAKIL KETUA</option>
-                                                <option value="">SEKRETARIS</option>
-                                                <option value="">BENDAHARA</option>
-                                                <option value="">ANGGOTA</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="noSKJbt" class="col-3 font-12 col-form-label">Nomor SK Jabatan</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="noSKJbt"
-                                                placeholder="Nomor SK Jabatan">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="noSKPkt" class="col-3 font-12 col-form-label">Nomor SK
-                                            Pengangkatan</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="noSKPkt"
-                                                placeholder="Nomor SK Pengangkatan">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="tgl_mulai" class="col-3 font-12">Tanggal SK Pengangkatan</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <div class="input-group">
-
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
-                                                </div>
-
-                                                <input type="text" class="form-control form-control-sm" id="tgl_mulai"
-                                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy"
-                                                    data-mask>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Tanggal SK Pemberhentian</label>
+                                    <div class="col-sm-5">
+                                        <div class="input-group input-group-sm date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="noSKPmbrnt" class="col-3 font-12 col-form-label">Nomor SK
-                                            Pemberhentian</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="noSKPmbrnt"
-                                                placeholder="Nomor SK Pemberhentian">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="tgl_berhenti" class="col-3 font-12">Tanggal SK Pemberhentian</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <div class="input-group">
-
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
-                                                </div>
-
-                                                <input type="text" class="form-control form-control-sm" id="tgl_berhenti"
-                                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy"
-                                                    data-mask>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="masa_jbt" class="col-3 font-12 col-form-label">Masa Jabatan
-                                            (Usia/Periode)</label>
-                                        <div class="col-sm-10 col-lg-5 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="masa_jbt"
-                                                placeholder="Contoh: 6 Tahun Periode Pertama (2015/2021)">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="keterangan" class="col-3 font-12 col-form-label">Keterangan</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-4">
-                                            <textarea name="" id="keterangan" class="form-control form-control-sm"
-                                                rows="4">Ketua Lembaga</textarea>
+                                            <input class="form-control input-sm pull-right tgl_1" id="tgl_1"
+                                                name="tgl_sk_pemberhentian" type="text" value="-">
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="card-footer border-0">
-                                    <button class="btn btn-danger">Batal</button>
-                                    <button type="submit" class="btn btn-info float-right">Simpan</button>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Masa Jabatan (Usia/Periode)</label>
+                                    <div class="col-sm-5">
+                                        <input name="periode" class="form-control input-sm" type="text"
+                                            placeholder="Contoh: 6 Tahun Periode Pertama (2015 s/d 2021)" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="keterangan">Keterangan</label>
+                                    <div class="col-sm-8">
+                                        <textarea name="keterangan" class="form-control input-sm" maxlength="300"
+                                            placeholder="Keterangan" rows="5"></textarea>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="box-footer">
+                                <button type="reset" class="btn btn-social btn-danger btn-sm"><i class="fa fa-times"></i>
+                                    Batal</button>
+                                <button type="submit" class="btn btn-social btn-info btn-sm pull-right"><i
+                                        class="fa fa-check"></i>
+                                    Simpan</button>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
+            </form>
+
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
 
     <script>
-
-        //Date picker
-        $('#tgl_mulai').datepicker({
-            autoclose: true
-        })
-        $('#tgl_berhenti').datepicker({
-            autoclose: true
-        })
-
-
-        // Ambil tombol dan input file
-        const button = document.getElementById('file_browser');
-        const fileInput = document.getElementById('file_input');
-        const cameraButton = document.getElementById('camera_browser');
-        const profileImage = document.getElementById('profile_image');
-        const cameraInput = document.getElementById('camera_input');
-        const cameraCanvas = document.getElementById('camera_canvas');
-        const cameraPreview = document.getElementById('camera_preview');
-        const keterangan = document.getElementById('keterangan');
-        const capture = document.getElementById('capture');
-
-        function showPreview(event) {
-            var file = event.target.files[0];
-            var preview = document.getElementById('filePreview');
-
-            if (file) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.innerHTML = `<img src="${e.target.result}" alt="File Preview" class="penduduk">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-
-        // Ketika tombol diklik, buka file browser
-        button.addEventListener('click', function () {
-            fileInput.click();  // Memicu input file untuk dibuka
-        });
-
-        // Jika file dipilih, ubah gambar menjadi gambar yang dipilih
-        fileInput.addEventListener('change', function () {
-            const file = fileInput.files[0];  // Ambil file pertama yang dipilih
-            if (file) {
-                const reader = new FileReader();
-
-                // Ketika file berhasil dibaca, ubah src gambar
-                reader.onload = function (e) {
-                    profileImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(file);  // Membaca file sebagai DataURL
-            }
-        });
-        // Jika foto diambil menggunakan kamera, ubah gambar menjadi foto yang diambil
-        cameraInput.addEventListener('change', function () {
-            const file = cameraInput.files[0];  // Ambil file foto yang diambil
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    profileImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(file);  // Membaca file foto sebagai DataURL
-            }
-        });
-
-        // Ketika tombol Unggah Foto dari Kamera diklik, buka kamera
-        cameraButton.addEventListener('click', function () {
-            startCamera();
-            profileImage.style.display = 'none';
-            keterangan.style.display = 'none';
-            capture.style.display = 'block';
-
-            // Memulai kamera untuk mengambil foto
-        });
-
-
-        // Fungsi untuk memulai kamera
-        function startCamera() {
-            if (navigator.mediaDevices.getUserMedia) {
-                navigator.mediaDevices.getUserMedia({ video: true })
-                    .then(function (stream) {
-                        // Tampilkan preview kamera
-                        cameraPreview.srcObject = stream;
-                        cameraPreview.style.display = 'block';
-
-                        // Ambil foto saat tombol di klik
-                        cameraPreview.addEventListener('click', function () {
-                            capturePhoto();
-                            stopCamera(stream);
-                            profileImage.style.display = 'block';
-                        });
-                    })
-                    .catch(function (err) {
-                        console.log("Terjadi kesalahan: " + err);
-                    });
-            } else {
-                alert("Kamera tidak didukung di browser ini.");
-            }
-        }
-
-        // Fungsi untuk menghentikan aliran video dari kamera setelah foto diambil
-        function stopCamera(stream) {
-            const tracks = stream.getTracks();
-            tracks.forEach(track => track.stop());
-            cameraPreview.style.display = 'none';  // Menyembunyikan preview kamera
-        }
-
-        // Fungsi untuk mengambil foto dan menampilkan di gambar profil
-        function capturePhoto() {
-            cameraCanvas.width = cameraPreview.videoWidth;
-            cameraCanvas.height = cameraPreview.videoHeight;
-
-            const ctx = cameraCanvas.getContext('2d');
-            ctx.drawImage(cameraPreview, 0, 0, cameraCanvas.width, cameraCanvas.height);
-
-            const dataUrl = cameraCanvas.toDataURL();  // Mengambil gambar sebagai DataURL
-            profileImage.src = dataUrl;  // Menampilkan gambar yang diambil di elemen <img>
-        }
-
-
-    </script>
-
+        $('#tgl_1').datepicker({
+           autoclose: true
+       })
+   </script>
 @endsection

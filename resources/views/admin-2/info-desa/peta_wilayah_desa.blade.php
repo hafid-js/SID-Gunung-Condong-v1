@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#"
+                        <a href="{{ url('/identitas-desa') }}"
                             class="btn btn-social bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
                             title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
                         <a href="#" data-href="#"
@@ -79,6 +79,8 @@
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
     <script>
+
+       
         // Inisialisasi peta
         var map = L.map('map').setView([51.505, -0.09], 13); // Set posisi awal dan zoom level
 

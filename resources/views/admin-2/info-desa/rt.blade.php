@@ -1,206 +1,184 @@
-@extends('admin.layout.layout')
+@extends('admin-2.layout.layout')
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header mt-min-20">
-            <div class="container-fluid">
-                <div class="row mb-4">
-                    <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">Wilayah Administratif RT</h4>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item active">Wilayah Administratif RT</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="row" style="display: none;" id="tampilBerhasil">
-                    <div id="toastsContainerTopRight" class="fixed">
-                        <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header"><strong class="mr-auto">
-                                    Berhasil</strong> <button type="button" class="close" data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="toast-body">Berhasil Ubah Status Komentar</div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
+    <div class="content-wrapper" style="min-height: 912.43px;">
+        <section class="content-header">
+            <h1>
+                Wilayah Administratif RT
+            </h1>
+
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
+                </li>
+                <li class="active">Wilayah Administratif RT</li>
+            </ol>
+
         </section>
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header" style="background-color: #ffffff;">
-                                    <div class="form-group row mb-0">
-                                        <div class="col-sm-12">
-                                            <div class="margin">
-                                                <a href="{{ url('dusun/rt/form') }}"
-                                                    class="btn btn-social mt-1 mb-1 btn-success btn-sm"
-                                                    title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
-                                                <a href="{{ url('dusun/rt/cetak') }}" title="Cetak Data" class="btn mt-1 mb-1 bg-purple btn-sm"><i
-                                                        class="fa fa-print"></i>
-                                                    Cetak</a>
-                                                <a href="#" title="Unduh Data" class="btn mt-1 mb-1 bg-navy btn-sm"><i
-                                                        class="fa fa-download"></i>
-                                                    Unduh</a>
-                                                    <a href="{{ url('dusun') }}" title="Kembali ke Wilayah Administratif RW"
-                                                    class="btn btn-social btn-info btn-sm visible-xs-block"
-                                                    data-title="Kembali ke Wilayah Administratif RW"><span class="btn-label"><i
-                                                            class="fa fa-arrow-circle-left"></i></span> Kembali ke Wilayah Administratif RW</a>
-                                            </div>
+        <section id="maincontent" class="content">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <a href="{{ url('dusun/rt/form') }}" id="btn-add"
+                        class="btn btn-social btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i
+                            class="fa fa-plus"></i> Tambah</a>
+                    <a href="{{ url('dusun/rt/cetak') }}"
+                        class="btn btn-social bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
+                        title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
+                    <a href="{{ url('dusun/rt/cetak') }}" title="Unduh Data"
+                        class="btn btn-social bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
+                        target="_blank"><i class="fa fa-download"></i> Unduh</a>
+
+                    <a href="{{ url('dusun/rw') }}"
+                        class="btn btn-social btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                        <i class="fa fa-arrow-circle-left "></i>Kembali ke Wilayah Administratif
+                        RW
+                    </a>
+                </div>
+                <div class="box-header">
+                    <strong>RW - / Dusun -</strong>
+                </div>
+                <div class="box-body">
+                    <form action="#" id="mainform" name="mainform" method="post"
+                        accept-charset="utf-8">
+                        <input type="hidden" name="sidcsrf" value="416a4ae5c007dd4af33a43ff35fd4607">
+
+                        <div class="table-responsive">
+                            <div id="tabeldata_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="dataTables_length" id="tabeldata_length"><label>Tampilkan <select
+                                                    name="tabeldata_length" aria-controls="tabeldata"
+                                                    class="form-control input-sm">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                    <option value="-1">Semua</option>
+                                                </select> entri</label></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div id="tabeldata_filter" class="dataTables_filter"><label>Cari:<input
+                                                    type="search" class="form-control input-sm"
+                                                    placeholder="kata kunci pencarian" aria-controls="tabeldata"></label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="card-body">
-                                            <div class="form-group row mb-0">
-                                                <div class="col-sm-12">
-                                                    <div class="box-header with-border">
-                                                        <strong>RW 001 / Dusun - Krajan</strong>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="col-sm-12">
+                                        <table class="table table-bordered table-hover dataTable" id="tabeldata" role="grid"
+                                            aria-describedby="tabeldata_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="padat sorting_disabled" rowspan="1" colspan="1"
+                                                        aria-label="#">#</th>
+                                                    <th class="padat sorting_disabled" rowspan="1" colspan="1"
+                                                        aria-label="No">No</th>
+                                                    <th class="padat aksi sorting_disabled" rowspan="1" colspan="1"
+                                                        aria-label="Aksi">Aksi</th>
+                                                    <th rowspan="1" colspan="1" class="sorting_disabled" aria-label="RT">RT
+                                                    </th>
+                                                    <th rowspan="1" colspan="1" class="sorting_disabled"
+                                                        aria-label="Ketua RT">Ketua RT</th>
+                                                    <th rowspan="1" colspan="1" class="sorting_disabled"
+                                                        aria-label="NIK Ketua RT">NIK Ketua RT</th>
+                                                    <th style="width:5%" rowspan="1" colspan="1" class="sorting_disabled"
+                                                        aria-label="KK">KK</th>
+                                                    <th style="width:5%" rowspan="1" colspan="1" class="sorting_disabled"
+                                                        aria-label="L+P">L+P</th>
+                                                    <th style="width:5%" rowspan="1" colspan="1" class="sorting_disabled"
+                                                        aria-label="L">L</th>
+                                                    <th style="width:5%" rowspan="1" colspan="1" class="sorting_disabled"
+                                                        aria-label="P">P</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="dragable" class="ui-sortable">
+                                                <tr data-id="13" class="dragable-handle odd" role="row">
+                                                    <td class=" padat"><i class="fa fa-sort-alpha-desc"></i></td>
+                                                    <td class=" padat">1</td>
+                                                    <td class=" aksi"><a
+                                                            href="{{ url('dusun/rt/form') }}"
+                                                            class="btn bg-orange btn-sm" title="Ubah"><i
+                                                                class="fa fa-edit"></i></a> <a href="#"
+                                                            data-href="#"
+                                                            class="btn bg-maroon btn-sm" title="Hapus" data-toggle="modal"
+                                                            data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                    <td>Junaidi</td>
+                                                    <td><strong>JUNAIDI EFENDI</strong></td>
+                                                    <td>0531912200900002</td>
+                                                    <td><span>0</span></td>
+                                                    <td><span>0</span></td>
+                                                    <td><span>0</span></td>
+                                                    <td><span>0</span></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th colspan="5" rowspan="1" class="padat aksi">Total</th>
+                                                    <th rowspan="1" colspan="1"></th>
+                                                    <th rowspan="1" colspan="1">0</th>
+                                                    <th rowspan="1" colspan="1">0</th>
+                                                    <th rowspan="1" colspan="1">0</th>
+                                                    <th rowspan="1" colspan="1">0</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                        <div id="tabeldata_processing" class="dataTables_processing panel panel-default"
+                                            style="display: none;">Sedang memproses...</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="dataTables_info" id="tabeldata_info" role="status" aria-live="polite">
+                                            Menampilkan 1 sampai 1 dari 1 entri</div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="tabeldata_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button previous disabled" id="tabeldata_previous"><a
+                                                        href="#" aria-controls="tabeldata" data-dt-idx="0"
+                                                        tabindex="0">Sebelumnya</a></li>
+                                                <li class="paginate_button active"><a href="#" aria-controls="tabeldata"
+                                                        data-dt-idx="1" tabindex="0">1</a></li>
+                                                <li class="paginate_button next disabled" id="tabeldata_next"><a href="#"
+                                                        aria-controls="tabeldata" data-dt-idx="2"
+                                                        tabindex="0">Selanjutnya</a></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-header" style="background-color: #ffffff;">
-                                    <div class="form-group row mb-0 justify-content-between">
-                                        <div class="col-sm-12 col-md-3 col-lg-2">
-                                        </div>
-
-                                        <div class="col-sm-12 col-md-3 col-lg-2">
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control form-control-sm"
-                                                    placeholder="kata kunci pencarian">
-                                                <div class="input-group-append">
-                                                    <button type="submit" class="btn btn-info btn-sm"><i
-                                                            class="fas fa-search"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-sm-12 col-md-12 col-lg-12">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover table-bordered">
-                                                    <thead class="thead-gray disabled">
-                                                        <tr>
-                                                            <th style="width:5%;">NO</th>
-                                                            <th style="width:5%;" class="text-center">Aksi</th>
-                                                            <th>RT</th>
-                                                            <th style="width: 30%;">Ketua RT</th>
-                                                            <th>NIK Ketua RT</th>
-                                                            <th>KK</th>
-                                                            <th>L+P</th>
-                                                            <th>L</th>
-                                                            <th>P</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td class="aksi">
-                                                                    <a href="{{ url('dusun/rt/form') }}"
-                                                                    class="btn bg-orange btn-sm" title="Ubah">
-                                                                    <i class="fa fa-edit text-white"></i>
-                                                                </a>
-                                                                    <a href="#" data-href="#" data-target="#hapus" class="btn bg-danger btn-sm" title="Hapus" data-toggle="modal">
-                                                                        <i class="fa fa-trash-o"></i></a>
-                                                            </td>
-                                                            <td>003</td>
-                                                            <td><strong>WIDADI</strong></td>
-                                                            <td>3306452265250004</td>
-                                                            <td>1</td>
-                                                            <td>3</td>
-                                                            <td>1</td>
-                                                            <td>2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th colspan="5" class="text-center">Total</th>
-                                                            <th>1</th>
-                                                            <th>4</th>
-                                                            <th>2</th>
-                                                            <th>2</th>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="pagination pagination-sm float-left">
-                                        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
-                                            Menampilkan 1 sampai 10 dari 57 entri</div>
-                                    </ul>
-                                    <ul class="pagination pagination-sm m-0 float-right">
-                                        <li class="paginate_button page-item previous disabled" id="example1_previous">
-                                            <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
-                                                class="page-link">Sebelumnya</a>
-                                        </li>
-                                        <li class="paginate_button page-item active">
-                                            <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
-                                                class="page-link">1</a>
-                                        </li>
-                                        <li class="paginate_button page-item next" id="example1_next">
-                                            <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
-                                                class="page-link">Selanjutnya</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-                    <!-- /.col -->
+                    </form>
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
 
-            <!-- first Modal -->
-            <div class="modal fade" id="hapus" tabindex="-1" aria-labelledby="hapusLabel" aria-hidden="true">
+            <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h6 class="modal-title" id="hapusLabel"><i class="fas fa-exclamation-triangle text-red"></i>
-                                Konfirmasi
-                            </h6>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle text-red"></i>
+                                Konfirmasi</h4>
                         </div>
-
-                        <div style="background-color: #00c0ef;">
-                            <div class="card-header">
-                                <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
-                                    data
-                                    ini?</h6>
-                            </div>
+                        <div class="modal-body btn-info">
+                            Apakah Anda yakin ingin menghapus data ini?
                         </div>
-                        <div class="modal-footer justify-content-end">
-                            <button type="button" class="btn btn-warning btn-sm text-white" data-dismiss="modal"><i
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-social btn-warning btn-sm" data-dismiss="modal"><i
                                     class="fa fa-sign-out"></i> Tutup</button>
-                            <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</button>
+                            <a class="btn-ok">
+                                <div class="btn btn-social btn-danger btn-sm" id="ok-delete"><i class="fa fa-trash-o"></i>
+                                    Hapus</div>
+                            </a>
                         </div>
-                        </form>
-
-                        <!-- /.modal-content -->
                     </div>
-                    <!-- /.modal-dialog -->
                 </div>
             </div>
+
         </section>
-        <!-- /.content -->
     </div>
 
 

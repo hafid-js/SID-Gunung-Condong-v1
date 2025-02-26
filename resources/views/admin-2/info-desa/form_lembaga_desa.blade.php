@@ -1,175 +1,152 @@
-@extends('admin.layout.layout')
+@extends('admin-2.layout.layout')
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header mt-min-20">
-            <div class="container-fluid">
-                <div class="row mb-4">
-                    <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <h4 class="m-0" style="font-weight: 400;">Lembaga Desa</h4>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                            <li class="breadcrumb-item">Lembaga Desa</li>
-                            <li class="breadcrumb-item active">Tambah Data</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
+    <div class="content-wrapper" style="min-height: 912.43px;">
+        <section class="content-header">
+            <h1>
+                Master Lembaga
+                <small>Tambah Data</small>
+            </h1>
+
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
+                </li>
+                <li><a href="{{ url('lembaga-desa') }}">Daftar Lembaga</a></li>
+                <li class="active">Master Lembaga Tambah Data</li>
+            </ol>
+
         </section>
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-lg-3">
-                        <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="form-group mt-3">
-                                    <div class="text-center">
-                                        <img class="logo_lembaga" id="logo_lembaga"
-                                            src="https://berputar.opendesa.id/assets/files/logo/opensid_logo.png"
-                                            alt="Foto Penduduk">
-                                    </div>
-                                </div>
-                                <code class="text-center font-11">(Kosongkan, jika logo tidak berubah)</code>
-                                <div class="card-body">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control form-control-sm"
-                                                disabled>
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-info btn-sm" id="file_browser"><i class="fas fa-search"></i></button>
-                                                <input type="file" id="file_input" onchange="showPreview(event)" style="display: none;" />
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-lg-9">
-                        <div class="card-body p-0">
-                            <div class="card card-outline card-info">
-                                <div class="card-header" style="background-color: #ffffff;">
-                                    <div class="form-group row mb-0">
-                                        <div class="col-sm-12">
-                                            <div class="margin">
-                                                <a href="{{ url('lembaga-desa') }}" title="Unduh Data"
-                                                    class="btn btn-social btn-info btn-sm visible-xs-block"><span
-                                                        class="btn-label"><i class="fa fa-arrow-circle-left"></i></span>
-                                                    Kembali
-                                                    ke Daftar Lembaga</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group row">
-                                        <label for="namLem" class="col-sm-2 font-12 col-form-label">Nama Lembaga</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-4">
-                                            <input type="text" class="form-control form-control-sm font-12" id="namLem" placeholder="Nama Lembaga">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="kodeLem" class="col-sm-2 font-12 col-form-label">Kode Lembaga</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-4">
-                                            <input type="text" class="form-control form-control-sm font-12" id="kodeLem"
-                                                value="54261" placeholder="Kode Lembaga">
-                                                <code>*Pastikan kode belum pernah dipakai di data lembaga / di data kelompok.</code>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="noSK" class="col-sm-2 font-12 col-form-label">No. SK Pendirian Lembaga</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <input type="text" class="form-control form-control-sm font-12" id="noSK" placeholder="No. SK Pendirian Lembaga">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="katLem" class="col-sm-2 font-12">Kategori Lembaga</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <select name="" id="katLem" class="form-control form-control-sm select2"
-                                                style="width:100%;">
-                                                <option value="">-- Silahkan Masukkan Kategori Lembaga --</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="ketLem" class="col-sm-2 font-12">Ketua Lembaga</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-9">
-                                            <select name="" id="ketLem" class="form-control form-control-sm select2"
-                                                style="width:100%;">
-                                                <option value="">-- Silahkan Masukkan NIK / Nama --</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="deskripsi" class="col-sm-2 font-12 col-form-label">Deskripsi Lembaga
-                                            Desa</label>
-                                        <div class="col-sm-10 col-lg-9 col-md-4">
-                                            <textarea class="form-control font-12" rows="3" for="deskripsi"
-                                                style="height:100%;">BPD merupakan lembaga baru di desa pada era otonomi daerah di Indonesia. Badan Permusyawaratan Desa atau yang disebut dengan nama lain adalah lembaga yang melaksanakan fungsi pemerintahan yang anggotanya merupakan wakil dari penduduk Desa berdasarkan keterwakilan wilayah dan ditetapkan secara demokratis.</textarea>
-                                        </div>
-                                    </div>
-                                </div>
+        <section id="maincontent" class="content">
 
-                                <div class="card-footer border-0">
-                                    <button class="btn btn-danger">Batal</button>
-                                    <button type="submit" class="btn btn-info float-right">Simpan</button>
-                                  </div>
+
+            <div class="row">
+                <form id="validasi" action="#h" method="POST"
+                    enctype="multipart/form-data" class="form-horizontal">
+                    <div class="col-md-3">
+                        <div class="box box-primary">
+                            <div class="box-body box-profile preview-img">
+                                <img class="penduduk img-responsive"
+                                    src="https://berputar.opendesa.id/assets/files/logo/opensid_logo.png" alt="Logo">
+                                <br>
+                                <p class="text-muted text-center text-red">(Kosongkan, jika logo tidak berubah)</p>
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control file-path" readonly="" name="logo">
+                                    <input type="file" class="hidden file-input" name="logo" accept=".gif,.jpg,.jpeg,.png">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info btn-flat file-browser"><i
+                                                class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-9">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <a href="{{ url('lembaga-desa') }} "
+                                    class="btn btn-social btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i
+                                        class="fa fa-arrow-circle-left "></i> Kembali Ke Daftar
+                                    Lembaga </a>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="nama">Nama Lembaga</label>
+                                    <div class="col-sm-7">
+                                        <input id="nama" class="form-control input-sm nama_terbatas required" type="text"
+                                            placeholder="Nama Lembaga" name="nama" value="" maxlength="50">
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="col-sm-3 control-label" for="kode">Kode Lembaga</label>
+                                    <div class="col-sm-7">
+                                        <input id="kode" class="form-control input-sm nomor_sk required" type="text"
+                                            placeholder="Kode Lembaga" name="kode" value="" maxlength="16">
+                                        <p><code>*Pastikan kode belum pernah dipakai di data lembaga / di data kelompok.</code>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="col-sm-3 control-label" for="kode">No. SK Pendirian Lembaga</label>
+                                    <div class="col-sm-7">
+                                        <input id="no_sk_pendirian" class="form-control input-sm nomor_sk" type="text"
+                                            placeholder="No. SK Pendirian Lembaga" name="no_sk_pendirian" value=""
+                                            maxlength="255">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="id_master">Kategori Lembaga</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control input-sm select2 required select2-hidden-accessible"
+                                            id="id_master" name="id_master" data-select2-id="id_master" tabindex="-1"
+                                            aria-hidden="true">
+                                            <option value="" data-select2-id="2">-- Silakan Masukkan Kategori Lembaga--
+                                            </option>
+                                            <option value="3">Badan Desa</option>
+                                        </select><span class="select2 select2-container select2-container--default"
+                                            dir="ltr" data-select2-id="1" style="width: 575.203px;"><span
+                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                    role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                    aria-labelledby="select2-id_master-container"><span
+                                                        class="select2-selection__rendered" id="select2-id_master-container"
+                                                        role="textbox" aria-readonly="true"
+                                                        title="-- Silakan Masukkan Kategori Lembaga--">-- Silakan Masukkan
+                                                        Kategori Lembaga--</span><span class="select2-selection__arrow"
+                                                        role="presentation"><b
+                                                            role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="id_ketua">Ketua Lembaga</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control input-sm select2 select2-hidden-accessible"
+                                            id="kelompok_penduduk" name="id_ketua" data-select2-id="kelompok_penduduk"
+                                            tabindex="-1" aria-hidden="true">
+                                            <option value="" data-select2-id="4">-- Silakan Masukkan NIK / Nama--</option>
+                                            <option value="1">NIK :0720110200700001 - Ari - Dusun a RT - / RW -</option>
+                                            <option value="2">NIK :0531912200900002 - JUNAIDI EFENDI - Jl. Jenderal Sudirman
+                                                RT - / RW -</option>
+                                            <option value="3">NIK :0531912200900003 - RAISYA KAYLA AZZAHRA - Jl. Jenderal
+                                                Sudirman RT - / RW -</option>
+                                            <option value="4">NIK :0531912200900004 - TATI RAMADYANA - Jl. Jenderal Sudirman
+                                                RT - / RW -</option>
+                                        </select><span class="select2 select2-container select2-container--default"
+                                            dir="ltr" data-select2-id="3" style="width: 575.203px;"><span
+                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                    role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                    aria-labelledby="select2-kelompok_penduduk-container"><span
+                                                        class="select2-selection__rendered"
+                                                        id="select2-kelompok_penduduk-container" role="textbox"
+                                                        aria-readonly="true" title="-- Silakan Masukkan NIK / Nama--">--
+                                                        Silakan Masukkan NIK / Nama--</span><span
+                                                        class="select2-selection__arrow" role="presentation"><b
+                                                            role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="keterangan">Deskripsi Lembaga</label>
+                                    <div class="col-sm-7">
+                                        <textarea name="keterangan" class="form-control input-sm"
+                                            placeholder="Deskripsi Lembaga" rows="3" maxlength="300"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <button type="reset" class="btn btn-social btn-danger btn-sm"><i class="fa fa-times"></i>
+                                    Batal</button>
+                                <button type="submit" class="btn btn-social btn-info btn-sm pull-right"><i
+                                        class="fa fa-check"></i> Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="sidcsrf" value="66fa58f300d5c2bdb1472f2fd97d0ceb">
+                </form>
             </div>
+
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
-
-    <script>
-        // Ambil tombol dan input file
-        const button = document.getElementById('file_browser');
-       const fileInput = document.getElementById('file_input');
-       const cameraButton = document.getElementById('camera_browser');
-       const logoLembaga = document.getElementById('logo_lembaga');
-
-       function showPreview(event) {
-           var file = event.target.files[0];
-           var preview = document.getElementById('filePreview');
-
-           if (file) {
-               var reader = new FileReader();
-               reader.onload = function (e) {
-                   preview.innerHTML = `<img src="${e.target.result}" alt="File Preview" class="penduduk">`;
-               };
-               reader.readAsDataURL(file);
-           }
-       }
-
-
-       // Ketika tombol diklik, buka file browser
-       button.addEventListener('click', function () {
-           fileInput.click();  // Memicu input file untuk dibuka
-       });
-
-       // Jika file dipilih, ubah gambar menjadi gambar yang dipilih
-       fileInput.addEventListener('change', function () {
-           const file = fileInput.files[0];  // Ambil file pertama yang dipilih
-           if (file) {
-               const reader = new FileReader();
-
-               // Ketika file berhasil dibaca, ubah src gambar
-               reader.onload = function (e) {
-                   logoLembaga.src = e.target.result;
-               };
-
-               reader.readAsDataURL(file);  // Membaca file sebagai DataURL
-           }
-       });
-
-   </script>
 
 @endsection

@@ -1,282 +1,284 @@
-@extends('admin.layout.layout')
+@extends('admin-2.layout.layout')
 @section('content')
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header mt-min-20">
-         <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <h4 class="m-0" style="font-weight: 400;">Pengelolaan Lembaga</h4>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6 mt-20 mb-min-20">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
-                        <li class="breadcrumb-item active">Pengelolaan Lembaga</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="row" style="display: none;" id="tampilBerhasil">
-                <div id="toastsContainerTopRight" class="fixed">
-                    <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-header"><strong class="mr-auto">
-                                Berhasil</strong> <button type="button" class="close" data-dismiss="modal"
-                                aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+    <div class="content-wrapper" style="min-height: 912.43px;">
+        <section class="content-header">
+            <h1>
+                Pengelolaan Lembaga
+            </h1>
+
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
+                </li>
+                <li class="active">Pengelolaan Lembaga</li>
+            </ol>
+
+        </section>
+
+        <section id="maincontent" class="content">
+
+
+            <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle text-red"></i>
+                                Konfirmasi</h4>
                         </div>
-                        <div class="toast-body">Berhasil Ubah Status Komentar</div>
+                        <div class="modal-body btn-info">
+                            Apakah Anda yakin ingin menghapus data ini?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-social btn-warning btn-sm" data-dismiss="modal"><i
+                                    class="fa fa-sign-out"></i> Tutup</button>
+                            <a class="btn-ok">
+                                <div class="btn btn-social btn-danger btn-sm" id="ok-delete"><i class="fa fa-trash-o"></i>
+                                    Hapus</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card-body p-0">
-                        <div class="card card-outline card-info">
-                            <div class="card-header" style="background-color: #ffffff;">
-                                <div class="form-group row mb-0">
-                                    <div class="col-sm-12">
-                                        <div class="margin">
-                                            <a href="{{ url('lembaga-desa/form') }}"
-                                                    class="btn mt-1 mb-1 btn-success btn-sm"
-                                                    title="Tambah Kategori"><i class="fa fa-plus "></i> Tambah</a>
-                                                    <a href="#" class="btn btn-danger mt-1 mb-1 btn-sm"><i class="fa fa-trash"></i> Hapus</a>
-                                                <a href="#" data-target="#cetak" title="Cetak Data" data-toggle="modal"
-                                                    data-target="#cetak" class="btn mt-1 mb-1 bg-purple btn-sm"><i
-                                                        class="fa fa-print"></i>
-                                                    Cetak</a>
-                                                <a href="#" data-target="#unduh" title="Unduh Data" data-toggle="modal"
-                                                    data-target="#unduh" class="btn mt-1 mb-1 bg-navy btn-sm"><i
-                                                        class="fa fa-download"></i>
-                                                    Unduh</a>
-                                                    <a href="{{ url('lembaga-desa/kategori') }}" class="btn btn-sm btn-warning mt-1 mb-1 text-white"><i class="fa fa-list"></i> Kategori</a>
-                                                    <a href="#" class="btn btn-sm bg-purple mt-1 mb-1"><i class="fa fa-refresh"></i> Bersihkan</a>
-                                        </div>
-                                    </div>
+                <div class="col-md-12">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <a href="{{ url('lembaga-desa/form') }}" title="Tambah"
+                                class="btn btn-social bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i
+                                    class="fa fa-plus"></i> Tambah</a>
+                            <a href="#" title="Hapus"
+                                onclick="#"
+                                class="btn btn-social btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih disabled"><i
+                                    class="fa fa-trash-o"></i> Hapus
+                            </a>
+                            <a href="#"
+                                class="btn btn-social bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
+                                data-remote="false" data-toggle="modal" data-target="#cetak" data-title="Cetak"><i
+                                    class="fa fa-print "></i> Cetak</a>
+                            <a href="#"
+                                class="btn btn-social bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
+                                data-remote="false" data-toggle="modal" data-target="#unduh" data-title="Unduh"><i
+                                    class="fa fa-download"></i> Unduh</a>
+                            <a href="{{ url('lembaga-desa/kategori') }}"
+                                class="btn btn-social bg-orange btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
+                                title="Kategori">
+                                <i class="fa fa fa-list"></i>Kategori
+                            </a>
+                            <a href="#"
+                                class="btn btn-social bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i
+                                    class="fa fa-refresh"></i>Bersihkan</a>
+                        </div>
+                        <div class="box-body">
+                            <div class="row mepet">
+                                <div class="col-sm-2">
+                                    <select id="status_dasar"
+                                        class="form-control input-sm select2 select2-hidden-accessible" name="status_dasar"
+                                        data-select2-id="status_dasar" tabindex="-1" aria-hidden="true">
+                                        <option value="0">Pilih Status</option>
+                                        <option value="1" selected="" data-select2-id="2">Aktif</option>
+                                        <option value="2">Tidak Aktif</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <select id="filter" class="form-control input-sm select2 select2-hidden-accessible"
+                                        name="filter" data-select2-id="filter" tabindex="-1" aria-hidden="true">
+                                        <option value="" data-select2-id="4">Pilih Kategori Lembaga</option>
+                                        <option value="3">Badan Desa</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="card-header" style="background-color: #ffffff;">
-                                <div class="form-group row mb-0 justify-content-between">
-                                    <div class="col-sm-12 col-md-3 col-lg-2">
-                                      <div class="btn-group">
-                                        <div class="form-group mr-1">
-                                            <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Status</option>
-                                                <option>Aktif</option>
-                                                <option>Tidak Aktif</option>
-                                            </select>
+                            <hr class="batas">
+                            <form action="#" id="mainform" name="mainform" method="post"
+                                accept-charset="utf-8">
+                                <input type="hidden" name="sidcsrf" value="b79161e0866ad07c9d5b327b01ec335f">
+
+                                <div class="table-responsive">
+                                    <div id="tabeldata_wrapper"
+                                        class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="dataTables_length" id="tabeldata_length"><label>Tampilkan
+                                                        <select name="tabeldata_length" aria-controls="tabeldata"
+                                                            class="form-control input-sm">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                            <option value="-1">Semua</option>
+                                                        </select> entri</label></div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div id="tabeldata_filter" class="dataTables_filter"><label>Cari:<input
+                                                            type="search" class="form-control input-sm"
+                                                            placeholder="kata kunci pencarian"
+                                                            aria-controls="tabeldata"></label></div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <select class="form-control form-control-sm select2" style="width: 100%;">
-                                                <option>Pilih Kategori Lembaga</option>
-                                            </select>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table
+                                                    class="table table-bordered table-hover tabel-daftar dataTable no-footer"
+                                                    id="tabeldata" role="grid" aria-describedby="tabeldata_info">
+                                                    <thead class="bg-gray">
+                                                        <tr role="row">
+                                                            <th class="padat sorting_disabled" rowspan="1" colspan="1"
+                                                                aria-label=""><input type="checkbox" id="checkall"></th>
+                                                            <th class="padat sorting_disabled" rowspan="1" colspan="1"
+                                                                aria-label="No">No</th>
+                                                            <th class="aksi sorting_disabled" rowspan="1" colspan="1"
+                                                                aria-label="Aksi">Aksi</th>
+                                                            <th class="padat sorting_asc" tabindex="0"
+                                                                aria-controls="tabeldata" rowspan="1" colspan="1"
+                                                                aria-sort="ascending"
+                                                                aria-label="Kode Lembaga: aktifkan untuk mengurutkan kolom menurun">
+                                                                Kode Lembaga</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="tabeldata"
+                                                                rowspan="1" colspan="1"
+                                                                aria-label="Nama Lembaga: aktifkan untuk mengurutkan kolom ke atas">
+                                                                Nama Lembaga</th>
+                                                            <th class="padat sorting" tabindex="0" aria-controls="tabeldata"
+                                                                rowspan="1" colspan="1"
+                                                                aria-label="Ketua Lembaga: aktifkan untuk mengurutkan kolom ke atas">
+                                                                Ketua Lembaga</th>
+                                                            <th class="padat sorting" tabindex="0" aria-controls="tabeldata"
+                                                                rowspan="1" colspan="1"
+                                                                aria-label="Kategori Lembaga: aktifkan untuk mengurutkan kolom ke atas">
+                                                                Kategori Lembaga</th>
+                                                            <th class="padat sorting" tabindex="0" aria-controls="tabeldata"
+                                                                rowspan="1" colspan="1"
+                                                                aria-label="Jumlah Anggota Lembaga: aktifkan untuk mengurutkan kolom ke atas">
+                                                                Jumlah Anggota Lembaga</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr role="row" class="odd">
+                                                            <td class=" padat"><input type="checkbox" name="id_cb[]"
+                                                                    value="2"></td>
+                                                            <td class=" padat">1</td>
+                                                            <td class=" aksi"><a
+                                                                    href="{{ url('lembaga-desa/detail') }}"
+                                                                    class="btn bg-purple btn-sm" title="Rincian"><i
+                                                                        class="fa fa-list-ol"></i></a> <a
+                                                                    href="{{ url('lembaga-desa/form') }}"
+                                                                    class="btn bg-orange btn-sm" title="Ubah Kategori"><i
+                                                                        class="fa fa-edit"></i></a> </td>
+                                                            <td class="padat sorting_1">BPD</td>
+                                                            <td>Badan Permusyawaratan Desa</td>
+                                                            <td class=" padat">Ari</td>
+                                                            <td class=" padat">Badan Desa</td>
+                                                            <td class=" padat">1</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div id="tabeldata_processing"
+                                                    class="dataTables_processing panel panel-default"
+                                                    style="display: none;">Sedang memproses...</div>
+                                            </div>
                                         </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-3 col-lg-2">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control form-control-sm"
-                                                placeholder="kata kunci pencarian">
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-info btn-sm"><i class="fas fa-search"></i></button>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="dataTables_info" id="tabeldata_info" role="status"
+                                                    aria-live="polite">Menampilkan 1 sampai 1 dari 1 entri</div>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="dataTables_paginate paging_simple_numbers"
+                                                    id="tabeldata_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button previous disabled"
+                                                            id="tabeldata_previous"><a href="#" aria-controls="tabeldata"
+                                                                data-dt-idx="0" tabindex="0">Sebelumnya</a></li>
+                                                        <li class="paginate_button active"><a href="#"
+                                                                aria-controls="tabeldata" data-dt-idx="1" tabindex="0">1</a>
+                                                        </li>
+                                                        <li class="paginate_button next disabled" id="tabeldata_next"><a
+                                                                href="#" aria-controls="tabeldata" data-dt-idx="2"
+                                                                tabindex="0">Selanjutnya</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-sm-12 col-md-12 col-lg-12">
-                                       <div class="table-responsive">
-                                        <table class="table table-hover table-bordered">
-                                            <thead class="thead-gray disabled">
-                                                <tr>
-                                                    <th>
-                                                        <input type="checkbox" id="check-all" />
-                                                    </th>
-                                                    <th style="width:5%;">NO</th>
-                                                    <th style="width:5%;" class="text-center">AKSI</th>
-                                                    <th>KODE LEMBAGA</th>
-                                                    <th style="width: 30%;">NAMA LEMBAGA</th>
-                                                    <th>KETUA LEMBAGA</th>
-                                                    <th>KATEGORI LEMBAGA</th>
-                                                    <th class="text-center">JUMLAH ANGGOTA LEMBAGA</th>
-                                                </tr>
-                                            </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="check-item" />
-                                                        </td>
-
-                                                        <td>1</td>
-                                                        <td class="aksi">
-                                                            <a href="{{ url('lembaga-desa/detail') }}" class="btn bg-purple btn-sm" title="Rincian Sub Wilayah">
-                                                                <i class="fa fa-list"></i></a>
-                                                            <a href="{{ url('lembaga-desa/form') }}" class="btn bg-orange btn-sm" title="Ubah">
-                                                                <i class="fa fa-edit text-white"></i></a>
-                                                        </td>
-                                                        <td>BPD</td>
-                                                        <td>Badan Permusyawatan Desa</td>
-                                                        <td>WIDADI</td>
-                                                        <td>Badan Permusyawatan Desa</td>
-                                                        <td class="text-center">1</td>
-                                                    </tr>
-                                                </tbody>
-                                        </table>
-                                       </div>
-                                    </div>
-                                </div>
-                                <ul class="pagination pagination-sm float-left">
-                                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
-                                        Menampilkan 1 sampai 10 dari 57 entri</div>
-                                </ul>
-                                <ul class="pagination pagination-sm m-0 float-right">
-                                    <li class="paginate_button page-item previous disabled" id="example1_previous">
-                                        <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
-                                            class="page-link">Sebelumnya</a>
-                                    </li>
-                                    <li class="paginate_button page-item active">
-                                        <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0"
-                                            class="page-link">1</a>
-                                    </li>
-                                    <li class="paginate_button page-item next" id="example1_next">
-                                        <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0"
-                                            class="page-link">Selanjutnya</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-
+                            </form>
                         </div>
                     </div>
                 </div>
-                <!-- /.col -->
             </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
 
+        </section>
+    </div>
 
-        <div class="modal fade" id="cetak" tabindex="-1" aria-labelledby="cetakLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rem85">
-                    <div>
-                        <div class="modal-header">
-                            <h6 class="modal-title" id="cetakLabel">Cetak Data</h6>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form action="#">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="laporanD" class="col-form-label">Laporan Ditandatangani</label>
-                                    <select name="" class="form-control form-control-sm select2" id="laporanD"
-                                        style="width: 100%;">
-                                        <option value="" selected>Pilih Staf Perangkat Desa</option>
-                                        <option value="">Hafid</option>
-                                        <option value="">Aulia Rachma L</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Ldiketahui" class="col-form-label">Laporan Diketahui</label>
-                                    <select name="" class="form-control form-control-sm select2" id="Ldiketahui"
-                                        style="width: 100%;">
-                                        <option value="">Hafid</option>
-                                        <option value="" selected>Aulia Rachma L</option>
-                                    </select>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                    </div>
+    <div class="modal fade in" id="cetak" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Cetak Data</h4>
                 </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="modal fade" id="unduh" tabindex="-1" aria-labelledby="unduhLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rem85">
-                    <div>
-                        <div class="modal-header">
-                            <h6 class="modal-title" id="unduhLabel">Unduh Data</h6>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form action="#">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="laporan" class="col-form-label">Laporan Ditandatangani</label>
-                                    <select name="" class="form-control form-control-sm select2" id="laporan"
-                                        style="width: 100%;">
-                                        <option value="" selected>Pilih Staf Perangkat Desa</option>
-                                        <option value="">Hafid</option>
-                                        <option value="">Aulia Rachma L</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="diketahui" class="col-form-label">Laporan Diketahui</label>
-                                    <select name="" class="form-control form-control-sm select2" id="diketahui"
-                                        style="width: 100%;">
-                                        <option value="">Hafid</option>
-                                        <option value="" selected>Aulia Rachma L</option>
-                                    </select>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- first Modal -->
-        <div class="modal fade" id="hapus" tabindex="-1" aria-labelledby="hapusLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="hapusLabel"><i class="fas fa-exclamation-triangle text-red"></i>
-                            Konfirmasi
-                        </h6>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div style="background-color: #00c0ef;">
-                        <div class="card-header">
-                            <h6 class="card-title text-white" style="font-size: 12px;">Apakah Anda yakin ingin menghapus
-                                data
-                                ini?</h6>
-                        </div>
-                    </div>
-                    <div class="modal-footer justify-content-end">
-                        <button type="button" class="btn btn-warning btn-sm text-white" data-dismiss="modal"><i
-                                class="fa fa-sign-out"></i> Tutup</button>
-                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus</button>
-                    </div>
-                    </form>
-
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-        </div>
-    </section>
-    <!-- /.content -->
+                <div class="fetched-data"><form id="validasi" action="#" method="post" target="_blank">
+<div class="modal-body">
+            <div class="form-group">
+        <label for="pamong_ttd">Laporan Ditandatangani</label>
+        <select class="form-control input-sm select2 required select2-hidden-accessible" name="pamong_ttd" data-select2-id="37" tabindex="-1" aria-hidden="true">
+            <option value="" data-select2-id="39">Pilih Staf Pemerintah Desa</option>
+                                <option value="1">Ari (Pj. Kepala Desa)</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="38" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-pamong_ttd-1s-container"><span class="select2-selection__rendered" id="select2-pamong_ttd-1s-container" role="textbox" aria-readonly="true" title="Pilih Staf Pemerintah Desa">Pilih Staf Pemerintah Desa</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+    <div class="form-group">
+        <label for="pamong_ketahui">Laporan Diketahui</label>
+        <select class="form-control input-sm select2 required select2-hidden-accessible" name="pamong_ketahui" data-select2-id="40" tabindex="-1" aria-hidden="true">
+            <option value="">Pilih Staf Pemerintah Desa</option>
+                                <option value="1" selected="" data-select2-id="42">Ari (Pj. Kepala Desa)</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="41" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-pamong_ketahui-c6-container"><span class="select2-selection__rendered" id="select2-pamong_ketahui-c6-container" role="textbox" aria-readonly="true" title="Ari (Pj. Kepala Desa)">Ari (Pj. Kepala Desa)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
 </div>
+<div class="modal-footer">
+    <button type="reset" class="btn btn-social btn-danger btn-sm pull-left"><i class="fa fa-times"></i> Batal</button>
+    <button type="submit" class="btn btn-social btn-info btn-sm"><i class="fa fa-check"></i> Cetak</button>
+</div>
+
+</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade in" id="unduh" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Unduh Data</h4>
+                </div>
+                <div class="fetched-data"><form id="validasi" action="#" method="post" target="_blank">
+<div class="modal-body">
+            <div class="form-group">
+        <label for="pamong_ttd">Laporan Ditandatangani</label>
+        <select class="form-control input-sm select2 required select2-hidden-accessible" name="pamong_ttd" data-select2-id="37" tabindex="-1" aria-hidden="true">
+            <option value="" data-select2-id="39">Pilih Staf Pemerintah Desa</option>
+                                <option value="1">Ari (Pj. Kepala Desa)</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="38" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-pamong_ttd-1s-container"><span class="select2-selection__rendered" id="select2-pamong_ttd-1s-container" role="textbox" aria-readonly="true" title="Pilih Staf Pemerintah Desa">Pilih Staf Pemerintah Desa</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+    <div class="form-group">
+        <label for="pamong_ketahui">Laporan Diketahui</label>
+        <select class="form-control input-sm select2 required select2-hidden-accessible" name="pamong_ketahui" data-select2-id="40" tabindex="-1" aria-hidden="true">
+            <option value="">Pilih Staf Pemerintah Desa</option>
+                                <option value="1" selected="" data-select2-id="42">Ari (Pj. Kepala Desa)</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="41" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-pamong_ketahui-c6-container"><span class="select2-selection__rendered" id="select2-pamong_ketahui-c6-container" role="textbox" aria-readonly="true" title="Ari (Pj. Kepala Desa)">Ari (Pj. Kepala Desa)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="reset" class="btn btn-social btn-danger btn-sm pull-left"><i class="fa fa-times"></i> Batal</button>
+    <button type="submit" class="btn btn-social btn-info btn-sm"><i class="fa fa-check"></i> Cetak</button>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
 
 
 @endsection

@@ -9,26 +9,25 @@
 
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item">
-                    <a href="https://berputar.opendesa.id/beranda"><i class="fa fa-home"></i>Beranda</a>
+                    <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
                 </li>
                 <li class="active">Identitas Desa</li>
             </ol>
 
         </section>
-
         <section id="maincontent" class="content">
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <a href="https://berputar.opendesa.id/identitas_desa/form"
+                    <a href="{{ url('identitas-desa/form') }}"
                         class="btn btn-social btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
                         title="Ubah Data Desa"><i class="fa fa-edit"></i> Ubah Data
                         Desa</a>
-                    <a href="https://berputar.opendesa.id/identitas_desa/maps/kantor"
+                    <a href="{{ url('identitas-desa/maps/kantor') }}"
                         class="btn btn-social bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
                         title="Lokasi Kantor Desa"><i class='fa fa-map-marker'></i>
                         Lokasi
                         Kantor Desa</a>
-                    <a href="https://berputar.opendesa.id/identitas_desa/maps/wilayah"
+                    <a href="{{ url('identitas-desa/maps/wilayah') }}"
                         class="btn btn-social btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
                         title="Peta Wilayah Desa"><i class='fa fa-map'></i>
                         Peta Wilayah

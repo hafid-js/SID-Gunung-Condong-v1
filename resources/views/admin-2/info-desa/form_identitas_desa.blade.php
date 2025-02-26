@@ -11,9 +11,9 @@
 
                 <ol class="breadcrumb float-sm-right">
     <li class="breadcrumb-item">
-        <a href="https://berputar.opendesa.id/beranda"><i class="fa fa-home"></i>Beranda</a>
+        <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
     </li>
-        <li class="breadcrumb-item"><a href="https://berputar.opendesa.id/identitas_desa">Identitas Desa</a></li>
+        <li class="breadcrumb-item"><a href="{{ url('/identitas-desa') }}">Identitas Desa</a></li>
     <li class="active">Ubah Data</li>
 </ol>
 
@@ -23,7 +23,7 @@
 
                 
                         
-    <form action="https://berputar.opendesa.id/identitas_desa/update" class="form-horizontal" id="validasi" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+    <form action="{{ url('/identitas-desa') }}/update" class="form-horizontal" id="validasi" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 <input type="hidden" name="sidcsrf" value="de0cefb44a04c3686cbd335977c81734" />                                         
 
     <div class="row">
@@ -80,7 +80,7 @@
         <div class="col-md-9">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <a href="https://berputar.opendesa.id/identitas_desa" class="btn btn-social btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Desa"><i class="fa fa-arrow-circle-o-left"></i> Kembali
+                    <a href="{{ url('identitas-desa') }}" class="btn btn-social btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Desa"><i class="fa fa-arrow-circle-o-left"></i> Kembali
                         Ke
                         Data Identitas
                         Desa</a>
