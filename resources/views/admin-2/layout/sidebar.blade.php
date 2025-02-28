@@ -504,74 +504,74 @@
                 </ul>
             </li>
                                                 <li class="treeview ">
-                <a href="https://berputar.opendesa.id/">
+                <a href="#">
                     <i class="fa fa-desktop "></i><span>Admin Web</span>
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu ">
 
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/web">
+                        <a href="{{ url('artikel') }}">
                             <i class="fa fa-file-movie-o "></i>
                             Artikel                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/web_widget">
+                        <a href="{{ url('widget') }}">
                             <i class="fa fa-windows "></i>
                             Widget                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/kategori">
+                        <a href="{{ url('kategori') }}">
                             <i class="fa fa-list-alt "></i>
                             Kategori                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/menu">
+                        <a href="{{ url('menu') }}">
                             <i class="fa fa-bars "></i>
                             Menu                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/sinergi_program">
+                        <a href="#">
                             <i class="fa fa-clone "></i>
                             Sinergi Program                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/komentar">
+                        <a href="{{ url('komentar') }}">
                             <i class="fa fa-comments "></i>
                             Komentar                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/gallery">
+                        <a href="{{ url('galeri') }}">
                             <i class="fa fa-image "></i>
                             Galeri                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/theme">
+                        <a href="#">
                             <i class="fa fa-object-group "></i>
                             Tema                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/sosmed">
+                        <a href="{{ url('sosmed') }}">
                             <i class="fa fa-facebook "></i>
                             Media Sosial                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/web/slider">
+                        <a href="{{ url('slider') }}">
                             <i class="fa fa-film "></i>
                             Slider                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/teks_berjalan">
+                        <a href="{{ url('teks-berjalan') }}">
                             <i class="fa fa-ellipsis-h "></i>
                             Teks Berjalan                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/pengunjung">
+                        <a href="{{ url('pengunjung') }}">
                             <i class="fa fa-bar-chart "></i>
                             Pengunjung                        </a>
                     </li>
                                         <li class="">
-                        <a href="https://berputar.opendesa.id/setting_web">
+                        <a href="{{ url('setting-web') }}">
                             <i class="fa fa-gear "></i>
                             Pengaturan                        </a>
                     </li>
@@ -756,5 +756,6 @@
                         
         </ul>
 
-    </section><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.2); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 1042.34px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    </section>
+    <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.2); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 1042.34px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
 </aside>

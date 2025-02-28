@@ -275,13 +275,18 @@ label {
     height: 22px;
 }
 
+table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+    border-bottom-width: 0;
+    /* padding-top: 40px; */
+}
+
 .fa {
     width: 13px;
 }
 
 .img-circle {
     border-radius: 10%;
-    margin-top: -38px;
+    margin-top: -10px;
 }
 
 img {
@@ -332,6 +337,10 @@ table.dataTable thead th.sorting_desc::after {
     opacity: 0.5; /* Kurangi transparansi agar lebih halus */
 }
 
+.direct-chat-messages {
+    height: auto;
+}
+
 .table-bordered>thead>tr>th,
 .table-bordered>thead>tr>td {
     border-bottom-width: 0px;
@@ -339,7 +348,6 @@ table.dataTable thead th.sorting_desc::after {
 
 table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
     border-bottom-width: 0;
-    padding-top: 40px;
 }
 
 .head-padding {

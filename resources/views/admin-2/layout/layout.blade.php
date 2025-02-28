@@ -49,6 +49,11 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js') }}"></script>
     <script src="https://unpkg.com/leaflet-fullscreen/dist/leaflet.fullscreen.min.js') }}"></script>
 
+    {{-- <x-head.tinymce-config /> --}}
+<!-- Place the first <script> tag in your HTML's <head> -->
+<script src="https://cdn.tiny.cloud/1/8mhbod4qy7z7hkyi68srd5kiu1ylu4dxjmbutvjqfspvo5t9/tinymce/7/tinymce.min.js') }}"
+    referrerpolicy="origin"></script>
+
     <style>
         /* Menambahkan scroll pada sidebar */
         .main-sidebar {
