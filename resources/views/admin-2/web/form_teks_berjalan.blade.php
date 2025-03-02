@@ -12,9 +12,9 @@
 
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item">
-                    <a href="https://berputar.opendesa.id/beranda"><i class="fa fa-home"></i>Beranda</a>
+                    <a href="{{ url('/') }}"><i class="fa fa-home"></i>Beranda</a>
                 </li>
-                <li class="breadcrumb-item"><a href="https://berputar.opendesa.id/teks_berjalan">Teks Berjalan</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('teks-berjalan') }}">Teks Berjalan</a></li>
                 tambah Data
             </ol>
 
@@ -24,13 +24,13 @@
 
 
 
-            <form action="https://berputar.opendesa.id/teks_berjalan/insert" class="form-horizontal" id="validasi"
-                method="post" accept-charset="utf-8" data-select2-id="validasi">
+            <form action="#" class="form-horizontal" id="validasi" method="post" accept-charset="utf-8"
+                data-select2-id="validasi">
                 <input type="hidden" name="sidcsrf" value="f01875d4e16f840bffce7597b5e81212">
 
                 <div class="box box-info" data-select2-id="10">
                     <div class="box-header with-border">
-                        <a href="https://berputar.opendesa.id/teks_berjalan"
+                        <a href="{{ url('teks-berjalan') }}"
                             class="btn btn-social  btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
                             title="Kembali Ke Teks Berjalan">
                             <i class="fa fa-arrow-circle-left "></i>Kembali Ke Teks Berjalan
@@ -51,17 +51,7 @@
                                     data-select2-id="tipe" tabindex="-1" aria-hidden="true">
                                     <option value="1" selected="" data-select2-id="2">Internal</option>
                                     <option value="2" data-select2-id="11">Eksternal</option>
-                                </select><span
-                                    class="select2 select2-container select2-container--default select2-container--below"
-                                    dir="ltr" data-select2-id="1" style="width: 676px;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" role="combobox"
-                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-tipe-container"><span
-                                                class="select2-selection__rendered" id="select2-tipe-container"
-                                                role="textbox" aria-readonly="true" title="Internal">Internal</span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </select>
                             </div>
                         </div>
                         <div class="col-sm-12" id="internal" style="">
@@ -161,16 +151,7 @@
                                     <option value="7">
                                         31 Maret 2013 | Awal mula SID
                                     </option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                                    data-select2-id="3" style="width: 676px;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" role="combobox"
-                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-tautan_internal-container"><span
-                                                class="select2-selection__rendered" id="select2-tautan_internal-container"
-                                                role="textbox" aria-readonly="true" title="-- Cari Judul Artikel --">-- Cari
-                                                Judul Artikel --</span><span class="select2-selection__arrow"
-                                                role="presentation"><b role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-12" id="eksternal" style="display: none;">
@@ -198,19 +179,7 @@
                                     <option value="0" selected="" data-select2-id="6">
                                         Tidak
                                     </option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                                    data-select2-id="5" style="width: 169px;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" role="combobox"
-                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-labelledby="select2-status-container"><span
-                                                class="select2-selection__rendered" id="select2-status-container"
-                                                role="textbox" aria-readonly="true" title="
-                                    Tidak
-                                ">
-                                                Tidak
-                                            </span><span class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </select>
                             </div>
                         </div>
                     </div>

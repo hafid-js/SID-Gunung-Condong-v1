@@ -2,11 +2,6 @@
 @section('content')
 
     <div class="content-wrapper" style="min-height: 912.43px;">
-        <div style="padding: 20px 30px; background: rgb(243, 156, 18); z-index: 999999; font-size: 15px; font-weight: 600;">
-            <a href="https://opendesa.id/"
-                style="color: rgba(255, 255, 255, 0.9); display: inline-block; margin-right: 10px; text-decoration: none;">Website
-                ini hanya sebagai demo aplikasi dengan fitur yg dibatasi, untuk mendapatkan akses penuh silahkan kunjungi
-                www.opendesa.id</a></div>
         <section class="content-header">
             <h1>
                 Teks Berjalan
@@ -14,7 +9,7 @@
 
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item">
-                    <a href="https://berputar.opendesa.id/beranda"><i class="fa fa-home"></i>Beranda</a>
+                    <a href="{{ '/' }}"><i class="fa fa-home"></i>Beranda</a>
                 </li>
                 <li class="active">Teks Berjalan</li>
             </ol>
@@ -36,13 +31,13 @@
                     <div class="col-md-12">
                         <div class="box box-info">
                             <div class="box-header with-border">
-                                <a href="https://berputar.opendesa.id/teks_berjalan/form"
+                                <a href="{{ url('teks-berjalan/form') }}"
                                     class="btn btn-social btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"
                                     title="Tambah">
                                     <i class="fa fa-plus"></i> Tambah
                                 </a>
                                 <a href="#" title="Hapus Data"
-                                    onclick="deleteAllBox('mainform', 'https://berputar.opendesa.id/teks_berjalan/delete')"
+                                    onclick="#"
                                     class="btn btn-social btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih disabled"><i
                                         class="fa fa-trash-o"></i> Hapus</a>
                             </div>
@@ -118,16 +113,16 @@
                                                                                         name="id_cb[]" value="1"></td>
                                                                                 <td class=" padat">1</td>
                                                                                 <td class=" aksi"><a
-                                                                                        href="https://berputar.opendesa.id/teks_berjalan/form/1"
+                                                                                        href="{{ url('teks-berjalan/form') }}"
                                                                                         class="btn btn-warning btn-sm"
                                                                                         title="Ubah Data"><i
                                                                                             class="fa fa-edit"></i></a> <a
-                                                                                        href="https://berputar.opendesa.id/teks_berjalan/lock/1/1"
+                                                                                        href="#"
                                                                                         class="btn bg-navy btn-sm"
                                                                                         title="Nonaktifkan Anjungan"><i
                                                                                             class="fa fa-lock"></i></a> <a
                                                                                         href="#"
-                                                                                        data-href="https://berputar.opendesa.id/teks_berjalan/delete/1"
+                                                                                        data-href="#"
                                                                                         class="btn bg-maroon btn-sm"
                                                                                         title="Hapus Data"
                                                                                         data-toggle="modal"
@@ -135,10 +130,10 @@
                                                                                             class="fa fa-trash"></i></a>
                                                                                 </td>
                                                                                 <td>Selamat datang di sistem informasi desa
-                                                                                    <a href="https://berputar.opendesa.id/artikel/"
+                                                                                    <a href="{{ url('artikel') }}"
                                                                                         target="_blank">Selamat
                                                                                         Datang</a><br></td>
-                                                                                <td><a href="https://berputar.opendesa.id/artikel/"
+                                                                                <td><a href="{{ url('artikel') }}"
                                                                                         target="_blank">- <br> </a></td>
                                                                             </tr>
                                                                         </tbody>

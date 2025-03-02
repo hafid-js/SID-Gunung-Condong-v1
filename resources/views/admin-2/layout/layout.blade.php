@@ -111,6 +111,9 @@
         <!-- FastClick -->
         <script src="{{ asset('admin-2/bower_components/fastclick/lib/fastclick.js') }}"></script>
         <!-- bootstrap color picker -->
+
+        {{-- custom js --}}
+        <script src="{{ asset('admin-2/js/custom.js') }}"></script>
         <script
             src="{{ asset('admin-2/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
         <!-- AdminLTE App -->
@@ -121,7 +124,7 @@
             $('.my-colorpicker2').colorpicker()
             $('.select2').select2()
         </script>
-        
+
         {{-- <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="{{ asset('admin-2/js/pages/dashboard.js' ) }}"></script>
         <!-- AdminLTE for demo purposes -->

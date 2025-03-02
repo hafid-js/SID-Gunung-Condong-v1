@@ -15,7 +15,7 @@ class PembangunanController extends Controller
     }
     public function formpembangunan() {
         Session::put('page','form-pembangunan');
-        return view('admin-2.pembangunan.form_pembangunan');
+        return view('admin.pembangunan.form_pembangunan');
     }
     public function dokumentasipembangunan() {
         Session::put('page','dokumentasi-pembangunan');
