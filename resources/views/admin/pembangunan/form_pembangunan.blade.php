@@ -257,7 +257,7 @@
 
                             <div class="card-body" id="collapseContent"> <!-- Tambahkan kelas collapse -->
                                 <div class="form-group">
-                                    <img class="image_pembangunan" id="image_pembangunan"
+                                    <img class="previewImage" id="previewImage"
                                         src="https://berputar.opendesa.id/assets/images/404-image-not-found.jpg?v1b31d555fd0886e1002839f5b442f1f2"
                                         alt="Gambar Utama Pembangunan">
                                 </div>
@@ -290,7 +290,7 @@
         const button = document.getElementById('file_browser');
        const fileInput = document.getElementById('file_input');
        const cameraButton = document.getElementById('camera_browser');
-       const imagePembangunan = document.getElementById('image_pembangunan');
+       const previewImage = document.getElementById('previewImage');
        const filePath = document.getElementById('filePath');
 
        function showPreview(event) {
@@ -300,7 +300,7 @@
            if (file) {
                var reader = new FileReader();
                reader.onload = function (e) {
-                   preview.innerHTML = `<img src="${e.target.result}" alt="File Preview" class="image_pembangunan">`;
+                   preview.innerHTML = `<img src="${e.target.result}" alt="File Preview" class="previewImage">`;
                };
                reader.readAsDataURL(file);
            }
@@ -320,7 +320,7 @@
 
                // Ketika file berhasil dibaca, ubah src gambar
                reader.onload = function (e) {
-                   imagePembangunan.src = e.target.result;
+                   previewImage.src = e.target.result;
                };
 
                reader.readAsDataURL(file);  // Membaca file sebagai DataURL
@@ -341,8 +341,8 @@
 
                 // Menunggu gambar dimuat dan mengubah ukuran gambar
                 img.onload = function() {
-                    imagePembangunan.src = img.src;
-                    imagePembangunan.style.display = 'block';
+                    previewImage.src = img.src;
+                    previewImage.style.display = 'block';
                 };
             };
             reader.readAsDataURL(file);

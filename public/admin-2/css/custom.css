@@ -286,7 +286,6 @@ table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td
 
 .img-circle {
     border-radius: 10%;
-    margin-top: -10px;
 }
 
 img {
@@ -888,7 +887,7 @@ div.form-surat .content-header {
 }
 
 .swal-bold {
-    font-weight: bold !important; 
+    font-weight: bold !important;
 }
 
 @media (max-width: 1000px) {
